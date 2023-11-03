@@ -1,0 +1,100 @@
+/* resets */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
+a{ text-decoration: none; }
+pre, code { font-family: 'Roboto Mono', monospace; }
+body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font: 16px/1.5 'Roboto Mono', monospace;
+    font-weight: 300;
+}
+h1,h2,h3,h4{
+    font-family: Jost;
+}
+
+
+/* custom properties  */
+:root{
+    /* --content-max: 576px; */
+    --content-max: 768px;
+    /* colors */
+    --mo-background: #F3F3F3;
+    --mo-dark-grey-text: #303133; 
+}
+::selection {
+    color: white !important;
+    background: black !important;
+}
+
+/* utility classes */
+.mt-1{ margin-top:1rem !important; }
+.mt-2{ margin-top:2rem !important; }
+.mt-5{ margin-top:5rem !important; }
+.mb-5{ margin-bottom:5rem !important; }
+.p-y-1{padding:1rem 0;}
+.opacity-5{ opacity: .5;}
+.bg-grey{ background: var(--mo-background); }
+.d-none{ display:none; }
+/* .section--angled {
+    padding: 10vh;
+    max-width: 60ch;
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+    clip-path: polygon(0 5vh,100% 0%,100% calc(100% - 5vh),0% 100%);
+} */
+
+.wrapper{
+    width:100%;
+    max-width: var(--content-max);
+    margin: 0 auto;
+    /* border:1px solid blue; */
+}
+
+
+/* menu */
+.header{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    /* outline: 1px solid black;
+    padding:1rem; */
+}
+.logo{
+    animation: rubberBand;
+    /* animation: flipInY; */
+    /* animation: lightSpeedInLeft; */
+    /* animation: bounceIn; */
+    
+    animation-duration: 500ms;
+}
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items:center;
+    gap: 1.8rem;
+    list-style: none;
+}
+.nav a{ 
+    color: var(--mo-dark-grey-text);
+    font-family: 'Jost';
+    font-weight: 400;
+}
+/* .nav > li.active > a, */ .nav a:hover{ opacity: .5; }
+.nav > li.active > a{ position:relative;}
+.nav > li.active > a::after{
+    content: "*";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: red;
+    font-weight: bold;
+}
+.nav > *{ 
+    /* flex-grow: 0;
+    flex-basis: auto;
+    flex-shrink: 0; */
+    flex-basis:auto;
+}
+
