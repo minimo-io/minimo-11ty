@@ -7,51 +7,101 @@
     <title>Mínimo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" rel="stylesheet" crossorigin="anonymous">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600&family=Roboto+Mono:wght@200;300;400&display=swap" rel="stylesheet">
+    <link href="/assets/animate.min.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="/assets/fonts/fonts.css" /> -->
     <link rel="stylesheet" href="/mo.css" />
     <link rel="canonical" href="https://minimo.io">
 </head>
 <body class="light">
 
-    <div class="bg-grey">
-        <div class="wrapper p-y-1">
-            <header class="header">
-                <img src="https://minimo.io/wp-content/uploads/2022/03/android-chrome-192x192-1.png" 
-                    alt="minimo-logo" 
-                    width="30px" 
-                    height="30px" 
-                    class="logo">
-
+    <div class="bg-grey section--angled">
+        <div class="wrapper pt-1 pb-2">
+            <header class="header pb-5">
+                <a href="/" class="hidden">
+                    <img src="https://minimo.io/wp-content/uploads/2022/03/android-chrome-192x192-1.png" 
+                        alt="minimo-logo" 
+                        width="30px" 
+                        height="30px" 
+                        class="logo">
+                </a>
                 <ul class="nav">
                     <li class="active"><a href="#">Home</a></li>
                     <li><a href="#">Projects</a></li>
+                    <li><a href="#">Design</a></li>
                     <li><a href="#">Bitcoin</a></li>
-                    <li class="opacity-5">/</li>
                     <li><a href="#">Biking</a></li>
+                    <li class="opacity-5">/</li>
+                    <li>
+                        <a href="https://github.com/minimo-io/"><span class="fa fa-github"></span></a>
+                        <!-- <a href="https://www.linkedin.com/in/nicolas-erramuspe/"><span class="fa fa-linkedIn"></span></a> -->
+                    </li>
                 </ul>
             </header>
 
-            <main class="mb-5">
+            <main class="profile mb-5">
+                <img decoding="async" 
+                width="132"
+                class="img-profile img-circular"
+                src="https://minimo.io/wp-content/uploads/2022/04/nicolas-erramuspe-2.jpeg" 
+                alt="me-image" loading="lazy">
+                <h2 class="font-weight-200 mt-3">👋 <i>Hey!</i></h2>
 
-                <h1 class="mt-5">This is just a fu***g test!</h1>
-                <h3>And so here comes the text...</h3>
-                <p class="mt-1">
-                    This is some made out texxxxt, and i am re-learning css for the moment.
-                    But belive it or not, this is a Jekyll project!
+                <p class="text-justify">
+                    <span>
+                        Nicolas here. I work on the development of <strong>Digital Products</strong> 
+                        and as an <strong>Independent Affiliate</strong> with focus on iGaming &amp; Crypto. 
+                        Currently located in <span class="no-wrap">🇧🇷SP/Brazil, </span>I also work on the design, 
+                        prototyping and development of cross-platform craziness using tools such as 
+                        <a class="mo-techstack mo-figma" href="https://www.figma.com/" target="_blank" rel="nofollow noopener">Figma</a>, 
+                        <a class="mo-techstack mo-vue" href="https://vuejs.org/" target="_blank" rel="nofollow noopener">Vue.js</a> and 
+                        <a class="mo-techstack mo-flutter" href="https://flutter.dev/" target="_blank" rel="nofollow noopener">Flutter</a>, 
+                        and on Search Engine Optimization for affiliate projects.
+                    </span>
                 </p>
+                <p class="profile-links text-justify">
+                    <a class="readMoreBtn" href="#">
+                        <i class="fa fa-arrowRight" aria-hidden="true"></i> Read more
+                    </a>
+                    <br>
+                    <a href="mailto:nicolas@minimo.io" target="_blank" rel="noopener nofollow">
+                        <i class="fa fa-paperPlane" aria-hidden="true"></i> Get in touch
+                    </a>
+                    <br>
+                    <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/FD95B34C67210C83D0D9273F567CEF272A5AF6C4" target="_blank" rel="noopener nofollow">
+                        <i class="fa fa-bitcoin" aria-hidden="true"></i> Email GPG key
+                    </a>
+                </p>
+                
             </main>
         </div>
     </div>
+
+    <div class="wrapper wrapper-wider mt-5">
+        <h1>And so here comes the text...</h1>
+        <h2>I just want to see if all this will work, or not?</h2>
+        <p>
+            This is some made out texxxxt, and i am re-learning css for the moment.
+            But belive it or not, this is a Jekyll project!
+        </p>
+        <p>
+            And so here we will have more and more text, just stupid nonsense, nothing worthwhile but still something
+            to read.
+        </p>
+        <h2>Ah by the way</h2>
+        <p>Almost forgot about it. By the way... <a href="/article.html">here is a link</a>.</p>
+        <h3>And finally a sub-item</h3>
+        <p>This is just a sub-item, nothing fancy!</p>
+    </div>
     
-    <main class="wrapper mt-1">
-        
-        <i class="fa-solid fa-user"></i> User
+    <main class="wrapper wrapper-wider mt-1">
+        <br>
+        <span class="fa fa-patreon"></span> Patreon
+
     </main>
 
     <footer>
-        <div class="wrapper">
+        <div class="wrapper wrapper-wider">
             2023 - Mínimo
         </div>
         
