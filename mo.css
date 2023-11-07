@@ -161,7 +161,7 @@ a:hover{
 .nav{
     display: flex;
     /* justify-content: flex-end; */
-    justify-content: space-between;
+    justify-content:flex-end;
     align-items:center;
     gap: var(--gap, 1.8rem);
     list-style: none;
@@ -220,7 +220,7 @@ a:hover{
 /* media queries */
 @media (max-width:576px){
     :root{
-        --gap:0rem;
+        --gap:1rem;
     }
     .profile{ padding: 0 1.5rem; }
     .section--angled{ clip-path: none; }
@@ -228,12 +228,17 @@ a:hover{
         position: fixed;
         flex-direction: column;
         inset:4rem;
-        background: hsla(0, 0%, 100%, .1);
-        /* flex-basis: 1; */
-        padding: min(30vh, 13rem) 2rem;
+        
+        background: white;
+        padding: min(30vh, 13rem) 0;
         border:3px solid black;
-        backdrop-filter: blur(1rem); 
-        z-index:3;
+        z-index:1000;
+    }
+    @supports (backdrop-filter: blur(1rem)){
+        .nav{
+            background: hsla(0, 0%, 100%, .1);
+            backdrop-filter: blur(1rem);             
+        }
     }
     .nav a{ font-weight: 400; }
 }
