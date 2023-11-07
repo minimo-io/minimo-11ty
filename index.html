@@ -14,18 +14,12 @@
     <script src="/mo.js" defer></script>
     <link rel="canonical" href="https://minimo.io">
 </head>
-<body class="light">
+<body>
 
     <div class="bg-grey bg--angled">
-        <div class="wrapper pt-1 pb-2">
+        <div class="wrapper wide-100 pt-1 pb-2">
+
             <header class="header">
-                <a href="/" class="hidden no-border">
-                    <img src="https://minimo.io/wp-content/uploads/2022/03/android-chrome-192x192-1.png" 
-                        alt="minimo-logo" 
-                        width="30px" 
-                        height="30px" 
-                        class="logo">
-                </a>
                 <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false"><span class="sr-only">Menu</span></button>
                 <ul id="primary-nav" class="nav" data-opened="false">
                     <li class="active"><a href="#">Home</a></li>
@@ -39,9 +33,9 @@
                         <!-- <a href="https://www.linkedin.com/in/nicolas-erramuspe/"><span class="fa fa-linkedIn"></span></a> -->
                     </li>
                 </ul>
-            </header>
+            </header>            
 
-            <main class="profile mb-3 text-justify">
+            <main class="wrapper wrapper-profile">
 
                 <img decoding="async" 
                 width="132"
@@ -87,10 +81,26 @@
         </div>
     </div>
 
-    <div class="wrapper wrapper-wider mt-5">
-        <div class="container">
 
-            <h1>And so here comes the text...</h1>
+    <div class="wrapper text-justify mt-5">
+        <h2>This is yet another standard "container", or wrapper.</h2>
+        <p>Meant to be very simple to use!</p>
+        <p>Just a lovely lovely thing.</p>
+        <p>
+            And as you might see this one should be able to hold text the size of our main container max width variable... 
+            We cannot say the same for everybody else around here... kkk. But fair enough, is this working or not?
+        </p>
+        <p>For <strong>all of them</strong> we need to solve their paddings!</p>
+        <p>And <strong>after that, the font-sizes</strong>.</p>
+        <p>So, solve:</p>
+        <ul>
+            <li>General paddings (except for profile).</li>
+            <li>General font sizes (clamps?).</li>
+        </ul>
+    </div>
+
+    <div class="wrapper wrapper-wider mt-5">
+            <h1>This other one is a wider container</h1>
             <h2>I just want to see if all this will work, or not?</h2>
             <p>
                 This is some made out texxxxt, and i am re-learning css for the moment.
@@ -104,8 +114,6 @@
             <p>Almost forgot about it. By the way... <a href="/article.html">here is a link</a>.</p>
             <h3>And finally a sub-item</h3>
             <p>This is just a sub-item, nothing fancy!</p>
-
-        </div>
     </div>
     
     <footer class="wrapper wrapper-wider">

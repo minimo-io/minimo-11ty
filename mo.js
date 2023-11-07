@@ -21,7 +21,8 @@ navToggle.addEventListener('click', () =>{
 
         // move menu items to the body in order to avoid clipping problems.
         document.body.prepend(primaryNav);
-        document.body.prepend(navToggle);
+        primaryNav.prepend(navToggle);
+        //document.body.prepend(navToggle);
 
         primaryNav.setAttribute("data-opened", "true");
         navToggle.setAttribute("aria-expanded", "true");
