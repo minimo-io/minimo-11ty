@@ -11,6 +11,7 @@
     <link href="/assets/animate.min.css" rel="stylesheet" />
     <!-- <link rel="stylesheet" href="/assets/fonts/fonts.css" /> -->
     <link rel="stylesheet" href="/mo.css" />
+    <script src="/mo.js" defer></script>
     <link rel="canonical" href="https://minimo.io">
 </head>
 <body class="light">
@@ -25,7 +26,8 @@
                         height="30px" 
                         class="logo">
                 </a>
-                <ul id="primary-nav" class="nav">
+                <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false"><span class="sr-only">Menu</span></button>
+                <ul id="primary-nav" class="nav" data-opened="false">
                     <li class="active"><a href="#">Home</a></li>
                     <li><a href="#">Projects</a></li>
                     <li><a href="#">Design</a></li>
@@ -119,7 +121,5 @@
             2023 - Mínimo
         
     </footer>
-
-    <script src="mo.js"></script>
 </body>
 </html>
