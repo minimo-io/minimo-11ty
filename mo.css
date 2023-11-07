@@ -2,7 +2,6 @@
 
 /* custom properties  */
 :root{
-    /* scroll-behavior: smooth; */
     --main-content-max: 576px;
     --secondary-content-max: 992px;
     /* fonts */
@@ -199,8 +198,6 @@ a:hover{
     font-family: var(--ff-body);
     font-size:var(--fs-300);
 }
-
-
 .nav{
     position: fixed;
     list-style: none;
@@ -218,7 +215,6 @@ a:hover{
     
     max-width: 45rem;
     margin:0 auto;
-
 }
 .nav a{ 
     display:flex;
@@ -228,6 +224,7 @@ a:hover{
     border:none;
     line-height: 1;
 }
+.nav > li.active > a{ color:black; }
 .nav a:hover{ opacity: .5; font-weight: 600; }
 .nav > li.active > a::before, .nav a:hover::before{
     content: "~";
@@ -295,4 +292,9 @@ a:hover{
 
     .wrapper-profile{ padding: 0 1.5rem; }
 
+}
+/* media queries */
+@media (max-width:712){
+
+    body{ background:red; }
 }
