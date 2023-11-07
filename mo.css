@@ -17,7 +17,7 @@
     --fs-300: .9rem;
     /* colors */
     --mo-background: #F3F3F3;
-    /* --mo-background: #FADB2A; */
+    /* --mo-background: cyan; */
     --mo-dark-grey-text: #303133; 
 }
 ::selection {
@@ -159,8 +159,7 @@ a:hover{
     font-size:var(--fs-300);
 }
 .nav{
-    /* display: flex; */
-    display: none;
+    display: flex;
     /* justify-content: flex-end; */
     justify-content: space-between;
     align-items:center;
@@ -192,7 +191,7 @@ a:hover{
 
 .profile{
     /* margin-inline: 6vw; */
-    padding: 0 1.5rem;
+    padding:0;
     
 }
 .profile p{
@@ -219,11 +218,22 @@ a:hover{
 }
 
 /* media queries */
-@media (min-width:576px){
-    .profile{ padding:0; }
-    .nav{ display:flex; }
-    html{
-        
-        background-color:wheat;
+@media (max-width:576px){
+    :root{
+        --gap:0rem;
     }
+    .profile{ padding: 0 1.5rem; }
+    .section--angled{ clip-path: none; }
+    .nav{ 
+        position: fixed;
+        flex-direction: column;
+        inset:4rem;
+        background: hsla(0, 0%, 100%, .1);
+        /* flex-basis: 1; */
+        padding: min(30vh, 13rem) 2rem;
+        border:3px solid black;
+        backdrop-filter: blur(1rem); 
+        z-index:3;
+    }
+    .nav a{ font-weight: 400; }
 }
