@@ -8,6 +8,8 @@
     --ff-body: 'Roboto Mono', monospace;
     --ff-heading: 'Jost', sans-serif;
 
+    --fs-clamped-500: clamp(.8rem, 1.5vw, 1.3rem);
+
     --fs-xl: clamp(2.5rem, 12vw + 1rem, 3rem); /* h1 */
     --fs-600: 2rem; /* h2 */
     --fs-500: 1.5rem; /* h3 */
@@ -41,6 +43,7 @@ body, p, pre, code {
     font-weight: 300;
     color:var(--mo-dark-grey-text);
 }
+strong{ font-weight: 400; }
 h1{ 
     font-size: var(--fs-xl);
     text-transform: uppercase;
@@ -60,8 +63,8 @@ p{
 a{ 
     color:var(--mo-dark-grey-text);
     /* color:red; */
-    border-bottom: 1px dotted rgba(0,0,0,0.7);
-    padding-bottom: 1px;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+    padding-bottom: 2px;
     font-weight: 400;
 }
 a:hover{
@@ -151,6 +154,10 @@ a:hover{
     
     animation-duration: 500ms;
 }
+.nav, .nav a{ 
+    font-family: var(--ff-body);
+    font-size:var(--fs-nav);
+}
 .nav{
     display: flex;
     justify-content: flex-end;
@@ -160,8 +167,6 @@ a:hover{
 }
 .nav a{ 
     color: var(--mo-dark-grey-text);
-    font-family: var(--ff-body);
-    font-size:var(--fs-nav);
     border:none;
     font-weight: 200;
     line-height: 1;
@@ -192,7 +197,8 @@ a:hover{
 }
 .profile p{
     line-height: 1.6;
-    font-size:20px;
+    /* font-size:20px;  */
+    font-size: var(--fs-clamped-500);
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
 }
