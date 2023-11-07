@@ -19,5 +19,6 @@ package-lock.json
 .vscode
 
 # Misc
+.DS_Store
 assets/js/dist
 .editorconfig
