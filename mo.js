@@ -8,6 +8,8 @@ window.addEventListener('DOMContentLoaded', function () {
     profileImage.addEventListener('click', () => animateProfileImage() );
     profileImage.click();
 
+    this.document.querySelector("img").addEventListener('click', ()=> animateCSS('img', 'rubberBand'));
+
 }, false);
 
 const animateProfileImage = () => animateCSS(profileImage, "rubberBand");
