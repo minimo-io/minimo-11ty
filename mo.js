@@ -2,7 +2,7 @@ const primaryNav = document.querySelector(".nav");
 const navToggle = document.querySelector(".nav-toggle");
 const profileImage = document.querySelector(".img-profile");
 
-window.addEventListener('load', function () {
+window.addEventListener('DOMContentLoaded', function () {
     profileImage.style.setProperty('--animate-duration', '0.5s');
     // profile image effect
     profileImage.addEventListener('click', () => animateProfileImage() );
