@@ -22,6 +22,7 @@
 
     /* colors */
     --mo-background: #F3F3F3;
+    --mo-background-gradient: linear-gradient(90deg, rgba(249,249,249,1) 20%, rgba(255,255,255,0) 100%);
     --mo-dark-grey-text: #2e3033;
     --nav-backdrop: rgba(255, 255, 255, .5);
 }
@@ -52,12 +53,10 @@ img, svg{
     vertical-align:middle;
 }
 hr {
-    margin: .1rem 0;
-    color: inherit;
     border: 0;
-    border-top: var(--mo-dark-grey-text) solid;
-    opacity: 0.25;
-  }
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--mo-dark-grey-text), rgba(0, 0, 0, 0));
+}
 
 
 /* texts and font sizes */
@@ -141,7 +140,10 @@ strong{ font-weight: 400; }
 .pb-5{ padding-bottom:5rem!important; }
 .p-y-1{padding:1rem 0;}
 .opacity-5{ opacity: .5;}
-.bg-grey{ background: var(--mo-background); }
+.bg-grey{ 
+    /* background: var(--mo-background); */
+    background: var(--mo-background-gradient); 
+}
 .no-border{ border:0; }
 .shadow{ box-shadow: 0 0 1rem rgba(0,0,0,0.1), 0 0 .5rem rgba(0,0,0,0.1), 0 0 .5rem rgba(0,0,0,0.1); }
 
@@ -242,7 +244,7 @@ pre{
 pre > code { background: none; padding: 0; white-space: unset; }
 blockquote {
     background: rgb(249,249,249);
-    background: linear-gradient(90deg, rgba(249,249,249,1) 20%, rgba(255,255,255,0) 100%);    
+    background: var(--mo-background-gradient);    
     margin: 1rem 0;
     padding: 2rem 2.5rem; 
     border-left: 2px solid var(--mo-dark-grey-text); 

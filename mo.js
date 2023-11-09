@@ -14,10 +14,9 @@ window.addEventListener('DOMContentLoaded', function () {
     // keysdown
     document.onkeydown = function (e) {
         if (e.defaultPrevented) return;
-        i
+        if (e.repeat) return;
         switch (e.key) {
           case "Escape":
-              console.log('Opened?' + primaryNav.getAttribute("data-opened"));
               if ("true" == primaryNav.getAttribute("data-opened")){
                 navToggle.click();
               }
@@ -76,20 +75,16 @@ const animateCSS = (element, animation, prefix = 'animate__') =>
   // We create a Promise and return it
   new Promise((resolve, reject) => {
     const animationName = `${prefix}${animation}`;
-    //if (typeof(element) == "string") 
-    console.log(typeof element);
     if (typeof element == "string") element = document.querySelector(element);
-    // const node = document.querySelector(element);
-    const node = element;
 
-    node.classList.add(`${prefix}animated`, animationName);
+    element.classList.add(`${prefix}animated`, animationName);
 
     // When the animation ends, we clean the classes and resolve the Promise
     function handleAnimationEnd(event) {
       event.stopPropagation();
-      node.classList.remove(`${prefix}animated`, animationName);
+      element.classList.remove(`${prefix}animated`, animationName);
       resolve('Animation ended');
     }
 
-    node.addEventListener('animationend', handleAnimationEnd, {once: true});
+    element.addEventListener('animationend', handleAnimationEnd, {once: true});
 });
