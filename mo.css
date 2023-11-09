@@ -254,7 +254,14 @@ blockquote footer{ padding-top:.5rem; font-style: normal; }
 blockquote footer::before{ content: '~'; }
 blockquote p::before { content: '\201C'; }
 blockquote p::after { content: '\201D'; }
-
+.wrapper ul, .wrapper ol { 
+    /* display: flex; 
+    flex-direction: column; 
+    gap: var(--gap);  */
+    margin-top:1rem;
+    padding: 0 0 0 1.3em; 
+}
+.wrapper ul { list-style-type: square; }
 
 /* nav */
 .header{
