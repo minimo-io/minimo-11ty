@@ -1,76 +1,96 @@
 function $(s){ return document.querySelector(s); }
 
+let theme = localStorage.getItem("theme");
+
 const primaryNav = $(".nav");
 const navToggle = $(".nav-toggle");
 const profileImage = $(".img-profile");
+const darkModeToggle = $(".dark-mode-toggle");
 
-// dom + sync js loaded
+const animateProfileImage = () => animateCSS(profileImage, "rubberBand");
+const switchTheme = (themeClassName) => {
+    document.body.classList.add(themeClassName);
+    localStorage.setItem("theme", themeClassName);
+};
+
+
+// dom + sync js loaded - simply RnR!
 window.addEventListener('DOMContentLoaded', function () {
     profileImage.style.setProperty('--animate-duration', '0.5s');
     // profile image effect
     profileImage.addEventListener('click', () => animateProfileImage() );
     profileImage.click();
-
-    // keysdown
+    // keysdown for menu
     document.onkeydown = function (e) {
         if (e.defaultPrevented) return;
         if (e.repeat) return;
         switch (e.key) {
-          case "Escape":
-              if ("true" == primaryNav.getAttribute("data-opened")){
+            case "Escape":
+                if ("true" == primaryNav.getAttribute("data-opened")){
+                    navToggle.click();
+                }
+                break;
+            case "m":
                 navToggle.click();
-              }
-              break;
-          case "m":
-              navToggle.click();
-              break;
-        //   default:
-        //       return; // Do nothing for the rest
+                break;
+            case "d":
+                darkModeToggle.click();
+            break;
         }
-      };    
+    };
+    // nav
+    navToggle.addEventListener('click', () =>{
+        const visibility = primaryNav.getAttribute("data-opened");
+        primaryNav.style.setProperty('--animate-duration', '0.2s');
+
+        if (visibility == "false"){
+
+            // move menu items to the body in order to avoid clipping problems.
+            document.body.prepend(primaryNav);
+            primaryNav.prepend(navToggle);
+            //document.body.prepend(navToggle);
+
+            primaryNav.setAttribute("data-opened", "true");
+            navToggle.setAttribute("aria-expanded", "true");
+
+            primaryNav.style.display = "flex";
+            navToggle.classList.add("cross");
+            animateCSS(".nav", 'rubberBand').then((message) => {
+
+            });
+
+        }else if (visibility == "true"){
+
+            $(".header").append(primaryNav);
+            $(".header").append(navToggle);
+
+            primaryNav.setAttribute("data-opened", "false");
+            navToggle.setAttribute("aria-expanded", "false");
+            
+            navToggle.classList.remove("cross");
+            // slideOutLeft, zoomOutDown
+            animateCSS(".nav", 'flipOutY').then((message) => {
+                // Do something after the animation
+                primaryNav.style.display = "none";
+            });        
+        }
+    });      
+    // dark mode toggle
+    darkModeToggle.addEventListener('click', () => {
+        // in the future I could implement not just dark mode
+        // buy more themes.
+        if (document.body.classList.contains("theme-dark-mode")){
+            this.document.body.classList.remove("theme-dark-mode");
+        }else{
+            switchTheme("theme-dark-mode");
+        }
+        
+    });
 
 }, false);
 
-const animateProfileImage = () => animateCSS(profileImage, "rubberBand");
 
-// nav
-navToggle.addEventListener('click', () =>{
-    const visibility = primaryNav.getAttribute("data-opened");
-    primaryNav.style.setProperty('--animate-duration', '0.2s');
-
-    if (visibility == "false"){
-
-        // move menu items to the body in order to avoid clipping problems.
-        document.body.prepend(primaryNav);
-        primaryNav.prepend(navToggle);
-        //document.body.prepend(navToggle);
-
-        primaryNav.setAttribute("data-opened", "true");
-        navToggle.setAttribute("aria-expanded", "true");
-
-        primaryNav.style.display = "flex";
-        navToggle.classList.add("cross");
-        animateCSS(".nav", 'rubberBand').then((message) => {
-
-        });
-
-    }else if (visibility == "true"){
-
-        $(".header").append(primaryNav);
-        $(".header").append(navToggle);
-
-        primaryNav.setAttribute("data-opened", "false");
-        navToggle.setAttribute("aria-expanded", "false");
-        
-        navToggle.classList.remove("cross");
-        // slideOutLeft, zoomOutDown
-        animateCSS(".nav", 'flipOutY').then((message) => {
-            // Do something after the animation
-            primaryNav.style.display = "none";
-        });        
-    }
-});
-
+// function to user the animate.css lib from js
 const animateCSS = (element, animation, prefix = 'animate__') =>
   // We create a Promise and return it
   new Promise((resolve, reject) => {

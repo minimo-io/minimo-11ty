@@ -1,5 +1,7 @@
-/* Using some base64 inline Font Awesome Free 6.4.2 icons by @fontawesome - https://fontawesome.com (License: CC BY 4.0)
-
+/* 
+    LICENSES: 
+    - Font Awesome Free 6.4.2 base64 & svg icons by @fontawesome - https://fontawesome.com (License: CC BY 4.0)
+*/
 /* custom properties  */
 :root{
     --main-content-max: 576px;
@@ -21,15 +23,13 @@
     --fs-clamped-900: clamp(2.4881rem, 2.0473rem + 2.2043vw, 3.7556rem);   
 
     /* colors */
-    --mo-background: #F3F3F3;
-    --mo-background-gradient: linear-gradient(90deg, rgba(249,249,249,1) 20%, rgba(255,255,255,0) 100%);
-    --mo-dark-grey-text: #2e3033;
+    --background: white;
+    --high-background: #F3F3F3;
+    --high-background-gradient: linear-gradient(90deg, rgba(249,249,249,1) 20%, rgba(255,255,255,0) 100%);
+    --foreground-text: #2e3033;
     --nav-backdrop: rgba(255, 255, 255, .5);
 }
-::selection {
-    color: white !important;
-    background: black !important;
-}
+::selection { color: white; background: black; }
 
 /* resets */
 *, *::before, *::after { box-sizing: border-box; }
@@ -55,17 +55,18 @@ img, svg{
 hr {
     border: 0;
     height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--mo-dark-grey-text), rgba(0, 0, 0, 0));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--foreground-text), rgba(0, 0, 0, 0));
 }
 
 
 /* texts and font sizes */
+body{ background:var(--background); }
 body, code, pre{
     line-height: 1.5;
     font-size:var(--fs-clamped-300);
     font-family: var(--ff-body);
     font-weight: 300;
-    color:var(--mo-dark-grey-text);
+    color:var(--foreground-text);
 }
 p{
     margin-top:1rem;
@@ -79,7 +80,7 @@ blockquote p{
 }
 pre > code, figcaption{ font-size: var(--fs-clamped-200); }
 figcaption{
-    color: var(--mo-dark-grey-text);
+    color: var(--foreground-text);
     font-style: italic;
     text-align:right;
     margin:.5rem 1rem auto 1rem;
@@ -115,12 +116,23 @@ p.profile-links a{
     line-height: 1.75rem;
 }
 a{ 
-    color:var(--mo-dark-grey-text);
+    color:var(--foreground-text);
     border-bottom: 1px solid rgba(46, 48, 51, .35);
     font-weight: 400;
 }
 a:hover{ opacity: .5 !important; }
 strong{ font-weight: 400; }
+
+/* themes */
+
+.theme-dark-mode{
+    transition: background 300ms;
+    --background: black;
+    --high-background: rgb(27, 27, 27);
+    --high-background-gradient: linear-gradient(90deg, rgb(27, 27, 27) 20%, rgba(0, 0, 0, 0) 100%);
+    --foreground-text: #e7e7e7;
+    --nav-backdrop: rgba(14, 14, 14, 0.5);
+}
 
 /* utility classes */
 .d-none{ display:none; }
@@ -141,8 +153,8 @@ strong{ font-weight: 400; }
 .p-y-1{padding:1rem 0;}
 .opacity-5{ opacity: .5;}
 .bg-grey{ 
-    /* background: var(--mo-background); */
-    background: var(--mo-background-gradient); 
+    /* background: var(--high-background); */
+    background: var(--high-background-gradient); 
 }
 .no-border{ border:0; }
 .shadow{ box-shadow: 0 0 1rem rgba(0,0,0,0.1), 0 0 .5rem rgba(0,0,0,0.1), 0 0 .5rem rgba(0,0,0,0.1); }
@@ -228,12 +240,12 @@ strong{ font-weight: 400; }
 }
 code{ 
     font-style: normal; 
-    background: var(--mo-background); 
+    background: var(--high-background); 
     padding: 2px 6px; 
     border-radius: 4px;
 }
 pre{
-    background: var(--mo-background); 
+    background: var(--high-background); 
     padding: .5rem 2rem;
     border-radius: 0.5rem; 
     white-space: pre-wrap; 
@@ -244,10 +256,10 @@ pre{
 pre > code { background: none; padding: 0; white-space: unset; }
 blockquote {
     background: rgb(249,249,249);
-    background: var(--mo-background-gradient);    
+    background: var(--high-background-gradient);    
     margin: 1rem 0;
     padding: 2rem 2.5rem; 
-    border-left: 2px solid var(--mo-dark-grey-text); 
+    border-left: 2px solid var(--foreground-text); 
     font-style: italic; 
 }
 blockquote footer{ padding-top:.5rem; font-style: normal; }
@@ -293,7 +305,7 @@ blockquote p::after { content: '\201D'; }
 .nav a{ 
     display:flex;
     font-weight: 300;      
-    color: var(--mo-dark-grey-text);
+    color: var(--foreground-text);
     border:none;
     line-height: 1;
 }
@@ -361,9 +373,4 @@ blockquote p::after { content: '\201D'; }
 
     .wrapper-profile{ padding: 0 1.5rem; }
 
-}
-
-@media (max-width:712){
-
-    body{ background:red; }
 }
