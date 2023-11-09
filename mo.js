@@ -1,6 +1,8 @@
-const primaryNav = document.querySelector(".nav");
-const navToggle = document.querySelector(".nav-toggle");
-const profileImage = document.querySelector(".img-profile");
+function $(s){ return document.querySelector(s); }
+
+const primaryNav = $(".nav");
+const navToggle = $(".nav-toggle");
+const profileImage = $(".img-profile");
 
 // dom + sync js loaded
 window.addEventListener('DOMContentLoaded', function () {
@@ -8,8 +10,6 @@ window.addEventListener('DOMContentLoaded', function () {
     // profile image effect
     profileImage.addEventListener('click', () => animateProfileImage() );
     profileImage.click();
-
-    this.document.querySelector("img").addEventListener('click', ()=> animateCSS('img', 'rubberBand'));
 
     // keysdown
     document.onkeydown = function (e) {
@@ -56,8 +56,8 @@ navToggle.addEventListener('click', () =>{
 
     }else if (visibility == "true"){
 
-        document.querySelector(".header").append(primaryNav);
-        document.querySelector(".header").append(navToggle);
+        $(".header").append(primaryNav);
+        $(".header").append(navToggle);
 
         primaryNav.setAttribute("data-opened", "false");
         navToggle.setAttribute("aria-expanded", "false");
@@ -75,7 +75,7 @@ const animateCSS = (element, animation, prefix = 'animate__') =>
   // We create a Promise and return it
   new Promise((resolve, reject) => {
     const animationName = `${prefix}${animation}`;
-    if (typeof element == "string") element = document.querySelector(element);
+    if (typeof element == "string") element = $(element);
 
     element.classList.add(`${prefix}animated`, animationName);
 
