@@ -1,17 +1,11 @@
 function $(s){ return document.querySelector(s); }
 
-let theme = localStorage.getItem("theme");
+let theme = localStorage.getItem("theme") ?? "theme-light"; // defaults
 
 const primaryNav = $(".nav");
 const navToggle = $(".nav-toggle");
 const profileImage = $(".img-profile");
 const darkModeToggle = $(".dark-mode-toggle");
-
-const animateProfileImage = () => animateCSS(profileImage, "rubberBand");
-const switchTheme = (themeClassName) => {
-    document.body.classList.add(themeClassName);
-    localStorage.setItem("theme", themeClassName);
-};
 
 
 // dom + sync js loaded - simply RnR!
@@ -75,20 +69,29 @@ window.addEventListener('DOMContentLoaded', function () {
             });        
         }
     });      
-    // dark mode toggle
+    // theme switcher
+    switchTheme(theme);
     darkModeToggle.addEventListener('click', () => {
         // in the future I could implement not just dark mode
         // buy more themes.
-        if (document.body.classList.contains("theme-dark-mode")){
-            this.document.body.classList.remove("theme-dark-mode");
+        if (document.body.classList.contains("theme-dark")){
+            
+            switchTheme("theme-light");
         }else{
-            switchTheme("theme-dark-mode");
+            switchTheme("theme-dark");
         }
         
     });
 
 }, false);
 
+// functions
+const animateProfileImage = () => animateCSS(profileImage, "rubberBand");
+const switchTheme = (themeClassName) => {
+    removeClassByPrefix(document.body, 'theme-');
+    document.body.classList.add(themeClassName);
+    theme = localStorage.setItem("theme", themeClassName);
+};
 
 // function to user the animate.css lib from js
 const animateCSS = (element, animation, prefix = 'animate__') =>
@@ -108,3 +111,9 @@ const animateCSS = (element, animation, prefix = 'animate__') =>
 
     element.addEventListener('animationend', handleAnimationEnd, {once: true});
 });
+// Credit to https://thegermancoder.com/2018/10/04/how-to-remove-classes-by-prefix-in-vanilla-javascript/
+const removeClassByPrefix = (node, prefix) => {
+	var regx = new RegExp('\\b' + prefix + '[^ ]*[ ]?\\b', 'g');
+	node.className = node.className.replace(regx, '');
+	return node;
+}

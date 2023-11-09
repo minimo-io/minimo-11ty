@@ -125,7 +125,7 @@ strong{ font-weight: 400; }
 
 /* themes */
 
-.theme-dark-mode{
+.theme-dark{
     transition: background 300ms;
     --background: black;
     --high-background: rgb(27, 27, 27);
