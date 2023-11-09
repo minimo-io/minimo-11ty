@@ -2,6 +2,7 @@ const primaryNav = document.querySelector(".nav");
 const navToggle = document.querySelector(".nav-toggle");
 const profileImage = document.querySelector(".img-profile");
 
+// dom + sync js loaded
 window.addEventListener('DOMContentLoaded', function () {
     profileImage.style.setProperty('--animate-duration', '0.5s');
     // profile image effect
@@ -9,6 +10,25 @@ window.addEventListener('DOMContentLoaded', function () {
     profileImage.click();
 
     this.document.querySelector("img").addEventListener('click', ()=> animateCSS('img', 'rubberBand'));
+
+    // keysdown
+    document.onkeydown = function (e) {
+        if (e.defaultPrevented) return;
+        i
+        switch (e.key) {
+          case "Escape":
+              console.log('Opened?' + primaryNav.getAttribute("data-opened"));
+              if ("true" == primaryNav.getAttribute("data-opened")){
+                navToggle.click();
+              }
+              break;
+          case "m":
+              navToggle.click();
+              break;
+        //   default:
+        //       return; // Do nothing for the rest
+        }
+      };    
 
 }, false);
 
@@ -34,7 +54,6 @@ navToggle.addEventListener('click', () =>{
         animateCSS(".nav", 'rubberBand').then((message) => {
 
         });
-
 
     }else if (visibility == "true"){
 
