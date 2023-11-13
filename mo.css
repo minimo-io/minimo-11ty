@@ -7,6 +7,7 @@
     --main-content-max: 576px;
     /* Prev: 992px; */
     --secondary-content-max: 768px;
+    
     /* paddings */
     --wrapper-gutter: 1rem;
 
@@ -163,12 +164,9 @@ strong{ font-weight: 400; }
 .shadow{ box-shadow: 0 0 1rem rgba(0,0,0,0.1), 0 0 .5rem rgba(0,0,0,0.1), 0 0 .5rem rgba(0,0,0,0.1); }
 .full-width{
     width: 100vw;
-   
     position: relative;
     left: 50%;
     right: 50%;
-    /* margin-left: -50vw;
-    margin-right: -50vw; */
     margin-inline: -50vw;
     transform: translateX(-50%);
 }

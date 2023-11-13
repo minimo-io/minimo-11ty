@@ -12,34 +12,31 @@
     <!-- <link rel="stylesheet" href="/assets/fonts/fonts.css" /> -->
     <link rel="stylesheet" href="/mo.css" />
     <link rel="canonical" href="https://minimo.io">
+
+    <script src="/mo.js" defer></script>
 </head>
-<body class="light">
+<body>
 
     <div class="bg-grey">
         <div class="wrapper pt-1 pb-2">
             <header class="header">
-                <a href="/">
-                    <img src="https://minimo.io/wp-content/uploads/2022/03/android-chrome-192x192-1.png" 
-                        alt="minimo-logo" 
-                        width="30px" 
-                        height="30px" 
-                        class="logo">
-                </a>
-                <ul class="nav">
-                    <li class="active"><a href="#">Home</a></li>
+                <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false"><span class="sr-only">Menu</span></button>
+                <ul id="primary-nav" class="nav" data-opened="false">
+                    <li class="active"><a href="/">Home</a></li>
                     <li><a href="#">Projects</a></li>
                     <li><a href="#">Design</a></li>
                     <li><a href="#">Bitcoin</a></li>
                     <li><a href="#">Biking</a></li>
+                    <li><a href="#">Shortcut<u>s</u></a></li>
                     <li class="opacity-5">/</li>
                     <li>
                         <a href="https://github.com/minimo-io/"><span class="fa fa-github"></span></a>
-                        <a href="https://www.linkedin.com/in/nicolas-erramuspe/"><span class="fa fa-linkedIn"></span></a>
+                        <!-- <a href="https://www.linkedin.com/in/nicolas-erramuspe/"><span class="fa fa-linkedIn"></span></a> -->
                     </li>
                 </ul>
             </header>
 
-            <main class="mt-5">
+            <main>
                 <h1>This is a freaking artice!</h1>
                 <h2>In turn it does have a subtitle.</h2>
                 <!-- <h3>I just want to see if all this will work, or not?</h3> -->
@@ -57,6 +54,8 @@
             to read.
         </p>
         <p>Oh, by the way... <a href="/articles.html">here is a link</a>.</p>
+
+        <button class="dark-mode-toggle">Darken my life</button>
     </div>
     
     <main class="wrapper mt-1">
@@ -65,13 +64,29 @@
 
     </main>
 
-    <footer>
-        <div class="wrapper">
-            2023 - Mínimo
-        </div>
-        
+    <footer class="wrapper">
+        2023 - Mínimo
     </footer>
 
-    <script src="mo.js"></script>
+    <!-- Test ld+json results here: https://search.google.com/test/rich-results/result -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": "Title of my first article",
+          "image": [
+            "https://example.com/photos/1x1/photo.jpg"
+           ],
+          "datePublished": "2015-02-05T08:00:00+08:00",
+          "dateModified": "2015-02-05T09:20:00+08:00",
+          "author": [{
+              "@type": "Person",
+              "name": "Jane Doe",
+              "image": "janedoe.jpg",
+              "jobTitle": "Developer",
+              "url": "https://example.com/profile/janedoe123"
+            }]
+        }
+        </script>    
 </body>
 </html>

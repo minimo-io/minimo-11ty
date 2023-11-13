@@ -12,10 +12,12 @@ const darkModeToggle = $(".dark-mode-toggle");
 
 // dom + sync js loaded - simply RnR!
 window.addEventListener('DOMContentLoaded', function () {
-    profileImage.style.setProperty('--animate-duration', '0.5s');
-    // profile image effect
-    profileImage.addEventListener('click', () => animateProfileImage() );
-    profileImage.click();
+    if (profileImage){
+        profileImage.style.setProperty('--animate-duration', '0.5s');
+        // profile image effect
+        profileImage.addEventListener('click', () => animateProfileImage() );
+        profileImage.click();
+    } 
     // keysdown for menu
     document.onkeydown = function (e) {
         if (e.defaultPrevented) return;

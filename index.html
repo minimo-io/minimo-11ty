@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">   
     <title>Mínimo</title>
+    <link rel="canonical" href="https://minimo.io">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;600&family=Roboto+Mono:wght@200;300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
     <link href="/assets/animate.min.css" rel="stylesheet" />
-    <!-- <link rel="stylesheet" href="/assets/fonts/fonts.css" /> -->
     <link rel="stylesheet" href="/mo.css" />
     <script src="/mo.js" defer></script>
-    <link rel="canonical" href="https://minimo.io">
 </head>
 <body>
     <div class="bg-grey bg--angled">
@@ -21,7 +20,7 @@
             <header class="header">
                 <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false"><span class="sr-only">Menu</span></button>
                 <ul id="primary-nav" class="nav" data-opened="false">
-                    <li class="active"><a href="#">Home</a></li>
+                    <li class="active"><a href="/">Home</a></li>
                     <li><a href="#">Projects</a></li>
                     <li><a href="#">Design</a></li>
                     <li><a href="#">Bitcoin</a></li>
@@ -165,5 +164,15 @@ const profileImage = document.querySelector(".img-profile");</code>
             2023 - Mínimo
         
     </footer>
+    <!-- Test ld+json results here: https://search.google.com/test/rich-results/result -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": Mínimo - Nicolás Erramuspe",
+            "url": "https://minimo.io",
+            "logo": "https://minimo.com/assets/images/yet-another-guy.webp"
+        }
+    </script>    
 </body>
 </html>
