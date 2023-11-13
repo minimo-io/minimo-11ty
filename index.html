@@ -41,7 +41,7 @@
                 width="132"
                 class="img-profile img-circular"
                 src="/assets/images/yet-another-guy.webp" 
-                alt="me-image" loading="lazy">
+                alt="profile-image" loading="lazy">
 
                 <h2 class="h4 font-weight-500 mt-3">👋 <i>Hey!</i></h2>
 
@@ -92,8 +92,8 @@
         </p>
         <p>Meant to be very simple to use!</p>
         <button class="dark-mode-toggle">Darken my life</button>
-        <figure id="cool-image">
-            <img src="/assets/images/cool-image.jpg" class="img-rounded">       
+        <figure>
+            <img src="/assets/images/cool-image.jpg" alt="Some cool image" class="img-rounded">       
             <figcaption>A caption for the above image</figcaption> 
         </figure>
         <p>
@@ -135,6 +135,10 @@ const profileImage = document.querySelector(".img-profile");</code>
                 And so here we will have more and more text, just stupid nonsense, nothing worthwhile but still something
                 to read.
             </p>
+            <figure class="full-width">
+                <img src="/assets/images/cool-image.jpg" class="img-rounded">       
+                <figcaption class="text-right">Credits to SomeRandomGuyAtUnsplash</figcaption> 
+            </figure>            
             <h2>Ah by the way</h2>
             <p>Almost forgot about it. By the way... <a href="/article.html">here is a link</a>.</p>
             <h3>And finally a sub-item</h3>
