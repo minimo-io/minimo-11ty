@@ -1,6 +1,8 @@
+'use strict';
+
 function $(s){ return document.querySelector(s); }
 
-let theme = localStorage.getItem("theme") ?? "theme-light"; // defaults
+let theme = localStorage.getItem("theme") || "theme-light"; // defaults
 
 const primaryNav = $(".nav");
 const navToggle = $(".nav-toggle");

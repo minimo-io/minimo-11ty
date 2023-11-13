@@ -7,6 +7,9 @@
     --main-content-max: 576px;
     /* Prev: 992px; */
     --secondary-content-max: 768px;
+    /* paddings */
+    --wrapper-gutter: 1rem;
+
     /* fonts */
     --ff-body: 'Roboto Mono', monospace;
     --ff-heading: 'Cormorant', serif;
@@ -225,6 +228,8 @@ strong{ font-weight: 400; }
     width:100%;
     max-width: var(--new-content-max, var(--main-content-max));
     margin-inline: auto;
+    padding-inline: var(--wrapper-gutter);
+    clear: both;
 }
 .wrapper-wider{
     --new-content-max: var(--secondary-content-max);
@@ -369,8 +374,10 @@ blockquote p::after { content: '\201D'; }
 }
 
 /* media queries */
-@media (max-width:576px){
-
-    .wrapper-profile{ padding: 0 1.5rem; }
+@media (max-width:768px){
+    :root{
+        --wrapper-gutter: 1.5rem;
+    }
+    /* .wrapper-profile{ padding-inline: calc(var(--wrapper-gutter) + .5rem ); } */
 
 }
