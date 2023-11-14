@@ -448,7 +448,7 @@ blockquote p::after { content: '\201D'; }
     display: flex;
     flex-direction: column;
     gap:.6rem;
-    padding:2rem 0 .5rem 0;
+    padding:2.1rem 0 .5rem 0;
 }
 .author-box + p{ 
     background: var(--high-background-gradient);
@@ -462,10 +462,10 @@ blockquote p::after { content: '\201D'; }
     flex:.5;
     align-self: center;
 }
-.author-box div:last-child{
+.author-box > :last-child{
     text-align: center;
     flex:2;
-    padding:0 calc(10vw - 5rem);   
+    padding-inline: 3rem;
 }
 .author-box div:last-child a{ border-bottom:0; }
 
