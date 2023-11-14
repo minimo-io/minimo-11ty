@@ -95,7 +95,11 @@ window.addEventListener('DOMContentLoaded', function () {
 // functions
 const animateProfileImage = () => animateCSS(profileImage, "rubberBand");
 const switchTheme = (themeClassName) => {
-    removeClassByPrefix(document.body, 'theme-');
+    // Credit to https://thegermancoder.com/2018/10/04/how-to-remove-classes-by-prefix-in-vanilla-javascript/
+    let prefix = "theme-";
+	let regx = new RegExp('\\b' + prefix + '[^ ]*[ ]?\\b', 'g');
+	document.body.className = document.body.className.replace(regx, '');
+
     document.body.classList.add(themeClassName);
     theme = localStorage.setItem("theme", themeClassName);
 };
@@ -118,9 +122,3 @@ const animateCSS = (element, animation, prefix = 'animate__') =>
 
     element.addEventListener('animationend', handleAnimationEnd, {once: true});
 });
-// Credit to https://thegermancoder.com/2018/10/04/how-to-remove-classes-by-prefix-in-vanilla-javascript/
-const removeClassByPrefix = (node, prefix) => {
-	var regx = new RegExp('\\b' + prefix + '[^ ]*[ ]?\\b', 'g');
-	node.className = node.className.replace(regx, '');
-	return node;
-}
