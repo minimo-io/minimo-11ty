@@ -412,6 +412,23 @@ blockquote p::after { content: '\201D'; }
         backdrop-filter: blur(.5rem);             
     }
 }
+.footer::before{
+    content:"";
+    display:block;
+    margin: 1rem auto;
+    width: 100%;
+    height:1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--foreground-text), rgba(0, 0, 0, 0));
+}
+.footer{
+    margin: 1rem auto;
+    padding:1rem 0;
+}
+.footer{
+    font-size: var(--fs-clamped-200);
+    text-align: center;
+    /* line-height: 20px; */
+}
 
 
 /* profile */
