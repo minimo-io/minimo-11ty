@@ -448,7 +448,14 @@ blockquote p::after { content: '\201D'; }
     display: flex;
     flex-direction: column;
     gap:.6rem;
-    padding-top:.6rem;
+    padding:2rem 0 .5rem 0;
+}
+.author-box + p{ 
+    background: var(--high-background-gradient);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    width: max-content;
+    margin: 1rem auto;
 }
 .author-box img{ max-width: 100px; }
 .author-box div:first-child{
@@ -460,9 +467,7 @@ blockquote p::after { content: '\201D'; }
     flex:2;
     padding:0 calc(10vw - 5rem);   
 }
-.author-box div:last-child a{
-    border-bottom:0;
-}
+.author-box div:last-child a{ border-bottom:0; }
 
 
 /* profile */
