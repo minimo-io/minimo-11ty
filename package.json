@@ -1,0 +1,25 @@
+{
+  "name": "@minimo-labs/minimo-11ty",
+  "version": "0.0.1",
+  "description": "A theme for the minimo.io website made with 11ty",
+  "main": "mo.js",
+  "scripts": {
+    "postcss:watch": "postcss "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minimo-io/minimo-11ty.git"
+  },
+  "keywords": [],
+  "author": "Nicolas <nicolas@minimo.io> (https://minimo.io)",
+  "license": "LGPL-2.1-only",
+  "bugs": {
+    "url": "https://github.com/minimo-io/minimo-11ty/issues"
+  },
+  "homepage": "https://github.com/minimo-io/minimo-11ty#readme",
+  "devDependencies": {
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0"
+  }
+}
