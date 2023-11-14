@@ -4,10 +4,11 @@ function $(s){ return document.querySelector(s); }
 
 let theme = localStorage.getItem("theme") || "theme-light"; // defaults
 
+const navButtons = $(".nav-buttons")
 const primaryNav = $(".nav");
+const themeToggle = $(".theme-toggle");
 const navToggle = $(".nav-toggle");
 const profileImage = $(".img-profile");
-const darkModeToggle = $(".dark-mode-toggle");
 
 
 // dom + sync js loaded - simply RnR!
@@ -32,7 +33,7 @@ window.addEventListener('DOMContentLoaded', function () {
                 navToggle.click();
                 break;
             case "d":
-                darkModeToggle.click();
+                themeToggle.click();
             break;
         }
     };
@@ -46,7 +47,7 @@ window.addEventListener('DOMContentLoaded', function () {
             // move menu items to the body in order to avoid clipping problems.
             document.body.prepend(primaryNav);
             primaryNav.prepend(navToggle);
-            //document.body.prepend(navToggle);
+            navButtons.style.display = "none";
 
             primaryNav.setAttribute("data-opened", "true");
             navToggle.setAttribute("aria-expanded", "true");
@@ -60,10 +61,11 @@ window.addEventListener('DOMContentLoaded', function () {
         }else if (visibility == "true"){
 
             $(".header").append(primaryNav);
-            $(".header").append(navToggle);
+            $(".nav-buttons").append(navToggle);
 
             primaryNav.setAttribute("data-opened", "false");
             navToggle.setAttribute("aria-expanded", "false");
+            navButtons.style.display = "";
             
             navToggle.classList.remove("cross");
             // slideOutLeft, zoomOutDown
@@ -73,9 +75,9 @@ window.addEventListener('DOMContentLoaded', function () {
             });        
         }
     });      
-    // theme switcher
+    // theme toggler
     switchTheme(theme);
-    darkModeToggle.addEventListener('click', () => {
+    themeToggle.addEventListener('click', () => {
         // in the future I could implement not just dark mode
         // buy more themes.
         if (document.body.classList.contains("theme-dark")){
