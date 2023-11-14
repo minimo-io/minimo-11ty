@@ -50,12 +50,13 @@ window.addEventListener('DOMContentLoaded', function () {
             navButtons.style.display = "none";
 
             primaryNav.setAttribute("data-opened", "true");
+            
             navToggle.setAttribute("aria-expanded", "true");
 
             primaryNav.style.display = "flex";
             navToggle.classList.add("cross");
             animateCSS(".nav", 'rubberBand').then((message) => {
-
+                navToggle.focus(); // for accessibility
             });
 
         }else if (visibility == "true"){

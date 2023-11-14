@@ -16,16 +16,17 @@
     <script src="/mo.js" defer></script>
 </head>
 <body>
-
+    <a href="#main" class="skip-to-main-content">Skip to main content</a>
     <div class="bg-grey">
         <div class="wrapper pt-1 pb-2">
             <header class="header">
                 <div class="nav-buttons">
-                    <button class="theme-toggle"></button>
-                    <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false"><span class="sr-only">Menu</span></button>
+                    <button class="theme-toggle"><span class="sr-only">Dark Mode Toggle</span></button>
+                    <button class="nav-toggle" aria-controls="primary-nav" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Menu</span></button>
                 </div>
-                <ul id="primary-nav" class="nav" data-opened="false">
-                    <li><a href="/">Home</a></li>
+
+                <ul id="primary-nav" class="nav" data-opened="false" role="menu" aria-label="Main menu">
+                    <li class="active"><a href="/">Home</a></li>
                     <li><a href="#">Projects</a></li>
                     <li><a href="#">Design</a></li>
                     <li><a href="#">Bitcoin</a></li>
@@ -43,7 +44,7 @@
                 </ul>
             </header>
 
-            <main>
+            <main id="main">
                 <h1>This is a freaking artice!</h1>
                 <h2>In turn it does have a subtitle.</h2>
                 <!-- <h3>I just want to see if all this will work, or not?</h3> -->
@@ -61,8 +62,6 @@
             to read.
         </p>
         <p>Oh, by the way... <a href="/articles.html">here is a link</a>.</p>
-
-        <button class="dark-mode-toggle">Darken my life</button>
     </div>
 
     <footer class="wrapper">
