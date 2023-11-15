@@ -1,0 +1,19 @@
+/*!
+* @author: minimo.io
+* @licenses: 
+* - Font Awesome Free 6.4.2 svg icons by @fontawesome - https://fontawesome.com/license (License: CC BY 4.0)
+* - animate.css 4.1.1 - https://animate.style/ - Licensed under the MIT license - http://opensource.org/licenses/MIT
+*/
+
+@import 'animate.min.css';
+
+@import 'base.css';
+@import 'themes.css';
+@import 'resets.css';
+@import 'typographies.css';
+@import 'utilities.css';
+@import 'icons.css';
+@import 'main.css';
+@import 'nav.css';
+@import 'profile.css';
+@import 'queries.css';

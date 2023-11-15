@@ -1,0 +1,11 @@
+/* profile */
+.wrapper-profile p{ }
+.img-profile{
+    display:block;
+    margin-inline: auto;
+    text-align: center;
+    width:132px;
+    border: 1px solid white;
+    padding: 2px;
+    cursor:pointer;
+}

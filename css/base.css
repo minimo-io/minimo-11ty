@@ -1,0 +1,35 @@
+/* custom properties  */
+:root{
+    --main-content-max: 576px;
+    /* Prev: 992px; */
+    --secondary-content-max: 768px;
+
+    /* paddings */
+    --wrapper-gutter: 1rem;
+
+    /* fonts */
+    --ff-body: 'Roboto Mono', monospace;
+    --ff-heading: 'Cormorant', serif;
+
+    /* font sizes */
+    /* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1240,19.69,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+    --fs-clamped-200: clamp(0.6944rem, 0.662rem + 0.162vw, 0.7875rem);
+    --fs-clamped-300: clamp(0.8331rem, 0.7805rem + 0.263vw, 0.9844rem);
+    --fs-clamped-400: clamp(1rem, 0.9198rem + 0.4011vw, 1.2306rem);
+    --fs-clamped-500: clamp(1.2rem, 1.0824rem + 0.588vw, 1.5381rem);
+    --fs-clamped-600: clamp(1.44rem, 1.272rem + 0.8402vw, 1.9231rem);
+    --fs-clamped-700: clamp(1.7281rem, 1.4931rem + 1.175vw, 2.4038rem);
+    --fs-clamped-800: clamp(2.0738rem, 1.7501rem + 1.6185vw, 3.0044rem);
+    --fs-clamped-900: clamp(2.4881rem, 2.0473rem + 2.2043vw, 3.7556rem);  
+
+    --svg-icon-size: 15px;
+
+    /* colors */
+    --background: white;
+    --high-background: #F3F3F3;
+    --high-background-gradient: linear-gradient(90deg, rgba(249,249,249,1) 20%, rgba(255,255,255,0) 100%);
+    --foreground-text: #2e3033;
+    /* --nav-backdrop: rgba(235, 235, 235, .5); */
+    --nav-backdrop: rgba(255, 255, 255, .5);
+    --nav-item-selected-color: black;
+}

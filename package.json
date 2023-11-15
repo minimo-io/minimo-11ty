@@ -4,7 +4,7 @@
   "description": "A theme for the minimo.io website made with 11ty",
   "main": "/js/mo.js",
   "scripts": {
-    "postcss:watch": "postcss "
+    "postcss:watch": "postcss css/style.css --dir dist"
   },
   "repository": {
     "type": "git",

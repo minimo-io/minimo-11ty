@@ -1,0 +1,5 @@
+/* media queries */
+@media (max-width:768px){
+    :root{ --wrapper-gutter: 1.5rem; }
+    .star::before{ display:none; }
+}
