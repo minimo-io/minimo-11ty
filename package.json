@@ -2,7 +2,7 @@
   "name": "@minimo-labs/minimo-11ty",
   "version": "0.0.1",
   "description": "A theme for the minimo.io website made with 11ty",
-  "main": "mo.js",
+  "main": "/js/mo.js",
   "scripts": {
     "postcss:watch": "postcss "
   },

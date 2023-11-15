@@ -43,14 +43,12 @@
 .theme-dark ::selection { color: black; background: white; }
 .theme-dark{
     transition: background 300ms; 
-
     --background: black;
     --high-background: rgb(27, 27, 27);
     --high-background-gradient: linear-gradient(90deg, rgb(27, 27, 27) 20%, rgba(0, 0, 0, 0) 100%);
     --foreground-text: #e7e7e7;
     --nav-backdrop: rgba(35, 35, 35, 0.5);
     --nav-item-selected-color: invert(100%);
-
 }
 /* not base64 encoded for ease of use when creating future themes */
 .theme-dark .nav-toggle{ background: url('data:image/svg+xml,<svg viewBox="0 0 400 400" fill="white" xmlns="http://www.w3.org/2000/svg"><circle cx="60" cy="60" r="40" /><circle cx="200" cy="60" r="40" /><circle cx="340" cy="60" r="40" /><circle cx="60" cy="200" r="40" /><circle cx="200" cy="200" r="40" /><circle cx="340" cy="200" r="40" /><circle cx="60" cy="340" r="40" /><circle cx="200" cy="340" r="40" /><circle cx="340" cy="340" r="40" /></svg>') no-repeat center; }
@@ -63,6 +61,13 @@
 /* resets */
 *, *::before, *::after { box-sizing: border-box; }
 * { margin: 0; padding: 0; }
+html{
+    /* Reason why: https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
+    -moz-text-size-adjust: none; 
+    -webkit-text-size-adjust: none; 
+    text-size-adjust: none
+}
+body, html{ overflow-x:hidden; }
 body{ overflow-x:hidden; margin: 0; -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 a{ text-decoration: none; }
 code { word-wrap: break-word; }
@@ -96,7 +101,6 @@ svg.fa{
 
 
 /* texts and font sizes */
-body, html{ overflow-x:hidden; }
 body{ 
     background:var(--background); 
     /* Firefox */
@@ -135,7 +139,7 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
     font-family: var(--ff-heading);
     line-height: 1;
     margin:1rem 0;
-    /* font-style: italic; */
+    text-wrap: balance;
 }
 h6, .h6, h5, .h5, h4, .h4{ font-weight: 400;  }
 h3, .h3, h2, .h2, h1, .h1{ font-weight: 600; }
@@ -237,6 +241,10 @@ strong{ font-weight: 400; }
   border: 0 !important;
 }
 .sr-only:not(caption) { position: absolute !important; }
+    /* bg clips */
+.bg--angled { clip-path: polygon(0 0,100% 0%,100% calc(100% - 5vh),0% 100%); }
+
+
 /* icons */
 .mo{ white-space: nowrap; }
 .mo::before{ 
@@ -274,10 +282,6 @@ strong{ font-weight: 400; }
     height: 16px;
     display:inline-block;
 }
-
-
-/* clips */
-.bg--angled { clip-path: polygon(0 0,100% 0%,100% calc(100% - 5vh),0% 100%); }
 
 /* main */
 a.skip-to-main-content {
