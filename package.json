@@ -2,9 +2,12 @@
   "name": "@minimo-labs/minimo-11ty",
   "version": "0.0.1",
   "description": "A theme for the minimo.io website made with 11ty",
-  "main": "/js/mo.js",
+  "main": "/mo.js",
   "scripts": {
-    "postcss:watch": "postcss css/style.css --dir dist"
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "watch:postcss": "postcss src/css/style.css --dir _site --watch",
+    "build:postcss": "postcss src/css/style.css --dir _site"
   },
   "repository": {
     "type": "git",
@@ -18,6 +21,7 @@
   },
   "homepage": "https://github.com/minimo-io/minimo-11ty#readme",
   "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
     "cssnano": "^6.0.1",
     "postcss": "^8.4.31",
     "postcss-cli": "^10.1.0",
