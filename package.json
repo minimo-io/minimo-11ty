@@ -4,8 +4,8 @@
   "description": "A theme for the minimo.io website made with 11ty",
   "main": "/mo.js",
   "scripts": {
-    "dev": "NODE_ENV=dev npm-run-all -p watch:*",
-    "build": "npm-run-all build:eleventy -p build:postcss",
+    "dev": "NODE_ENV=dev npm-run-all --parallel watch:*",
+    "build": "npm-run-all build:11ty --parallel build:postcss",
     "watch:11ty": "eleventy --serve",
     "build:11ty": "eleventy",
     "watch:postcss": "postcss src/css/style.css --dir _site --watch",
