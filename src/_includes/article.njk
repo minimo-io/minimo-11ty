@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">   
-    <title>Mínimo</title>
+    <title>{{ title }} - Mínimo</title>
     <link rel="canonical" href="https://minimo.io">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,8 +44,8 @@
         </div>
         <div class="wrapper wrapper-wide text-center pb-2">
             <main id="main">
-                <h1 class="font-italic font-weight-600">⚡️ The Lightning Network</h1>
-                <h2 class="fs-400 line-height-1-2">In turn it does have a subtitle, hope you really like it, because it is what it is and this is a wide container</h2>
+                <h1 class="font-italic font-weight-600">{{ title }}</h1>
+                <h2 class="fs-400 line-height-1-2">{{ description }}</h2>
                 <!-- <p style="font-size:var(--fs-clamped-200)" class="font-italic">March 25, 2023</p> -->
             </main>  
             <figure class="pt-2">
@@ -55,20 +55,8 @@
         </div>
     
     </div>
-    <div class="wrapper mt-2">
-        <h2 class="h3 font-italic">Intro.</h2>
-        <p>
-            This is some made out texxxxt, and i am re-learning css for the moment.
-            But belive it or not, this is a Jekyll project!
-        </p>       
-        <p>
-            And so here we will have more and more text, just stupid nonsense, nothing worthwhile but still something
-            to read.
-        </p>
-        <p>Oh, by the way... <a href="/">here is a link to our $HOME</a>.</p>
-        <!-- <hr> -->
 
-    </div>
+    {{ content | safe  }}
 
     <footer class="footer wrapper">
         <div class="author-box">

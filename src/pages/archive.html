@@ -1,10 +1,14 @@
+---
+title: Archive
+description: A collection of articles
+---
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">   
-    <title>Mínimo</title>
+    <title>{{ title }} - Mínimo</title>
     <link rel="canonical" href="https://minimo.io">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,6 +55,9 @@
     
     </div>
     <div id="main" class="archive wrapper wrapper-wide mt-2">
+        {% for post in collections.posts %}
+            <p><a href="{{ post.url }}">#24 - {{ post.data.title }}</a></p>
+        {% endfor %}
         <h2 class="h3 font-italic">2023.</h2>
         <p><a href="#">#24 - Swapping TRC-20 (Tether) tokens to Bitcoin (mainnet) using FixedFloat</a></p>
         <p class="star"><a href="#">#23 - <strong>⚡️ The Lightning Network</strong></a></p>

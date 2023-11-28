@@ -4,7 +4,7 @@
   "description": "A theme for the minimo.io website made with 11ty",
   "main": "/mo.js",
   "scripts": {
-    "dev": "NODE_ENV=dev npm-run-all --parallel watch:*",
+    "dev": "NODE_ENV=dev npm-run-all clean-build --parallel watch:*",
     "build": "npm-run-all clean-build build:11ty --parallel build:postcss minify:*",
     "clean-build": "rimraf _site",
     "watch:11ty": "eleventy --serve",
