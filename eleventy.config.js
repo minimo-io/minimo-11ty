@@ -7,6 +7,7 @@ module.exports = function(eleventyConfig){
         './src/js/bundle.js': 'bundle.js'
     });
 
+    eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
     return {
         dir: {
