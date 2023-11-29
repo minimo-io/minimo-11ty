@@ -15,10 +15,26 @@ description: A collection of articles
 
 </div>
 <div id="main" class="archive wrapper wrapper-wide mt-2">
-    {% for post in collections.posts %}
-        <p><a href="{{ post.url }}">#24 - {{ post.data.title }}</a></p>
+    {% set currentYear = "" %}
+    {% set count = collections.posts.length %}
+    {% for post in collections.posts | reverse %}
+        {% set postYear = post.date.getFullYear() %}
+        
+        {% if currentYear != postYear %}
+            {% set currentYear = postYear %}
+            <h2 class="h3 font-italic">{{ postYear }}.</h2>
+        {% endif %}
+        
+        <p{% if post.data.star %} class="star"{% endif %}>
+            <a href="{{ post.url }}">
+                #{% if count.toString().length < 10 %}0{% endif %}{{ count }} 
+                - {{ post.data.title }} {{ postYear }}
+            </a>
+        </p>
+        {% set count = count - 1 %}
     {% endfor %}
-    <h2 class="h3 font-italic">2023.</h2>
+
+    {# <h2 class="h3 font-italic">2023.</h2>
     <p><a href="#">#24 - Swapping TRC-20 (Tether) tokens to Bitcoin (mainnet) using FixedFloat</a></p>
     <p class="star"><a href="#">#23 - <strong>⚡️ The Lightning Network</strong></a></p>
     <p><a href="#">#22 - Desarrollo de aplicaciones utilizando Vue.js</a></p>
@@ -26,6 +42,6 @@ description: A collection of articles
     <p><a href="#">#21 - Poedit workflow</a><span class="pill">Wordpresss</span></p>
     <p class="star"><a href="#">#20 - <strong>Braaay, vinhos e vinhas</strong></a><span class="pill">project</span></p>
     <p class="star"><a href="#">#19 - <strong>Betizen.org, iGaming affiliate platform</strong></a></p>
-    <p><a href="#">#18 - Hops y la cerveza uruguaya</a><span class="pill">project</span></p>
+    <p><a href="#">#18 - Hops y la cerveza uruguaya</a><span class="pill">project</span></p> #}
 
 </div>

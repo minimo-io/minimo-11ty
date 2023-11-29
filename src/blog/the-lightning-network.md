@@ -1,6 +1,11 @@
 ---
+date: 2023-10-10
 title: "⚡️ The Lightning Network"
 description: "In turn it does have a subtitle, hope you really like it, because it is what it is and this is a wide container"
+star: true
+tags:
+  - bitcoin
+  - lightning network
 ---
 
 <div class="wrapper mt-2">
