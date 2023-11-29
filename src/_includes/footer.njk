@@ -23,15 +23,17 @@
         
         </div>
     </div>
+
     {% if page.url === "/archive/" %}
         <p style="font-size:var(--fs-clamped-200);">Last article published: Dic 13, 2023</p>
+    {% elseif page.url === "/" %}
+        
+         <p style="font-size:var(--fs-clamped-200);">minimo.io - {% year %}</p>
     {% else %}
         <p style="font-size:var(--fs-clamped-200);">Published on March 13, 2023</p>
     {% endif %}
-</footer>
 
-<footer class="footer wrapper wrapper-wide">
-    minimo.io - {% year %}
+    {% if page.url != "/"  %}<p style="font-size:var(--fs-clamped-200);">minimo.io - {% year %}</p>{% endif %}
 </footer>
 
 <!-- Test ld+json results here: https://search.google.com/test/rich-results/result -->
