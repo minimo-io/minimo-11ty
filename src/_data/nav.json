@@ -1,5 +1,32 @@
 {
     "items": [
-        
+        { 
+            "url": "/",
+            "name": "Home"
+        },
+        {
+            "url": "/projects/",
+            "name": "Projects"
+        },
+        {
+            "url": "/design/",
+            "name": "Design"
+        },
+        {
+            "url": "/devops/",
+            "name": "Development"
+        },
+        {
+            "url": "/biking/",
+            "name": "Biking"
+        },
+        {
+            "url": "/archive/",
+            "name": "Archive"
+        },
+        {
+            "url": "/shortcuts/",
+            "name": "Shortcuts"
+        }
     ]
 }

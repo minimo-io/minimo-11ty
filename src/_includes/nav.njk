@@ -6,18 +6,14 @@
 
     <ul id="primary-nav" class="nav" data-opened="false" role="menu" aria-label="Main menu">
        
-        {% for page in collections.pages %}
-            <li>
-                <a href="{{ page.url }}">{{ page.data.title }}</a>
-            </li>
+        {% for item in nav.items %}
+            <li 
+            {% if item.url == page.url %}
+                class="active"
+            {% endif %}
+            ><a href="{{ item.url }}">{{ item.name }}</a></li>
         {% endfor %}
         
-        <li class="active"><a href="/">Home</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Design</a></li>
-        <li><a href="#">Bitcoin</a></li>
-        <li><a href="#">Biking</a></li>
-        <li><a href="#">Shortcut<u>s</u></a></li>
         <li class="opacity-5">/</li>
         <li class="primary-nav-icons">
             <a href="{{ site.github }}" target="_blank" rel="noopener noreferrer">
