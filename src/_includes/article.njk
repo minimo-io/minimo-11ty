@@ -18,7 +18,7 @@
     <a href="#main" class="skip-to-main-content">Skip to main content</a>
     <div class="bg-grey">
         <div class="wrapper pt-1">
-             {% include "nav.njk" %}
+             {% include "components/nav.njk" %}
         </div>
         <div class="wrapper wrapper-wide text-center pb-2">
             <main id="main">
@@ -36,6 +36,6 @@
 
     {{ content | safe  }}
 
-    {% include "footer.njk" %}
+    {% include "components/footer.njk" %}
 </body>
 </html>
