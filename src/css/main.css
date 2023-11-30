@@ -79,3 +79,18 @@ blockquote p::after { content: '\201D'; }
 }
 .archive p{ margin-top:3px; }
 .archive a{ border-bottom:0; }
+
+/* read more */
+.read-more-btn{ cursor:pointer; }
+.read-more-text{
+    -webkit-transition: height .5s ease;
+    -o-transition: height .5s ease;
+    transition: height .5s ease;
+    overflow: hidden;
+}
+.read-more-text:not(.read-more-text-active){
+    display:none;
+}
+/* .read-more-text-active{
+
+} */

@@ -90,6 +90,41 @@ window.addEventListener('DOMContentLoaded', function () {
         
     });
 
+    // read more. Note! Arrow functions do not have a "this" context, so avoid
+    // https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#the_value_of_this_within_the_handler
+    $(".read-more-btn").addEventListener('click', function(e){
+        
+        let readMoreText = $(".read-more-text");
+
+        if (false === readMoreText.classList.contains("read-more-text-active")){
+            // show text
+            // first get the height of the hidden text,
+            // it must be visible for the browser first in order to have a height
+            // https://developer.mozilla.org/en-US/docs/Web/API/Element/clientHeight
+            readMoreText.classList.add("read-more-text-active");
+            readMoreText.style.height = 'auto';
+            let height = readMoreText.clientHeight + 'px';
+            
+            // reset the height and animate, via configured css styles
+            readMoreText.style.height = '0px';
+            setTimeout(function(){ readMoreText.style.height = height; }, 0);
+
+        }else{
+            // hide text
+            // smart use of: https://developer.mozilla.org/en-US/docs/Web/API/Element/transitionend_event
+            // thanks to Ciprian Popescu, https://github.com/wolffe
+            readMoreText.style.height = '0px';
+            readMoreText.addEventListener("transitionend", function(){
+                readMoreText.classList.remove("read-more-text-active");
+            });
+
+            
+        }
+       
+        e.preventDefault();
+
+    });
+
 }, false);
 
 // functions
