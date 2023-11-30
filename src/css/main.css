@@ -91,6 +91,3 @@ blockquote p::after { content: '\201D'; }
 .read-more-text:not(.read-more-text-active){
     display:none;
 }
-/* .read-more-text-active{
-
-} */

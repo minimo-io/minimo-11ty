@@ -116,6 +116,8 @@ window.addEventListener('DOMContentLoaded', function () {
             readMoreText.style.height = '0px';
             readMoreText.addEventListener("transitionend", function(){
                 readMoreText.classList.remove("read-more-text-active");
+            },{
+                once: true
             });
 
             
