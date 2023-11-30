@@ -37,22 +37,35 @@
 </footer>
 
 <!-- Test ld+json results here: https://search.google.com/test/rich-results/result -->
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "Title of my first article",
-    "image": [
-    "https://example.com/photos/1x1/photo.jpg"
-    ],
-    "datePublished": "2015-02-05T08:00:00+08:00",
-    "dateModified": "2015-02-05T09:20:00+08:00",
-    "author": [{
-        "@type": "Person",
-        "name": "Jane Doe",
-        "image": "janedoe.jpg",
-        "jobTitle": "Developer",
-        "url": "https://example.com/profile/janedoe123"
-    }]
-}
-</script>    
+
+{% if page.url === "/" %}
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": Mínimo - Nicolás Erramuspe",
+            "url": "https://minimo.io",
+            "logo": "/images/yet-another-guy.webp"
+        }
+    </script>
+{% else %}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Title of my first article",
+        "image": [
+        "https://example.com/photos/1x1/photo.jpg"
+        ],
+        "datePublished": "2015-02-05T08:00:00+08:00",
+        "dateModified": "2015-02-05T09:20:00+08:00",
+        "author": [{
+            "@type": "Person",
+            "name": "Jane Doe",
+            "image": "janedoe.jpg",
+            "jobTitle": "Developer",
+            "url": "https://example.com/profile/janedoe123"
+        }]
+    }
+    </script>   
+{% endif %}

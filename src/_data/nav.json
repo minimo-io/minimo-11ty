@@ -23,10 +23,6 @@
         {
             "url": "/archive/",
             "name": "Archive"
-        },
-        {
-            "url": "/shortcuts/",
-            "name": "Shortcuts"
         }
     ]
 }

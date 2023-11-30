@@ -2,18 +2,10 @@
 title: Archive
 description: A collection of articles
 ---
-<div class="bg-grey Xbg--angled">
-    <div class="wrapper pt-1 Xpb-2">
-        {% include "components/nav.njk" %}
-    </div>
-    <div class="wrapper wrapper-wide text-center pb-2">
-        <main>
-            <h1 class="font-italic font-weight-600">Archive</h1>
-            <h2 class="fs-400 line-height-1-2">Posts collection</h2>
-        </main>  
-    </div>
+{% import "macros/heros.njk" as hero with context %}
 
-</div>
+{{ hero.simple(title, description) }}
+
 <div id="main" class="archive wrapper wrapper-wide mt-2">
     {% set currentYear = "" %}
     {% set count = collections.posts.length %}
