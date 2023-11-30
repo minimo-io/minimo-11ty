@@ -36,9 +36,9 @@
     {% if page.url != "/"  %}<p style="font-size:var(--fs-clamped-200);">minimo.io - {% year %}</p>{% endif %}
 </footer>
 
-<!-- Test ld+json results here: https://search.google.com/test/rich-results/result -->
-
+{# Test ld+json results here: https://search.google.com/test/rich-results/result  #}
 {% if page.url === "/" %}
+    
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -48,7 +48,7 @@
             "logo": "/images/yet-another-guy.webp"
         }
     </script>
-{% else %}
+{% elif layout === "article" %}
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
