@@ -23,17 +23,18 @@
         
         </div>
     </div>
-
+    {% set defaultFooter = "minimo.io - v" + pkg.version %}
     {% if page.url === "/archive/" %}
         <p style="font-size:var(--fs-clamped-200);">Last article published: Dic 13, 2023</p>
     {% elseif page.url === "/" %}
         
-         <p style="font-size:var(--fs-clamped-200);">minimo.io - {% year %}</p>
+         <p style="font-size:var(--fs-clamped-200);">{{ defaultFooter }}</p>
+
     {% else %}
         <p style="font-size:var(--fs-clamped-200);">Published on March 13, 2023</p>
     {% endif %}
 
-    {% if page.url != "/"  %}<p style="font-size:var(--fs-clamped-200);">minimo.io - {% year %}</p>{% endif %}
+    {% if page.url != "/"  %}<p style="font-size:var(--fs-clamped-200);">{{ defaultFooter }}</p>{% endif %}
 </footer>
 
 {# Test ld+json results here: https://search.google.com/test/rich-results/result  #}
@@ -43,8 +44,8 @@
         {
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": Mínimo - Nicolás Erramuspe",
-            "url": "https://minimo.io",
+            "name": "{{ site.author | safe }}",
+            "url": "{{ page.url }}",
             "logo": "/images/yet-another-guy.webp"
         }
     </script>

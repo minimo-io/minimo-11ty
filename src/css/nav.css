@@ -85,7 +85,6 @@
         backdrop-filter: blur(.5rem);             
     }
 }
-.archive p{ margin-top:3px; }
 .footer::before{
     content:"";
     display:block;

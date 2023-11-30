@@ -65,8 +65,10 @@ p.profile-links a{
 }
 a{ 
     color:var(--foreground-text);
-    border-bottom: 1px solid rgba(46, 48, 51, .35);
+    border-bottom: var(--links-border);
     font-weight: 400;
+    /* background:var(--background);
+    filter:invert(100%); */
 }
 a:hover{ opacity: .5; }
 strong{ font-weight: 400; }

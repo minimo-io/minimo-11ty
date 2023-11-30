@@ -77,3 +77,5 @@ blockquote p::after { content: '\201D'; }
     margin-left:.2rem;
     transform:scale(0.8);
 }
+.archive p{ margin-top:3px; }
+.archive a{ border-bottom:0; }
