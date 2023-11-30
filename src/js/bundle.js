@@ -109,6 +109,12 @@ window.addEventListener('DOMContentLoaded', function () {
             readMoreText.style.height = '0px';
             setTimeout(function(){ readMoreText.style.height = height; }, 0);
 
+            // change button text and icon
+            this.querySelector("svg:nth-child(1)").classList.add("d-none");
+            this.querySelector("svg:nth-child(2)").classList.remove("d-none");
+            this.querySelector("span").textContent = "Read less";
+            
+
         }else{
             // hide text
             // smart use of: https://developer.mozilla.org/en-US/docs/Web/API/Element/transitionend_event
@@ -119,8 +125,9 @@ window.addEventListener('DOMContentLoaded', function () {
             },{
                 once: true
             });
-
-            
+            this.querySelector("svg:nth-child(1)").classList.remove("d-none");
+            this.querySelector("svg:nth-child(2)").classList.add("d-none");
+            this.querySelector("span").textContent = "Read more";
         }
        
         e.preventDefault();
