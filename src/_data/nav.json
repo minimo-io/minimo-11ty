@@ -21,8 +21,8 @@
             "name": "Biking"
         },
         {
-            "url": "/archive/",
-            "name": "Archive"
+            "url": "/blog/",
+            "name": "Blog"
         }
     ]
 }
