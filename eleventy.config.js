@@ -10,6 +10,13 @@ module.exports = function(eleventyConfig){
     eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
 
     eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+    eleventyConfig.addFilter("postDate", (dateString) => {
+        dateObj = new Date(dateString);
+        let monthName = dateObj.toLocaleString('en', { month: 'long' });
+        let dayNumber = dateObj.getDate();
+        let yearNumber = dateObj.getFullYear();
+        return `${monthName} ${dayNumber}, ${yearNumber}`;
+    });    
 
     return {
         dir: {

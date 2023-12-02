@@ -1,7 +1,7 @@
 ---
 title: "Some blog title"
 description: "A great description for this blog entry"
-date: 2020-05-31
+date: 2020-04-31T23:00:00
 tags:
   - test
 ---

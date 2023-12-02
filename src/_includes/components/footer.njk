@@ -25,13 +25,16 @@
     </div>
     {% set defaultFooter = "minimo.io - v" + pkg.version %}
     {% if page.url === "/blog/" %}
-        <p style="font-size:var(--fs-clamped-200);">Last article published: Dic 13, 2023</p>
+        {% set lastPostPublished = collections.posts | reverse %}
+        {% if collections.posts.length > 0 %}
+            <p style="font-size:var(--fs-clamped-200);">Last article published: {{ lastPostPublished.slice(0,1)[0].date | postDate }}</p>
+        {% endif %}
     {% elseif page.url === "/" %}
         
          <p style="font-size:var(--fs-clamped-200);">{{ defaultFooter }}</p>
 
     {% else %}
-        <p style="font-size:var(--fs-clamped-200);">Published on March 13, 2023</p>
+        <p style="font-size:var(--fs-clamped-200);">Published on {{ date | postDate }}</p>
     {% endif %}
 
     {% if page.url != "/"  %}<p style="font-size:var(--fs-clamped-200);">{{ defaultFooter }}</p>{% endif %}
