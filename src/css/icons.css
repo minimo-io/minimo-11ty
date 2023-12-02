@@ -8,23 +8,45 @@
     content: '';
  }
 .mo-vue::before{ 
-    background-position: 0px 6px;
-    background-size: 58px;
+    background-position: 2px 7px;
+    background-size: 111px;
+    height: 20px;
+    margin-right: 4px;
     width: 15px;
-    height: 21px;
-    margin-right: 2px;
 }
 .mo-figma::before{ 
-    background-position: -30px 2px;
-    background-size: 45px;
-    width: 10px;
+    background-position: -24px 5px;
+    background-size: 85px;
     height: 20px;
+    width: 13px;
+    margin-right: 2px;
 }
 .mo-flutter::before{
-    background-position: -13px 2px;
-    width: 21px;
+    background-position: -14px 4px;
+    background-size: 96px;
     height: 20px;
-    background-size: cover;
+    width: 13px;
+}
+.mo-woocommerce::before{
+    background-position: -72px 3px;
+    background-size: 103px;
+    height: 20px;
+    margin-right: 2px;
+    width: 33px;  
+}
+.mo-11ty::before{
+    background-position: -43px 3px;
+    background-size: 86px;
+    height: 19px;
+    margin-right: 2px;
+    width: 18px;
+}
+.mo-git::before{
+    background-position: 1px -18px;
+    background-size: 103px;
+    height: 20px;
+    margin-right: 4px;
+    width: 19px;
 }
 .star::before{
     content: "";
