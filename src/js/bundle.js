@@ -20,9 +20,11 @@ window.addEventListener('DOMContentLoaded', function () {
         // waving hand
         let heyHand = $(".hey-hand");
         if (heyHand){
-            heyHand.style.setProperty('--animate-duration', '1s');
+            heyHand.style.setProperty('--animate-duration', '0.8s');
+            heyHand.addEventListener('click', () => animateCSS(heyHand, "shakeX"));
+            this.setTimeout(()=>{ heyHand.click(); }, 500);
             const handInterval = setInterval(function(){
-                animateCSS(heyHand, "shakeX");
+                heyHand.click();
             }, 5000);
         }
     } 
