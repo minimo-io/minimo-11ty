@@ -10,14 +10,21 @@ const themeToggle = $(".theme-toggle");
 const navToggle = $(".nav-toggle");
 const profileImage = $(".img-profile");
 
-
 // dom + sync js loaded - simply RnR!
 window.addEventListener('DOMContentLoaded', function () {
+    // homepage animations
     if (profileImage){
         profileImage.style.setProperty('--animate-duration', '0.5s');
-        // profile image effect
         profileImage.addEventListener('click', () => animateProfileImage() );
         profileImage.click();
+        // waving hand
+        let heyHand = $(".hey-hand");
+        if (heyHand){
+            heyHand.style.setProperty('--animate-duration', '1s');
+            const handInterval = setInterval(function(){
+                animateCSS(heyHand, "shakeX");
+            }, 5000);
+        }
     } 
     // keysdown for menu
     document.onkeydown = function (e) {
