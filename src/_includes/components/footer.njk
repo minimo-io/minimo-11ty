@@ -1,4 +1,5 @@
 <footer class="footer wrapper">
+    {% if page.url !== "/" %}
     <div class="author-box">
         <div>
             <img decoding="async" 
@@ -23,6 +24,8 @@
         
         </div>
     </div>
+    {% endif %}
+    
     {% set defaultFooter = "minimo.io - v" + pkg.version %}
     {% if page.url === "/blog/" %}
         {% set lastPostPublished = collections.posts | reverse %}
@@ -31,10 +34,10 @@
         {% endif %}
     {% elseif page.url === "/" %}
         
-         <p style="font-size:var(--fs-clamped-200);">{{ defaultFooter }}</p>
+         <p class="site-version">{{ defaultFooter }}</p>
 
     {% else %}
-        <p style="font-size:var(--fs-clamped-200);">Published on {{ date | postDate }}</p>
+        {# <p style="font-size:var(--fs-clamped-200);">Published on {{ date | postDate }}</p> #}
     {% endif %}
 
     {% if page.url != "/"  %}<p style="font-size:var(--fs-clamped-200);">{{ defaultFooter }}</p>{% endif %}

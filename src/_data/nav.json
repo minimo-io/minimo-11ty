@@ -5,16 +5,8 @@
             "name": "Home"
         },
         {
-            "url": "/projects/",
-            "name": "Projects"
-        },
-        {
-            "url": "/design/",
-            "name": "Design"
-        },
-        {
-            "url": "/devops/",
-            "name": "Development"
+            "url": "/work/",
+            "name": "Work"
         },
         {
             "url": "/biking/",

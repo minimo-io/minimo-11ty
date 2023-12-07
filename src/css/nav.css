@@ -107,12 +107,13 @@
     gap:.6rem;
     padding:2.1rem 0 .5rem 0;
 }
-.author-box + p{ 
+.author-box + p, .site-version{ 
     background: var(--high-background-gradient);
     padding: 0.5rem 1rem;
     border-radius: 10px;
     width: max-content;
     margin: 1rem auto;
+    font-size:var(--fs-clamped-200);
 }
 .author-box img{ max-width: 100px; }
 .author-box div:first-child{

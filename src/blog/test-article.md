@@ -14,7 +14,7 @@ tags:
     </p>
     <p>Meant to be very simple to use!</p>
     <figure>
-        <img src="/images/cool-image.jpg" alt="Some cool image" class="img-rounded">
+        <img src="/images/project-betizen.jpg" alt="Some cool image" class="img-rounded">
         <figcaption>A caption for the above image</figcaption> 
     </figure>
     <p>

@@ -2,8 +2,9 @@
 date: 1988-01-02T14:00:00
 modified: 2023-10-11T10:13:20
 title: "⚡️ The Lightning Network"
-description: "In turn it does have a subtitle, hope you really like it, because it is what it is and this is a wide container"
-star: true
+description: "Newcomer notes on the Layer 2 scalability solution for Bitcoin"
+image: "/images/lightning-network-bitcon-capacity.webp"
+imageCaption: "wow!"
 tags:
   - bitcoin
   - lightning network
