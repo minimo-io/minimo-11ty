@@ -62,6 +62,11 @@ blockquote p::after { content: '\201D'; }
     padding: 0 0 0 1.3em; 
 }
 .wrapper ul { list-style-type: square; }
+
+.tags a{ 
+    text-decoration:none; 
+    border-bottom:0;
+}
 .pill{
     display: inline-block;
     padding: .25rem .5rem;

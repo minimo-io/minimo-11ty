@@ -2,8 +2,6 @@
 title: "Some blog title"
 description: "A great description for this blog entry"
 date: 2020-04-31T23:00:00
-tags:
-  - test
 ---
 <div class="wrapper text-justify mt-5">
     <h1>It's Huge!</h1>

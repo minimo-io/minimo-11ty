@@ -7,7 +7,7 @@ image: "/images/lightning-network-bitcon-capacity.webp"
 imageCaption: "lightning network"
 tags:
   - bitcoin
-  - lightning network
+  - lightning
 ---
 
 <div class="wrapper mt-2">

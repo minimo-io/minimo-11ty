@@ -23,7 +23,13 @@ description: "Design, prototyping and creation of cross-platform craziness using
                 <a href="{{ post.url }}" style="font-weight:200;">
                     #{% if count.toString().length < 10 %}0{% endif %}{{ count }} 
                     - {{ post.data.title }} {{ postYear }}
-                </a><span class="pill">article</span>
+                </a>
+                {# <span class="pill">article</span> #}
+                {% for tag in post.data.tags %} 
+                    {% if tag != "posts" %}
+                        <a href="/tag/{{ tag | slugify }}/"><span class="pill">{{ tag }}</span></a>
+                    {% endif %}
+                {% endfor %}                
             </p>
             {% set count = count - 1 %}
         {% endfor %}

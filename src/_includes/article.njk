@@ -8,8 +8,10 @@ layout: base
 
  {{ content | safe  }}
 
-<div class="wrapper mt-2">
+<div class="tags wrapper mt-2">
     {% for tag in tags %}
-        <span class="pill">{{ tag }}</span>
+        {% if tag != "posts" %}
+            <a href="/tag/{{ tag | slugify }}/"><span class="pill">{{ tag }}</span></a>
+        {% endif %}
     {% endfor %}
 </div>
