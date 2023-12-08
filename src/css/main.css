@@ -75,7 +75,6 @@ blockquote p::after { content: '\201D'; }
     text-transform: lowercase;
     background: var(--high-background);
     margin-left:.2rem;
-    transform:scale(0.8);
 }
 
 .archive p{ 

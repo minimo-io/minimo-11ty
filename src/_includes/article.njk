@@ -4,6 +4,12 @@ layout: base
 
 {% import "macros/heros.njk" as hero with context %}
 
-{{ hero.article(title, description, image) }}
+{{ hero.article(title, description, image, imageCaption) }}
 
  {{ content | safe  }}
+
+<div class="wrapper mt-2">
+    {% for tag in tags %}
+        <span class="pill">{{ tag }}</span>
+    {% endfor %}
+</div>

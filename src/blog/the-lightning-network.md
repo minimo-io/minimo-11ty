@@ -4,7 +4,7 @@ modified: 2023-10-11T10:13:20
 title: "⚡️ The Lightning Network"
 description: "Newcomer notes on the Layer 2 scalability solution for Bitcoin"
 image: "/images/lightning-network-bitcon-capacity.webp"
-imageCaption: "wow!"
+imageCaption: "lightning network"
 tags:
   - bitcoin
   - lightning network

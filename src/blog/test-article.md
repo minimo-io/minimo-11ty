@@ -12,9 +12,8 @@ tags:
     <p class="fs-400">Now let's imagine a text, like the profile one, that needs to be a litte bigger.
         Even as a paragraph. Here is the .fs-400 class.
     </p>
-    <p>Meant to be very simple to use!</p>
     <figure>
-        <img src="/images/project-betizen.jpg" alt="Some cool image" class="img-rounded">
+        <img src="/images/project-hops.webp" alt="hops-project" class="img-rounded">
         <figcaption>A caption for the above image</figcaption> 
     </figure>
     <p>
@@ -75,7 +74,7 @@ const profileImage = document.querySelector(".img-profile");</code>
         to read.
     </p>
     <figure class="full-width">
-        <img src="/images/cool-image.jpg" class="img-rounded">       
+        <img src="/images/project-betizen.webp" class="img-rounded">       
         <figcaption class="text-right">Credits to SomeRandomGuyAtUnsplash</figcaption> 
     </figure>            
     <h2>Ah by the way</h2>

@@ -19,6 +19,7 @@ description: A collection of articles
                 #{% if count.toString().length < 10 %}0{% endif %}{{ count }} 
                 - {{ post.data.title }} {{ postYear }}
             </a>
+            <span class="pill">article</span>
         </p>
         {% set count = count - 1 %}
     {% endfor %}
