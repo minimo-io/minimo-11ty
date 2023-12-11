@@ -1,3 +1,5 @@
+const emojiReadTime = require("@11tyrocks/eleventy-plugin-emoji-readtime");
+
 module.exports = function(eleventyConfig){
 
 
@@ -17,6 +19,11 @@ module.exports = function(eleventyConfig){
         let yearNumber = dateObj.getFullYear();
         return `${monthName} ${dayNumber}, ${yearNumber}`;
     });    
+
+    // reading time
+    eleventyConfig.addPlugin(emojiReadTime, {
+        showEmoji: false
+    });
 
     return {
         dir: {

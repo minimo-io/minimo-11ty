@@ -35,5 +35,8 @@
     "postcss-import": "^15.1.0",
     "rimraf": "^5.0.5",
     "terser": "^5.24.0"
+  },
+  "dependencies": {
+    "@11tyrocks/eleventy-plugin-emoji-readtime": "^1.0.1"
   }
 }

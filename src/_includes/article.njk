@@ -6,7 +6,9 @@ layout: base
 
 {{ hero.article(title, description, image, imageCaption) }}
 
- {{ content | safe  }}
+<article class="article">
+    {{ content | safe  }}
+</article>
 
 <div class="tags wrapper mt-2">
     {% for tag in tags %}
@@ -14,4 +16,5 @@ layout: base
             <a href="/tag/{{ tag | slugify }}/"><span class="pill">{{ tag }}</span></a>
         {% endif %}
     {% endfor %}
+    <p class="mt-1"><a href="/blog/">← Back to archive</a></p>
 </div>

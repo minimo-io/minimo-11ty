@@ -159,7 +159,7 @@ window.addEventListener('DOMContentLoaded', function () {
                     readMoreText.style.height = height; 
                     
                 }, 0);
-                
+
                  // smooth scroll to this anchor
                 goToHashed("#more");
 

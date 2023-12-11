@@ -21,7 +21,8 @@
             <h1 class="font-italic font-weight-600">{{ title }}</h1>
             <h2 class="fs-400 line-height-1-2">{{ description }}</h2>
             <p style="font-size:var(--fs-clamped-200)" class="font-italic">
-                {{ date | postDate  }} - <a href="/blog/">Back to archive</a>
+                {# {{ date | postDate  }} - <a href="/blog/">Back to archive</a> #}
+                {{ date | postDate  }} - {{ content | emojiReadTime }}
             </p>
         </main>
         {% if image %}
