@@ -5,8 +5,8 @@ date: 2020-04-31T23:00:00
 ---
 <div class="wrapper text-justify mt-5">
     <h1>It's Huge!</h1>
-    <h2>The Lightning Network</h2>
-    <h2 class="h4">This is yet another standard "container", or wrapper.</h2>
+    <h2 id="wow">The Lightning Network</h2>
+    <h4>This is yet another standard "container", or wrapper.</h4>
     <a href="#intro">Intro.</a>
     <a href="#lightning">Projects.</a>
     <p class="fs-400">Now let's imagine a text, like the profile one, that needs to be a litte bigger.
@@ -78,7 +78,7 @@ const profileImage = document.querySelector(".img-profile");</code>
         <figcaption class="text-right">Credits to SomeRandomGuyAtUnsplash</figcaption> 
     </figure>            
     <h2>Ah by the way</h2>
-    <p>Almost forgot about it. By the way... <a href="/article">here is a link</a>.</p>
+    <p>Almost forgot about it. By the way... <a href="/blog/">here is a link</a>.</p>
     <h3>And finally a sub-item</h3>
     <p>This is just a sub-item, nothing fancy!</p>
     <h4 class="mb-0">Smaller stuff coming</h4>

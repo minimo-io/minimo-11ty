@@ -48,7 +48,11 @@ h4, .h4{ font-size: var(--fs-clamped-600); }
 h3, .h3{ font-size: var(--fs-clamped-700); }
 h2, .h2{ font-size: var(--fs-clamped-800); }
 h1, .h1{ font-size: var(--fs-clamped-900); }
-
+a.heading-hash{ 
+    text-decoration:none; 
+    border-bottom:0; 
+    vertical-align: text-top;
+}
 .nav, .nav a{ 
     font-size:var(--fs-clamped-300);
 }

@@ -11,7 +11,7 @@ tags:
 ---
 
 <div class="wrapper mt-2">
-    <h2 class="h3 font-italic">Intro.</h2>
+    <h2 id="intro" class="h3 font-italic">Intro.</h2>
     <p>
         This is some made out texxxxt, and i am re-learning css for the moment.
         But belive it or not, this is a Jekyll project!

@@ -1,6 +1,6 @@
 'use strict';
 
-function $(s){ return document.querySelector(s); }
+function $(s, all){ return (all ? document.querySelectorAll(s) : document.querySelector(s) ) }
 
 let theme = localStorage.getItem("theme") || "theme-light"; // defaults
 
@@ -24,32 +24,10 @@ const goToHashed = (manualAnchor) => {
     
     }
 }
+
 // dom + sync js loaded - simply RnR!
 window.addEventListener('DOMContentLoaded', function () {
 
-
-    // anchor internal links smooth-scrolling
-    const anchors = document.querySelectorAll('a[href*="#"]');
-    anchors && anchors.forEach(anchor =>{
-        anchor.addEventListener('click', function(e){
-            e.preventDefault();
-            // console.log("Hashing link");
-            const goToHash = $(this.getAttribute("href"));
-
-            goToHash.style.scrollMarginTop = "10px";
-            goToHash.scrollIntoView({ behavior: "smooth", block: "start" });
-      
-            window.history && history.replaceState(undefined, undefined, this.getAttribute("href"));
-        });
-    });
-
-    // process on-page-load hashes (go to anchor, smoothly)
-    goToHashed();
-    // process manual hash changes, also smoothly
-    window.addEventListener('hashchange', (e)=>{
-        e.preventDefault(); 
-        goToHashed();
-     }, false);
 
     // homepage animations
     if (profileImage){
@@ -194,6 +172,39 @@ window.addEventListener('DOMContentLoaded', function () {
 
         });
     }
+
+    // add hashing links to headings for deep linking
+    const articleHeadings = $(".article h2, .article .h2", "all");
+    articleHeadings && articleHeadings.forEach( heading => {
+        if (heading.getAttribute("id")){
+            heading.innerHTML =  
+            `<a href='#${ heading.getAttribute("id") }' title='${ heading.textContent }' class='heading-hash'>#</a> ` +
+            heading.innerHTML;
+        }
+    });
+
+    // anchor internal links smooth-scrolling
+    const anchors = $('a[href*="#"]', "all");
+    anchors && anchors.forEach(anchor =>{
+        anchor.addEventListener('click', function(e){
+            e.preventDefault();
+            // console.log("Hashing link");
+            const goToHash = $(this.getAttribute("href"));
+
+            goToHash.style.scrollMarginTop = "10px";
+            goToHash.scrollIntoView({ behavior: "smooth", block: "start" });
+      
+            window.history && history.replaceState(undefined, undefined, this.getAttribute("href"));
+        });
+    });
+
+    // process on-page-load hashes (go to anchor, smoothly)
+    goToHashed();
+    // process manual hash changes, also smoothly
+    window.addEventListener('hashchange', (e)=>{
+        e.preventDefault(); 
+        goToHashed();
+     }, false);    
 
 }, false);
 
