@@ -9,12 +9,12 @@
             "name": "Work"
         },
         {
-            "url": "/biking/",
-            "name": "Biking"
-        },
-        {
             "url": "/blog/",
             "name": "Blog"
-        }
+        },
+        {
+            "url": "/biking/",
+            "name": "Biking"
+        }        
     ]
 }

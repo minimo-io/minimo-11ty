@@ -9,10 +9,14 @@ const primaryNav = $(".nav");
 const themeToggle = $(".theme-toggle");
 const navToggle = $(".nav-toggle");
 const profileImage = $(".img-profile");
-const goToHashed = () => {
-    if (window.location.hash && window.location.hash.length) {
-        const hashedElem = $(window.location.hash);
-        console.log("Going to hash: " + window.location.hash);
+const goToHashed = (manualAnchor) => {
+    if (
+        window.location.hash && window.location.hash.length 
+        || manualAnchor 
+    ) {
+        
+        const hashedElem = $(manualAnchor) || $(window.location.hash);
+        // console.log("Going to hash: " + window.location.hash);
         if (hashedElem){
             hashedElem.style.scrollMarginTop = "10px";
             hashedElem.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -41,7 +45,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
     // process on-page-load hashes (go to anchor, smoothly)
     goToHashed();
-    // process manual hash changes
+    // process manual hash changes, also smoothly
     window.addEventListener('hashchange', (e)=>{
         e.preventDefault(); 
         goToHashed();
@@ -151,7 +155,13 @@ window.addEventListener('DOMContentLoaded', function () {
                 
                 // reset the height and animate, via configured css styles
                 readMoreText.style.height = '0px';
-                setTimeout(function(){ readMoreText.style.height = height; }, 0);
+                setTimeout(function(){ 
+                    readMoreText.style.height = height; 
+                    
+                }, 0);
+                
+                 // smooth scroll to this anchor
+                goToHashed("#more");
 
                 // change button text and icon
                 this.querySelector("svg:nth-child(1)").classList.add("d-none");
@@ -160,6 +170,7 @@ window.addEventListener('DOMContentLoaded', function () {
                 
 
             }else{
+
                 // hide text
                 // smart use of: https://developer.mozilla.org/en-US/docs/Web/API/Element/transitionend_event
                 // thanks to Ciprian Popescu, https://github.com/wolffe
@@ -169,6 +180,11 @@ window.addEventListener('DOMContentLoaded', function () {
                 },{
                     once: true
                 });
+
+                // smooth scroll to this anchor
+                goToHashed("#main");
+                
+                // change button text and icon back to read-more
                 this.querySelector("svg:nth-child(1)").classList.remove("d-none");
                 this.querySelector("svg:nth-child(2)").classList.add("d-none");
                 this.querySelector("span").textContent = "Read more";

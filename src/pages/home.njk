@@ -25,7 +25,7 @@ description: "Design, prototyping and creation of cross-platform craziness using
                     - {{ post.data.title }} {{ postYear }}
                 </a>
                 {# <span class="pill">article</span> #}
-                {% for tag in post.data.tags %} 
+                {% for tag in post.data.tags %}
                     {% if tag != "posts" %}
                         <a href="/tag/{{ tag | slugify }}/"><span class="pill">{{ tag }}</span></a>
                     {% endif %}
@@ -33,16 +33,9 @@ description: "Design, prototyping and creation of cross-platform craziness using
             </p>
             {% set count = count - 1 %}
         {% endfor %}
+
         <p class="star" Xstyle="font-size:var(--fs-clamped-400);font-weight:200;"><a Xstyle="font-weight:200;" href="#">#00 - Braaay, vinhos e vinhas</a><span class="pill">project</span></p>
-        {# <h2 class="h3 font-italic">2023.</h2>
-        <p><a href="#">#24 - Swapping TRC-20 (Tether) tokens to Bitcoin (mainnet) using FixedFloat</a></p>
-        <p class="star"><a href="#">#23 - <strong>⚡️ The Lightning Network</strong></a></p>
-        <p><a href="#">#22 - Desarrollo de aplicaciones utilizando Vue.js</a></p>
-        <h2 class="h3 font-italic">2022.</h2>
-        <p><a href="#">#21 - Poedit workflow</a><span class="pill">Wordpresss</span></p>
-        
-        <p class="star"><a href="#">#19 - <strong>Betizen.org, iGaming affiliate platform</strong></a></p>
-        <p><a href="#">#18 - Hops y la cerveza uruguaya</a><span class="pill">project</span></p> #}
+
     </div>
 
     <div id="photos" class="mb-4">
@@ -50,12 +43,12 @@ description: "Design, prototyping and creation of cross-platform craziness using
             🖼️ <span class="font-italic">Photos</span>
         </h3> 
     
-        <p class="Xfs-400 font-italic Xtext-center">A collection of public available pictures.</p>
+        <p class="Xfs-400 font-italic">A collection of public available pictures.</p>
     </div>
     <h3 id="photos" class="h3 font-weight-600 mt-4">
         🚴🏼‍♂️ <span class="font-italic">Biking</span>
     </h3>    
-     <p class="Xfs-400 font-italic Xtext-center">Some aventures taken place on top of <a href="/biking/">a bike</a>, on <a href="https://en.wikipedia.org/wiki/GPS_Exchange_Format" target="_blank" rel="noopener noreferrer">GPX files</a>.</p>        
+     <p class="Xfs-400 font-italic">Some aventures on top of <a href="/biking/">a bike</a>, on <a href="https://en.wikipedia.org/wiki/GPS_Exchange_Format" target="_blank" rel="noopener noreferrer">GPX files</a>.</p>        
 </div>
 
 {# <hr class="my-3"> #}
