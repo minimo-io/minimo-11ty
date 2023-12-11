@@ -21,8 +21,8 @@ description: "Design, prototyping and creation of cross-platform craziness using
             
             <p {% if post.data.star %} class="star"{% endif %} Xstyle="font-size:var(--fs-clamped-400);font-weight:200;">
                 <a href="{{ post.url }}" style="font-weight:200;">
-                    #{% if count.toString().length < 10 %}0{% endif %}{{ count }} 
-                    - {{ post.data.title }} {{ postYear }}
+                    #{% if count.toString().length < 2 %}0{% endif %}{{ count }} 
+                    - {{ post.data.title }}
                 </a>
                 {# <span class="pill">article</span> #}
                 {% for tag in post.data.tags %}
@@ -33,9 +33,6 @@ description: "Design, prototyping and creation of cross-platform craziness using
             </p>
             {% set count = count - 1 %}
         {% endfor %}
-
-        <p class="star" Xstyle="font-size:var(--fs-clamped-400);font-weight:200;"><a Xstyle="font-weight:200;" href="#">#00 - Braaay, vinhos e vinhas</a><span class="pill">project</span></p>
-
     </div>
 
     <div class="mb-4">

@@ -1,6 +1,6 @@
 ---
-date: 1988-01-02T14:00:00
-modified: 2023-10-11T10:13:20
+date: 2023-02-27T12:14:47+00:00
+modified: 2023-09-03T22:20:13
 title: "⚡️ The Lightning Network"
 description: "Newcomer notes on the Layer 2 scalability solution for Bitcoin"
 image: "/images/lightning-network-bitcon-capacity.webp"

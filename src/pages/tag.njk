@@ -1,12 +1,19 @@
 ---
-title: Blog
-description: A collection of articles
+pagination:
+    data: collections
+    size: 1
+    alias: tag
+    addAllPagesToCollections: true
+    layout: base
+permalink: /tag/{{ tag | slugify }}/
+eleventyComputed:
+    title: Tagged with "{{ tag }}"
 ---
 
-<div id="main" class="archive wrapper Xwrapper-wide mt-2">
+<div id="main" class="archive wrapper mt-2">
     {% set currentYear = "" %}
-    {% set count = collections.posts.length %}
-    {% for post in collections.posts | reverse %}
+    {% set count = collections[tag].length %}    
+    {% for post in collections[tag] | reverse %}
         {% set postYear = post.date.getFullYear() %}
         
         {% if currentYear != postYear %}
@@ -17,7 +24,7 @@ description: A collection of articles
         <p{% if post.data.star %} class="star"{% endif %}>
             <a href="{{ post.url }}">
                 #{% if count.toString().length < 2 %}0{% endif %}{{ count }} 
-                - {{ post.data.title }}
+                - {{ post.data.title or "Homepage" }}
             </a>
             {% for tag in post.data.tags %} 
                 {% if tag != "posts" %}

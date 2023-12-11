@@ -1,12 +1,12 @@
 ---
-title: "Some blog title"
-description: "A great description for this blog entry"
-date: 2020-04-31T23:00:00
+title: "Minimal snippets (reference)"
+description: "Common patters and elements for the new minimo.io site"
+date: 2023-11-20T20:00:00
 ---
 <div class="wrapper text-justify mt-5">
     <h1>It's Huge!</h1>
-    <h2 id="wow">The Lightning Network</h2>
-    <h4>This is yet another standard "container", or wrapper.</h4>
+    <h2 id="wow">The new minimo is out!</h2>
+    <h4>This is yet another example article serving as a reference.</h4>
     <a href="#intro">Intro.</a>
     <a href="#lightning">Projects.</a>
     <p class="fs-400">Now let's imagine a text, like the profile one, that needs to be a litte bigger.
