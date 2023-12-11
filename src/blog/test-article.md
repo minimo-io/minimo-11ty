@@ -7,6 +7,8 @@ date: 2020-04-31T23:00:00
     <h1>It's Huge!</h1>
     <h2>The Lightning Network</h2>
     <h2 class="h4">This is yet another standard "container", or wrapper.</h2>
+    <a href="#intro">Intro.</a>
+    <a href="#lightning">Projects.</a>
     <p class="fs-400">Now let's imagine a text, like the profile one, that needs to be a litte bigger.
         Even as a paragraph. Here is the .fs-400 class.
     </p>
@@ -42,7 +44,7 @@ const profileImage = document.querySelector(".img-profile");</code>
     - Ok one thing is this
     - And this is totally another thing
 
-    <h2 class="h3 font-italic">Intro.</h2>
+    <h2 id="intro" class="h3 font-italic">Intro.</h2>
     <p>
         This is some made out texxxxt, and i am re-learning css for the moment.
         But belive it or not, this is a Jekyll project!
@@ -55,7 +57,7 @@ const profileImage = document.querySelector(".img-profile");</code>
 </div>
 <hr>
 <div class="wrapper wrapper-wide">
-    <h1 class="h2 text-center">⚡️ The Lightning Network</h1>
+    <h1 id="lightning" class="h2 text-center">⚡️ The Lightning Network</h1>
     <p>
         This is some made out texxxxt, and i am re-learning css for the moment.
         But belive it or not, this is a Jekyll project!

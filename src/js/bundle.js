@@ -9,9 +9,44 @@ const primaryNav = $(".nav");
 const themeToggle = $(".theme-toggle");
 const navToggle = $(".nav-toggle");
 const profileImage = $(".img-profile");
-
+const goToHashed = () => {
+    if (window.location.hash && window.location.hash.length) {
+        const hashedElem = $(window.location.hash);
+        console.log("Going to hash: " + window.location.hash);
+        if (hashedElem){
+            hashedElem.style.scrollMarginTop = "10px";
+            hashedElem.scrollIntoView({ behavior: "smooth", block: "start" });
+        } 
+    
+    }
+}
 // dom + sync js loaded - simply RnR!
 window.addEventListener('DOMContentLoaded', function () {
+
+
+    // anchor internal links smooth-scrolling
+    const anchors = document.querySelectorAll('a[href*="#"]');
+    anchors && anchors.forEach(anchor =>{
+        anchor.addEventListener('click', function(e){
+            e.preventDefault();
+            // console.log("Hashing link");
+            const goToHash = $(this.getAttribute("href"));
+
+            goToHash.style.scrollMarginTop = "10px";
+            goToHash.scrollIntoView({ behavior: "smooth", block: "start" });
+      
+            window.history && history.replaceState(undefined, undefined, this.getAttribute("href"));
+        });
+    });
+
+    // process on-page-load hashes (go to anchor, smoothly)
+    goToHashed();
+    // process manual hash changes
+    window.addEventListener('hashchange', (e)=>{
+        e.preventDefault(); 
+        goToHashed();
+     }, false);
+
     // homepage animations
     if (profileImage){
         profileImage.style.setProperty('--animate-duration', '0.5s');
@@ -91,7 +126,6 @@ window.addEventListener('DOMContentLoaded', function () {
         // in the future I could implement not just dark mode
         // buy more themes.
         if (document.body.classList.contains("theme-dark")){
-            
             switchTheme("theme-light");
         }else{
             switchTheme("theme-dark");
@@ -99,49 +133,51 @@ window.addEventListener('DOMContentLoaded', function () {
         
     });
 
-    // read more. Note! Arrow functions do not have a "this" context, so avoid
+    // read more button. Note! Arrow functions do not have a "this" context, so avoid
     // https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#the_value_of_this_within_the_handler
-    $(".read-more-btn").addEventListener('click', function(e){
+    if ($(".read-more-btn")){
+        $(".read-more-btn").addEventListener('click', function(e){
+            
+            let readMoreText = $(".read-more-text");
+
+            if (false === readMoreText.classList.contains("read-more-text-active")){
+                // show text
+                // first get the height of the hidden text,
+                // it must be visible for the browser first in order to have a height
+                // https://developer.mozilla.org/en-US/docs/Web/API/Element/clientHeight
+                readMoreText.classList.add("read-more-text-active");
+                readMoreText.style.height = 'auto';
+                let height = readMoreText.clientHeight + 'px';
+                
+                // reset the height and animate, via configured css styles
+                readMoreText.style.height = '0px';
+                setTimeout(function(){ readMoreText.style.height = height; }, 0);
+
+                // change button text and icon
+                this.querySelector("svg:nth-child(1)").classList.add("d-none");
+                this.querySelector("svg:nth-child(2)").classList.remove("d-none");
+                this.querySelector("span").textContent = "Read less";
+                
+
+            }else{
+                // hide text
+                // smart use of: https://developer.mozilla.org/en-US/docs/Web/API/Element/transitionend_event
+                // thanks to Ciprian Popescu, https://github.com/wolffe
+                readMoreText.style.height = '0px';
+                readMoreText.addEventListener("transitionend", function(){
+                    readMoreText.classList.remove("read-more-text-active");
+                },{
+                    once: true
+                });
+                this.querySelector("svg:nth-child(1)").classList.remove("d-none");
+                this.querySelector("svg:nth-child(2)").classList.add("d-none");
+                this.querySelector("span").textContent = "Read more";
+            }
         
-        let readMoreText = $(".read-more-text");
+            e.preventDefault();
 
-        if (false === readMoreText.classList.contains("read-more-text-active")){
-            // show text
-            // first get the height of the hidden text,
-            // it must be visible for the browser first in order to have a height
-            // https://developer.mozilla.org/en-US/docs/Web/API/Element/clientHeight
-            readMoreText.classList.add("read-more-text-active");
-            readMoreText.style.height = 'auto';
-            let height = readMoreText.clientHeight + 'px';
-            
-            // reset the height and animate, via configured css styles
-            readMoreText.style.height = '0px';
-            setTimeout(function(){ readMoreText.style.height = height; }, 0);
-
-            // change button text and icon
-            this.querySelector("svg:nth-child(1)").classList.add("d-none");
-            this.querySelector("svg:nth-child(2)").classList.remove("d-none");
-            this.querySelector("span").textContent = "Read less";
-            
-
-        }else{
-            // hide text
-            // smart use of: https://developer.mozilla.org/en-US/docs/Web/API/Element/transitionend_event
-            // thanks to Ciprian Popescu, https://github.com/wolffe
-            readMoreText.style.height = '0px';
-            readMoreText.addEventListener("transitionend", function(){
-                readMoreText.classList.remove("read-more-text-active");
-            },{
-                once: true
-            });
-            this.querySelector("svg:nth-child(1)").classList.remove("d-none");
-            this.querySelector("svg:nth-child(2)").classList.add("d-none");
-            this.querySelector("span").textContent = "Read more";
-        }
-       
-        e.preventDefault();
-
-    });
+        });
+    }
 
 }, false);
 
