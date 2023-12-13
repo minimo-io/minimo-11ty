@@ -1,0 +1,26 @@
+{% macro archive(collection) %}
+    {% set currentYear = "" %}
+    {% set count = collection.length %}
+    {% for post in collection | reverse %}
+        {% set postYear = post.date.getFullYear() %}
+        
+        {% if currentYear != postYear %}
+            {% set currentYear = postYear %}
+            <h2 class="h3 font-italic">{{ postYear }}.</h2>
+        {% endif %}
+        
+        <p {% if post.data.star %} class="star"{% endif %} Xstyle="font-size:var(--fs-clamped-400);font-weight:200;">
+            <a href="{{ post.url }}" style="font-weight:200;">
+                #{% if count.toString().length < 2 %}0{% endif %}{{ count }} 
+                - {{ post.data.title }}
+            </a>
+            {# <span class="pill">article</span> #}
+            {% for tag in post.data.tags %}
+                {% if tag != "posts" %}
+                    <a href="/tag/{{ tag | slugify }}/"><span class="pill">{{ tag }}</span></a>
+                {% endif %}
+            {% endfor %}                
+        </p>
+        {% set count = count - 1 %}
+    {% endfor %}
+{% endmacro %}

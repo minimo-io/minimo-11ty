@@ -2,29 +2,7 @@
 title: Blog
 description: A collection of articles
 ---
-
+{% import "macros/lists.njk" as list %}
 <div id="main" class="archive wrapper Xwrapper-wide mt-2">
-    {% set currentYear = "" %}
-    {% set count = collections.posts.length %}
-    {% for post in collections.posts | reverse %}
-        {% set postYear = post.date.getFullYear() %}
-        
-        {% if currentYear != postYear %}
-            {% set currentYear = postYear %}
-            <h2 class="h3 font-italic">{{ postYear }}.</h2>
-        {% endif %}
-        
-        <p{% if post.data.star %} class="star"{% endif %}>
-            <a href="{{ post.url }}">
-                #{% if count.toString().length < 2 %}0{% endif %}{{ count }} 
-                - {{ post.data.title }}
-            </a>
-            {% for tag in post.data.tags %} 
-                {% if tag != "posts" %}
-                    <a href="/tag/{{ tag | slugify }}/"><span class="pill">{{ tag }}</span></a>
-                {% endif %}
-            {% endfor %}
-        </p>
-        {% set count = count - 1 %}
-    {% endfor %}
+    {{ list.archive(collections.posts) }}
 </div>

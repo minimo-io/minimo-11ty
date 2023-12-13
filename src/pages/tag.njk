@@ -9,29 +9,7 @@ permalink: /tag/{{ tag | slugify }}/
 eleventyComputed:
     title: Tagged with "{{ tag }}"
 ---
-
+{% import "macros/lists.njk" as list %}
 <div id="main" class="archive wrapper mt-2">
-    {% set currentYear = "" %}
-    {% set count = collections[tag].length %}    
-    {% for post in collections[tag] | reverse %}
-        {% set postYear = post.date.getFullYear() %}
-        
-        {% if currentYear != postYear %}
-            {% set currentYear = postYear %}
-            <h2 class="h3 font-italic">{{ postYear }}.</h2>
-        {% endif %}
-        
-        <p{% if post.data.star %} class="star"{% endif %}>
-            <a href="{{ post.url }}">
-                #{% if count.toString().length < 2 %}0{% endif %}{{ count }} 
-                - {{ post.data.title or "Homepage" }}
-            </a>
-            {% for tag in post.data.tags %} 
-                {% if tag != "posts" %}
-                    <a href="/tag/{{ tag | slugify }}/"><span class="pill">{{ tag }}</span></a>
-                {% endif %}
-            {% endfor %}
-        </p>
-        {% set count = count - 1 %}
-    {% endfor %}
+    {{ list.archive(collections[tag]) }}
 </div>
