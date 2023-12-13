@@ -7,6 +7,8 @@
     {% if description %}<meta name="description" content="{{ description }}">{% endif %}
     {% if pagination and pagination.alias == "tag" %}
         <meta name="robots" content="noindex, nofollow" />
+    {% else %}
+        <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
     {% endif %}
     
     <link rel="canonical" href="{{ site.url + page.url }}">
