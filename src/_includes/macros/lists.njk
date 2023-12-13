@@ -12,12 +12,11 @@
         <p {% if post.data.star %} class="star"{% endif %} Xstyle="font-size:var(--fs-clamped-400);font-weight:200;">
             <a href="{{ post.url }}" style="font-weight:200;">
                 #{% if count.toString().length < 2 %}0{% endif %}{{ count }} 
-                - {{ post.data.title }}
+                - {{ post.data.title or "Home" }}
             </a>
-            {# <span class="pill">article</span> #}
             {% for tag in post.data.tags %}
                 {% if tag != "posts" %}
-                    <a href="/tag/{{ tag | slugify }}/"><span class="pill">{{ tag }}</span></a>
+                    <a title="Link to tag `{{ tag | escape }}`" href="/tag/{{ tag | slugify }}/"><span class="pill">{{ tag }}</span></a>
                 {% endif %}
             {% endfor %}                
         </p>
