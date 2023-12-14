@@ -5,9 +5,11 @@ date: 2022-09-23T15:38:46
 modified: 2022-09-30T13:59:38
 image: /images/project-loveinabox.webp
 imageCaption: "The LoveInABox project mockup"
+permalink: /work/love-in-a-box/
 star: true
 tags:
     - prototype
+    - project
     - cooking
 ---
 
