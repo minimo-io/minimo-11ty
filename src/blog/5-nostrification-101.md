@@ -8,12 +8,21 @@ tags:
 ---
 
 <div class="wrapper mt-2">
-    <h2 id="intro" class="h3 font-italic">Intro.</h2>
     <p>
         In my process of nostrification I stumble upon some interesting stuff worth checking for newcommers.
-        <br>Here's the list.
+        <br>Here follow both an <a href="#apps-and-services">Apps & Services</a> and <a href="#guides">Guides</a> lists.
     </p>       
 
+    <h2 id="apps-and-services" class="h3 font-italic">Apps & Services.</h2>
+    <ul>
+        <li><a href="https://habla.news/faq">habla.news</a>: A nostr-based web app that enables anyone to earn from their writing.</li>
+        <li><a href="https://www.nostrapps.com/">nostrapps.com</a>: A curated list of Nostr apps.</li>
+        <li><a href="https://nostrsync.live/">nostrsync.live</a>: Download a copy of your Data.</li>
+        <li><a href="https://zaplife.lol/">zaplife.lol</a>: Zapping stats.</li>
+        <li><a href="https://stats.nostr.band/">stats.nostr.band</a>: Nostr Real Time Stats.</li>
+    </ul>
+    
+    <h2 id="guides" class="h3 font-italic mt-2">Guides.</h2>
     <ul>
         <li><a href="https://nostr.how/en/guides/get-verified">Get NIP-05 verified</a>, also <a href="https://gist.github.com/metasikander/609a538e6a03b2f67e5c8de625baed3e">this gist</a>.</li>
     </ul>
