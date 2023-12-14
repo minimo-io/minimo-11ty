@@ -23,6 +23,6 @@ tags:
         Expect an open financial report once a month. <u>Partners are welcome!</u>
     </p>
     <p>
-    I am open to ideas! Fell free to <a href="/">get in touch</a>.
+        <blockquote>👉 Ready to add you store? Please <a href="/" title="Link to Homepage">get in touch</a>.</blockquote>
     </p>
 </div>
