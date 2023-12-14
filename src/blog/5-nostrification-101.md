@@ -20,6 +20,7 @@ tags:
         <li><a href="https://nostrsync.live/">nostrsync.live</a>: Download a copy of your Data.</li>
         <li><a href="https://zaplife.lol/">zaplife.lol</a>: Zapping stats.</li>
         <li><a href="https://stats.nostr.band/">stats.nostr.band</a>: Nostr Real Time Stats.</li>
+        <li><a href="https://nostrends.vercel.app/">nostrends.vercel.app</a>: What's trending on Nostr?</li>
     </ul>
     
     <h2 id="guides" class="h3 font-italic mt-2">Guides.</h2>
