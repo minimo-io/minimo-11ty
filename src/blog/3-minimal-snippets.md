@@ -1,7 +1,7 @@
 ---
 title: "Minimal snippets (reference)"
 description: "Common patters and elements for the new minimo.io site"
-date: 2023-11-20T20:00:00
+date: 2023-11-20T20:00:00-03:00
 ---
 <div class="wrapper text-justify mt-5">
     <h1>It's Huge!</h1>
@@ -13,7 +13,7 @@ date: 2023-11-20T20:00:00
         Even as a paragraph. Here is the .fs-400 class.
     </p>
     <figure>
-        <img src="/images/project-hops.webp" alt="hops-project" class="img-rounded">
+        <img src="/images/project-lightning-beer.webp" alt="hops-project" class="img-rounded">
         <figcaption>A caption for the above image</figcaption> 
     </figure>
     <p>

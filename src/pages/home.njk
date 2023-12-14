@@ -7,13 +7,15 @@ description: "Design, prototyping and creation of cross-platform craziness using
     <h2 id="summary" class="h3 font-weight-600 Xtext-center">
         🦄 <span class="font-italic">Summary</span>
     </h2>
-    <p class="Xfs-400 font-italic Xtext-center">A yearly summary of all <a href="/work/">work</a> activities, project launches, articles, etc, involving development, design and... eveything in between!</p>
-    <div  class="archive mb-4">
-        {{ list.archive(collections.posts) }}
-       <p class="mt-1">
-            
-            <a href="/blog/">👉 Go to full archive</a>
-        </p>
+    <p class="Xfs-400 font-italic Xtext-center">
+        A yearly summary of all activities, project launches, articles on development, design and... eveything in between!
+    </p>
+    <p class="mt-1">
+        👉 <a href="/blog/">Go to the full archive</a> ({{ collections.posts.length }} articles)
+    </p>    
+   
+    <div  class="archive mb-4">        
+        {{ list.archive(collections.posts, "2023") }}
     </div>
 
     <div class="mb-4">
