@@ -1,5 +1,5 @@
 ---
-title: "LightningBeer"
+title: "Lightning Beer"
 description: "Buy craft beer with Bitcoin/Lightning in trusted local shops"
 date: 2023-10-01T23:23:12-03:00
 image: /images/project-lightning-beer.webp
