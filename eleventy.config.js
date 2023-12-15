@@ -2,10 +2,11 @@ const emojiReadTime = require("@11tyrocks/eleventy-plugin-emoji-readtime");
 
 module.exports = function(eleventyConfig){
 
+    // ingore searching for templates in this folders
+    eleventyConfig.ignores.add('src/tests');
 
-    // eleventyConfig.addPassthroughCopy('./src/css/style.css');
+    // additional file copies
     eleventyConfig.addPassthroughCopy('src/images');
-    // eleventyConfig.addPassthroughCopy('./src/js/bundle.js');
     eleventyConfig.addPassthroughCopy({'src/js/bundle.js': 'bundle.js'});
     eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
     eleventyConfig.addPassthroughCopy('src/.well-known');
