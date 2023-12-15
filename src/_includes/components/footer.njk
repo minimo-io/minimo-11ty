@@ -5,7 +5,7 @@
             <img decoding="async" 
             width="100"
             class="img-profile img-circular"
-            src="/images/yet-another-guy.webp" 
+            src="/assets/images/yet-another-guy.webp" 
             alt="profile-image" loading="lazy">
         </div>
         <div>
@@ -52,7 +52,7 @@
             "@type": "Organization",
             "name": "{{ site.author | safe }}",
             "url": "{{ page.url }}",
-            "logo": "/images/yet-another-guy.webp"
+            "logo": "{{ site.url }}/assets/images/yet-another-guy.webp"
         }
     </script>
 {% elif layout === "article" %}
@@ -61,15 +61,15 @@
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "{{ title }}",
-        "image": [ "https://example.com/photos/1x1/photo.jpg" ],
+        "image": [ "{{ site.url + image }}" ],
         "datePublished": "{{ page.date.toISOString() }}",
         {% if modified %}"dateModified": "{{ modified.toISOString() }}",{% endif %}
         "author": [{
             "@type": "Person",
             "name": "{{ site.authorShort }}",
-            "image": "/images/yet-another-guy.webp",
+            "image": "{{ site.url }}/assets/yet-another-guy.webp",
             "jobTitle": "Developer",
-            "url": "https://minimo.io"
+            "url": "{{ site.url }}"
         }]
     }
     </script>   

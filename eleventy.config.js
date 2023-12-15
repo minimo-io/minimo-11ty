@@ -4,11 +4,9 @@ module.exports = function(eleventyConfig){
 
     // ingore searching for templates in this folders
     eleventyConfig.ignores.add('src/tests');
-    // eleventyConfig.ignores.add('src/blog/2-the-lightning-network.md');
 
     // additional file copies
-    eleventyConfig.addPassthroughCopy('src/images');
-    eleventyConfig.addPassthroughCopy({'src/js/bundle.js': 'bundle.js'});
+    eleventyConfig.addPassthroughCopy('src/assets');
     eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
     eleventyConfig.addPassthroughCopy('src/.well-known');
 

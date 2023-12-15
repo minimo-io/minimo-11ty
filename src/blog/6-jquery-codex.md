@@ -1,7 +1,7 @@
 ---
 title: jQuery Codex
 description: A plugin for sodomizing strings of text •̀ᴗ•́
-image: /images/project-jquery-codex.gif
+image: /assets/images/project-jquery-codex.gif
 date: 2020-05-24T21:21:22-03:00
 imageCaption: "jquery-codex"
 star: true

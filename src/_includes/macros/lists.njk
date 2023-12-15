@@ -13,8 +13,7 @@
                 {% set currentYear = postYear %}
                 <h2 class="h3 font-italic">{{ postYear }}.</h2>
             {% endif %}
-            
-            <p {% if post.data.star %} class="star"{% endif %} Xstyle="font-size:var(--fs-clamped-400);font-weight:200;">
+            <p {% if post.data.star %} class="star"{% endif %}>
                 <a href="{{ post.url }}" style="font-weight:200;">
                     #{% if count.toString().length < 2 %}0{% endif %}{{ count }} 
                     - {{ post.data.title or "Home" }}
