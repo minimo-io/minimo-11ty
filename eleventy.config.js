@@ -4,7 +4,7 @@ module.exports = function(eleventyConfig){
 
     // ingore searching for templates in this folders
     eleventyConfig.ignores.add('src/tests');
-    eleventyConfig.ignores.add('src/blog/2-the-lightning-network.md');
+    // eleventyConfig.ignores.add('src/blog/2-the-lightning-network.md');
 
     // additional file copies
     eleventyConfig.addPassthroughCopy('src/images');
