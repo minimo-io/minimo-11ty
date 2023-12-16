@@ -15,7 +15,7 @@ tags:
         <li><a href="https://bitcoindev.org/">bitcoindev.org</a>: Bitcoin & Lighning resources for devs.</li>
         <li><a href="https://www.lightning-landscape.net/projects">lightning-landscape.net</a>: The great panorama of the ecosystem.</li>
         <li><a href="https://www.theblock.co/data/on-chain-metrics/bitcoin">TheBlock.co On-Chain Metris</a>.</li>
-        <li><a href="https://www.lopp.net/">lopp.net</a>: Great resources list by James Loop.</li>
+        <li><a href="https://www.lopp.net/bitcoin-information/books.html">lopp.net</a>: Great resources list by James Loop.</li>
     </ul>
 
 </div>
