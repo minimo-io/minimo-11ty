@@ -15,6 +15,10 @@
         {
             "url": "/biking/",
             "name": "Biking"
-        }        
+        },
+        {
+            "url": "/diy/",
+            "name": "DIY"
+        }       
     ]
 }
