@@ -275,13 +275,21 @@ const displayGpx = function (elt) {
     _t('h3').textContent = gpx.get_name();
     _c('start').textContent = gpx.get_start_time().toDateString() + ', '
         + gpx.get_start_time().toLocaleTimeString();
-    _c('distance').textContent = gpx.get_distance_imp().toFixed(2);
+    _c('distance').textContent = (gpx.get_distance() / 1000).toFixed(2);
     _c('duration').textContent = gpx.get_duration_string(gpx.get_moving_time());
-    _c('pace').textContent     = gpx.get_duration_string(gpx.get_moving_pace_imp(), true);
+    // _c('pace').textContent     = gpx.get_duration_string(gpx.get_moving_pace_imp(), true);
+    _c('pace').textContent     = gpx.get_duration_string(gpx.get_moving_pace(), true);
     // _c('avghr').textContent    = gpx.get_average_hr();
-    _c('elevation-gain').textContent = gpx.to_ft(gpx.get_elevation_gain()).toFixed(0);
-    _c('elevation-loss').textContent = gpx.to_ft(gpx.get_elevation_loss()).toFixed(0);
-    _c('elevation-net').textContent  = gpx.to_ft(gpx.get_elevation_gain()
-        - gpx.get_elevation_loss()).toFixed(0);
+
+    // _c('elevation-gain').textContent = gpx.to_ft(gpx.get_elevation_gain()).toFixed(0);
+    // _c('elevation-loss').textContent = gpx.to_ft(gpx.get_elevation_loss()).toFixed(0);
+    // _c('elevation-net').textContent  = gpx.to_ft(gpx.get_elevation_gain()
+    //     - gpx.get_elevation_loss()).toFixed(0);
+
+        _c('elevation-gain').textContent = (gpx.get_elevation_gain()).toFixed(0);
+        _c('elevation-loss').textContent = (gpx.get_elevation_loss()).toFixed(0);
+        _c('elevation-net').textContent  = (gpx.get_elevation_gain()
+            - gpx.get_elevation_loss()).toFixed(0);
+
     }).addTo(map);
 }

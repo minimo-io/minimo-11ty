@@ -9,7 +9,7 @@ description: "Design, prototyping and creation of cross-platform craziness using
     </h2>
     <p class="Xfs-400 font-italic Xtext-center">
         A yearly summary of all activities, project launches, articles on development, design and... eveything in between!  👉 <a href="/blog/">Go to the full archive</a> ({{ collections.posts.length }} articles)
-    </p>   
+    </p>
    
     <div  class="archive mb-4">        
         {{ list.archive(collections.posts, "2023") }}
@@ -19,9 +19,12 @@ description: "Design, prototyping and creation of cross-platform craziness using
         <h2 id="biking" class="h3 font-weight-600">
             🚴🏼‍♂️ <span class="font-italic">Biking</span>
         </h2>    
-        <p class="Xfs-400 font-italic">Some aventures on top of <a href="/biking/">a bike</a>, on <a href="https://en.wikipedia.org/wiki/GPS_Exchange_Format" target="_blank" rel="noopener noreferrer">GPX files</a>.</p>
+        <p class="Xfs-400 font-italic">
+            Latest bike adventure registered on a <a href="https://en.wikipedia.org/wiki/GPS_Exchange_Format" target="_blank" rel="noopener noreferrer">GPX file</a>.<br>
+            👉 More biking challenges <a href="/biking/">here</a>.
+        </p>
 
-        <section id="demo" class="gpx mt-1" data-gpx-source="/assets/gpxs/2024-02-12-mogi.gpx" data-map-target="demo-map">
+        <section id="bike-map" class="gpx mt-1" data-gpx-source="/assets/gpxs/2024-02-12-mogi.gpx" data-map-target="demo-map">
             <header>
                 <h3>Loading...</h3>
                 <span class="start"></span>
@@ -31,20 +34,20 @@ description: "Design, prototyping and creation of cross-platform craziness using
         
             <footer>
                 <ul class="info">
-                <li>Distance:&nbsp;<span class="distance"></span>&nbsp;mi</li>
-                &mdash; <li>Duration:&nbsp;<span class="duration"></span></li>
-                &mdash; <li>Pace:&nbsp;<span class="pace"></span>/mi</li>
-                {# &mdash; <li>Avg&nbsp;HR:&nbsp;<span class="avghr"></span>&nbsp;bpm</li> #}
-                &mdash; <li>Elevation:&nbsp;+<span class="elevation-gain"></span>&nbsp;ft,
-                    -<span class="elevation-loss"></span>&nbsp;ft
-                    (net:&nbsp;<span class="elevation-net"></span>&nbsp;ft)</li>
+                    <li>Distance:&nbsp;<span class="distance"></span>km</li>
+                    · <li>Duration:&nbsp;<span class="duration"></span></li>
+                    · <li>Pace:&nbsp;<span class="pace"></span>/km</li>
+                    {# / <li>Avg&nbsp;HR:&nbsp;<span class="avghr"></span>&nbsp;bpm</li> #}
+                    · <li>Elevation:&nbsp;+<span class="elevation-gain"></span>m,
+                        -<span class="elevation-loss"></span>m
+                        (net:<span class="elevation-net"></span>m)</li>
                 </ul>
             </footer>
         </section>
 
         <script type="application/javascript">
             document.addEventListener('DOMContentLoaded', function(){
-                displayGpx(document.getElementById('demo'));
+                displayGpx(document.getElementById('bike-map'));
             });
         </script>        
 
