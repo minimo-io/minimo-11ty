@@ -13,7 +13,7 @@ date: 2023-11-20T20:00:00-03:00
         Even as a paragraph. Here is the .fs-400 class.
     </p>
     <figure>
-        <img src="/assets/images/project-lightning-beer.webp" alt="hops-project" class="img-rounded">
+        <img src="/assets/images/project-lightning-beer.webp" alt="lightning-beer-project" class="img-rounded">
         <figcaption>A caption for the above image</figcaption> 
     </figure>
     <p>

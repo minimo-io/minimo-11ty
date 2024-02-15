@@ -11,7 +11,7 @@
         {% if includePost %}
             {% if currentYear != postYear %}
                 {% set currentYear = postYear %}
-                <h2 class="h3 font-italic">{{ postYear }}.</h2>
+                <h2 class="h4 font-italic font-weight-600">{{ postYear }}.</h2>
             {% endif %}
             <p {% if post.data.star %} class="star"{% endif %}>
                 <a href="{{ post.url }}" style="font-weight:200;">
