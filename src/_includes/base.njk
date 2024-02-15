@@ -12,14 +12,23 @@
     {% endif %}
     
     <link rel="canonical" href="{{ site.url + page.url }}">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,600;1,400;1,600&family=Roboto+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+
     <link href="/assets/css/style.css" rel="stylesheet" />
     <script src="/assets/js/bundle.js" defer></script>
     <link href="/assets/images/favicon.png" rel="icon" sizes="32x32">
     <meta name="generator" content="{{ eleventy.generator }}">
     <style>svg{ max-width: 15px; }img{ max-width: 100%; }</style>
+
+    {# GPX #}
+    {% if page.url == "/" %}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.js"></script>
+    {% endif %}
 </head>
 <body>
     <a href="#main" class="skip-to-main-content">Skip to main content</a>

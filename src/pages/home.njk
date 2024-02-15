@@ -20,6 +20,34 @@ description: "Design, prototyping and creation of cross-platform craziness using
             🚴🏼‍♂️ <span class="font-italic">Biking</span>
         </h2>    
         <p class="Xfs-400 font-italic">Some aventures on top of <a href="/biking/">a bike</a>, on <a href="https://en.wikipedia.org/wiki/GPS_Exchange_Format" target="_blank" rel="noopener noreferrer">GPX files</a>.</p>
+
+        <section id="demo" class="gpx mt-1" data-gpx-source="/assets/gpxs/2024-02-12-mogi.gpx" data-map-target="demo-map">
+            <header>
+                <h3>Loading...</h3>
+                <span class="start"></span>
+            </header>
+
+            <div class="map" id="demo-map"></div>
+        
+            <footer>
+                <ul class="info">
+                <li>Distance:&nbsp;<span class="distance"></span>&nbsp;mi</li>
+                &mdash; <li>Duration:&nbsp;<span class="duration"></span></li>
+                &mdash; <li>Pace:&nbsp;<span class="pace"></span>/mi</li>
+                {# &mdash; <li>Avg&nbsp;HR:&nbsp;<span class="avghr"></span>&nbsp;bpm</li> #}
+                &mdash; <li>Elevation:&nbsp;+<span class="elevation-gain"></span>&nbsp;ft,
+                    -<span class="elevation-loss"></span>&nbsp;ft
+                    (net:&nbsp;<span class="elevation-net"></span>&nbsp;ft)</li>
+                </ul>
+            </footer>
+        </section>
+
+        <script type="application/javascript">
+            document.addEventListener('DOMContentLoaded', function(){
+                displayGpx(document.getElementById('demo'));
+            });
+        </script>        
+
     </div>
 
     <h2 id="photos" class="h3 font-weight-600 mt-4">
