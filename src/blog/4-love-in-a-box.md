@@ -3,7 +3,7 @@ title: "LoveInABox"
 description: "A cooking and recipe app that lets you order a box of ingredients"
 date: 2022-09-23T15:38:46-03:00
 modified: 2022-09-30T13:59:38-03:00
-image: /assets/images/project-loveinabox.webp
+image: /assets/images/projects/project-loveinabox.webp
 imageCaption: "The LoveInABox project mockup"
 permalink: /work/love-in-a-box/
 star: true

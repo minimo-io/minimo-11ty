@@ -2,7 +2,7 @@
 date: 2023-12-14T11:00:00-03:00
 title: "Nostrification 101"
 description: "Interesting Nostr stuff for newcommers"
-image: "/assets/images/nostrification-101.webp"
+image: "/assets/images/blog/nostrification-101.webp"
 tags:
   - nostr
 ---
