@@ -8,11 +8,18 @@ tags:
 ---
 <div class="wrapper mt-2">
     <p>
-        So first some quick (always changing) definitions.<br>
-        <strong class="font-weight-600">What is Vite?</strong>: A (rollup based) front-end build tool (aka bundler) and development server designed for -modernnn--ous webdev.
+        So first some quick (always changing) definitions.
     </p>
     <p>
-        What else would I need? A CSS Framework.
+        <strong class="font-weight-600">What is Vite?</strong>: A (rollup based) front-end build tool (aka bundler) and development server designed for modernnnnnnn-ous webdev.
     </p>
+    <p>
+        Got it! So what else would do I need? A CSS Framework.
+    </p>
+
+     <h2 id="refs" class="h3 font-italic mt-2">References.</h2>
+    <ul>
+        <li><a href="https://medium.com/@andrewmasonmedia/how-to-use-environmental-variables-env-in-vue-js-and-vite-ac2ee73480dd">How to use environmental variables (.env) [...] in Vite</a>.</li>
+    </ul>
     
 </div>
