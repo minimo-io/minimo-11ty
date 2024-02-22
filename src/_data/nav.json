@@ -14,11 +14,11 @@
         },
         {
             "url": "/biking/",
-            "name": "Biking"
+            "name": "Biking/Adventure"
         },
         {
-            "url": "/diy/",
-            "name": "DIY"
+            "url": "/investing/",
+            "name": "Investing"
         }       
     ]
 }
