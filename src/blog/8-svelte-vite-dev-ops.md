@@ -20,8 +20,9 @@ tags:
     <p>
         <strong class="font-weight-600">What is Svelte? And SvelteKit?</strong>: Definitions are changing around. But as far as Svelte4 was concern, Svelte was a components framework, and SvelteKit an app framework. 
     </p>
-    <p>Meaning that if what you need is to inject some simple functioanlity to a page (let's say one created an Static Site Generator like Eleventy) then Svelte + Vite is for you (that's the case for Mínimo).</p>
-    <p>If on the other hand if what you need is to build a full-fledge applicationthen SvelteKit is the way to go. More on this in <a href="https://www.youtube.com/watch?v=z7n17ajJpCo">this video</a> about Svelte 5 with Rich Harris</p>
+    <p>Meaning that if what you need is to inject some simple functioanlity to a page ( say one created with a Static Site Generator like Eleventy) then Svelte + Vite is for you (that's the case for <a href="https://minimo.io">minimo.io</a>).</p>
+    <p>If on the other hand if what you need is to build a full-stack lovely and creepy application then SvelteKit is your way to go. More on this in <a href="https://youtu.be/z7n17ajJpCo?si=zx8RuvJNbqgBuXIm&t=2410">this video</a> about Svelte 5 with Rich Harris <i>(Feb 1st, 2024)</i>.</p>
+
     <p>
         Got it! So what else would do I need? A CSS Framework.
     </p>
@@ -30,7 +31,6 @@ tags:
     <ul>
         <li><a href="https://kinsta.com/knowledgebase/what-is-an-environment-variable/">Environment Variables: What They Are and How To Use Them</a>, more <a href="https://devzibah.hashnode.dev/using-a-dotenv-file-to-store-and-use-api-keys-in-a-vite-built-react-app">here</a>.</li>
     </ul>
-</p>
 
 
 </div>
