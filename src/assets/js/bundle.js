@@ -9,6 +9,8 @@ const primaryNav = $(".nav");
 const themeToggle = $(".theme-toggle");
 const navToggle = $(".nav-toggle");
 const profileImage = $(".img-profile");
+const gpxMap = $("#bike-map");
+
 const goToHashed = (manualAnchor) => {
     if (
         window.location.hash && window.location.hash.length 
@@ -45,6 +47,12 @@ window.addEventListener('DOMContentLoaded', function () {
             }, 5000);
         }
     } 
+    // main map load
+    if (gpxMap){
+        displayGpx(gpxMap);
+    }
+    
+
     // keysdown for menu
     document.onkeydown = function (e) {
         if (e.defaultPrevented) return;
