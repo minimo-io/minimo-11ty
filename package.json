@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/minimo-io/minimo-11ty/issues"
   },
-  "homepage": "https://github.com/minimo-io/minimo-11ty#readme",
+  "homepage": "https://minimo.io",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "cssnano": "^6.0.4",
