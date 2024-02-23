@@ -13,7 +13,7 @@ date: 2023-11-20T20:00:00-03:00
         Even as a paragraph. Here is the .fs-400 class.
     </p>
     <figure>
-        <img src="/assets/images/project-lightning-beer.webp" alt="lightning-beer-project" class="img-rounded">
+        <img src="/assets/images/projects/project-lightning-beer.webp" alt="lightning-beer-project" class="img-rounded">
         <figcaption>A caption for the above image</figcaption> 
     </figure>
     <p>
@@ -74,10 +74,10 @@ const profileImage = document.querySelector(".img-profile");</code>
         to read.
     </p>
     <figure class="full-width">
-        <img src="/assets/images/project-betizen.webp" class="img-rounded">       
+        <img src="/assets/images/projects/project-loveinabox.webp" class="img-rounded">       
         <figcaption class="text-right">Credits to SomeRandomGuyAtUnsplash</figcaption> 
     </figure>            
-    <h2>Ah by the way</h2>
+    <h2>Love all the way...!</h2>
     <p>Almost forgot about it. By the way... <a href="/blog/">here is a link</a>.</p>
     <h3>And finally a sub-item</h3>
     <p>This is just a sub-item, nothing fancy!</p>

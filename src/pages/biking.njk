@@ -2,16 +2,18 @@
 title: Biking
 description: Some aventures on top of a bike 🚴🏼‍♂️
 ---
-{% import "macros/links.njk" as link %}
-{% import "macros/heros.njk" as hero %}
+{# {% import "macros/links.njk" as link %}
+{% import "macros/heros.njk" as hero %} #}
 {% import "macros/biking-map.njk" as biking %}
 
-<div id="main" class="wrapper mt-2">
-
+<div id="main" class="wrapper">
     <p>
         Strava bike adventures registered as GPX files (<a href="https://en.wikipedia.org/wiki/GPS_Exchange_Format" target="_blank" rel="noopener noreferrer">GPS Exchange Format</a>). Here is the latest one.
     </p>
 
     {{ biking.map(loadApp=true) }}
+    <figure>
+        <img class="img-rounded" src="/assets/images/biking-hero.webp">
+    </figure>
 
 </div>
