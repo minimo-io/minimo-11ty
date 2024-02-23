@@ -1,0 +1,27 @@
+{% macro map(loadApp=false) %}
+
+    <section id="biking-map" class="gpx mt-1" data-gpx-source="/assets/gpxs/2024-02-12-mogi.gpx" data-map-target="latest-biking-map">
+        <header>
+            <h3>Loading...</h3>
+            <span class="start"></span>
+        </header>
+
+        <div class="map" id="latest-biking-map"></div>
+    
+        <footer>
+            <ul class="info">
+                <li>Distance:&nbsp;<span class="distance"></span>km</li>
+                · <li>Duration:&nbsp;<span class="duration"></span></li>
+                · <li>Pace:&nbsp;<span class="pace"></span>/km</li>
+                {# / <li>Avg&nbsp;HR:&nbsp;<span class="avghr"></span>&nbsp;bpm</li> #}
+                · <li>Elevation:&nbsp;+<span class="elevation-gain"></span>m,
+                    -<span class="elevation-loss"></span>m
+                    (net:<span class="elevation-net"></span>m)</li>
+            </ul>
+        </footer>
+    </section>
+
+    {% if loadApp === true %}
+        <div class="biking-app"></div>
+    {% endif %}
+{%endmacro%}

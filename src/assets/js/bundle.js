@@ -9,7 +9,7 @@ const primaryNav = $(".nav");
 const themeToggle = $(".theme-toggle");
 const navToggle = $(".nav-toggle");
 const profileImage = $(".img-profile");
-const gpxMap = $("#bike-map");
+const gpxMap = $("#biking-map");
 
 const goToHashed = (manualAnchor) => {
     if (

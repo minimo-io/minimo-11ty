@@ -3,6 +3,8 @@ permalink: /
 description: "Design, prototyping and creation of cross-platform craziness using Figma, Vue.js, Flutter, Woocommerce & SSGs like 11ty"
 ---
 {% import "macros/lists.njk" as list %}
+{% import "macros/biking-map.njk" as biking %}
+
 <div class="wrapper article text-justify mt-5">
     <h2 id="summary" class="h3 font-weight-600 Xtext-center">
         🦄 <span class="font-italic">Summary</span>
@@ -27,31 +29,12 @@ description: "Design, prototyping and creation of cross-platform craziness using
         <h2 id="biking" class="h3 font-weight-600">
             🚴🏼‍♂️ <span class="font-italic">Biking</span>
         </h2>    
-        <p class="Xfs-400 font-italic">
+        <p class="font-italic">
             Latest bike adventure registered on a <a href="https://en.wikipedia.org/wiki/GPS_Exchange_Format" target="_blank" rel="noopener noreferrer">GPX file</a>.<br>
-            👉 More biking <i>tournées</i> <a href="/biking/">here</a>.
+            👉 All biking <i>tournées</i> <a href="/biking/">here</a>.
         </p>
-
-        <section id="bike-map" class="gpx mt-1" data-gpx-source="/assets/gpxs/2024-02-12-mogi.gpx" data-map-target="demo-map">
-            <header>
-                <h3>Loading...</h3>
-                <span class="start"></span>
-            </header>
-
-            <div class="map" id="demo-map"></div>
         
-            <footer>
-                <ul class="info">
-                    <li>Distance:&nbsp;<span class="distance"></span>km</li>
-                    · <li>Duration:&nbsp;<span class="duration"></span></li>
-                    · <li>Pace:&nbsp;<span class="pace"></span>/km</li>
-                    {# / <li>Avg&nbsp;HR:&nbsp;<span class="avghr"></span>&nbsp;bpm</li> #}
-                    · <li>Elevation:&nbsp;+<span class="elevation-gain"></span>m,
-                        -<span class="elevation-loss"></span>m
-                        (net:<span class="elevation-net"></span>m)</li>
-                </ul>
-            </footer>
-        </section>    
+        {{ biking.map(loadApp=false) }}
 
     </div>
 
@@ -59,5 +42,5 @@ description: "Design, prototyping and creation of cross-platform craziness using
         🖼️ <span class="font-italic">Photos</span>
     </h2> 
 
-    <p class="Xfs-400 font-italic">A collection of public available pictures.</p>     
+    <p class="font-italic">A collection of public available pictures.</p>     
 </div>
