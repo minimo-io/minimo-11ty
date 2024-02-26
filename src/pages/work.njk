@@ -2,7 +2,7 @@
 title: Work
 description: Apps, designs, websites, extensions and <br>prototypes 🚀
 ---
-{% import "macros/lists.njk" as list %}
+{% import "macros/lists.njk" as list with context %}
 {% import "macros/links.njk" as link %}
 {% import "macros/heros.njk" as hero %}
 {% import "macros/author-box.njk" as author with context %}
@@ -19,12 +19,11 @@ description: Apps, designs, websites, extensions and <br>prototypes 🚀
     <hr>
     
     <div id="main" class="archive wrapper mt-2">
-        {{ list.archive(collections["project"]) }}
+        {{ list.work(collections["project"]) }}
     </div>
 
 
-    <!-- Braaay -->
-    <h3 class="h4 font-italic">
+    {# <h3 class="h4 font-italic">
         <span class="font-weight-400"><a href="http://braaay.com">Braaay.com</a></span>
     </h3>
     <p class="fs-400 font-italic">
@@ -62,11 +61,11 @@ description: Apps, designs, websites, extensions and <br>prototypes 🚀
         <figcaption>Android app for Hops.uy</figcaption> 
     </figure>
     <p>Some awesome text explaining the Hops project... how it was bought by Braaay.</p>
-    {# {{ link.project("https://hops.uy") }} #}
+
 
     <br>
 
-    <!-- Betizen -->
+    
     <h3 class="h3 font-italic text-left font-weight-600">
         <a href="https://betizen.org">Betizen</a>
     </h3>
@@ -82,7 +81,8 @@ description: Apps, designs, websites, extensions and <br>prototypes 🚀
     </p>
     <p>
         Goal: no BS, no false promises. Just simple, fair listings.
-    </p>    
+    </p>     
     {{ link.project("https://betizen.org") }}
+    #}
    
 </div>

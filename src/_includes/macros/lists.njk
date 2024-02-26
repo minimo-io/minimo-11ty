@@ -28,3 +28,36 @@
         {% set count = count - 1 %}
     {% endfor %}
 {% endmacro %}
+
+{% macro work(collection) %}
+    {% for post in collection | reverse %}
+        {% if currentYear != postYear %}
+            {% set currentYear = postYear %}
+            <h2 class="h4 font-italic font-weight-600">{{ postYear }}.</h2>
+        {% endif %}
+
+        <h3 class="h3 font-italic text-left font-weight-600">
+            <a href="{{ post.url }}">
+               {{ post.data.title or "Home" }}
+            </a>
+        </h3>
+        <p class="fs-400 font-italic">{{ post.data.description }}</p>
+        <figure>
+            <img src="{{ post.data.image }}" alt="{{ post.data.imageCaption or '' }}" class="img-rounded">
+            <figcaption>{{ post.data.imageCaption or '' }}</figcaption> 
+        </figure>
+        
+        {# <p>{{ post.content | safe }}</p> #}
+
+        {# <p {% if post.data.star %} class="star"{% endif %}>
+            <a href="{{ post.url }}" style="font-weight:200;">
+               {{ post.data.title or "Home" }}
+            </a>
+            {% for tag in post.data.tags %}
+                {% if tag != "posts" %}
+                    <a title="Link to tag `{{ tag | escape }}`" href="/tag/{{ tag | slugify }}/"><span class="pill">{{ tag }}</span></a>
+                {% endif %}
+            {% endfor %}                
+        </p> #}
+    {% endfor %}
+{% endmacro %}
