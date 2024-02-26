@@ -1,15 +1,30 @@
 ---
 title: Work
-description: Apps, websites, extensions and prototypes 🚀
+description: Apps, designs, websites, extensions and <br>prototypes 🚀
 ---
+{% import "macros/lists.njk" as list %}
 {% import "macros/links.njk" as link %}
 {% import "macros/heros.njk" as hero %}
+{% import "macros/author-box.njk" as author with context %}
 
 <div class="wrapper mt-2">
-    <p>Currently working on Braaay, Nostr NIP-38 Live Music, the Lightning Beer App & Betizen.org.</p>
+    {# <p class="alert">👉 Currently working on <a href="https://braaay.com">Braaay.com</a> & the <a href="/work/lightning-beer/">Lightning Beer App</a></a></p> #}
+
+    {{ author.box(fontSize="font-size:var(--fs-clamped-300);", extraClasses=" pt-0", showDetails=true, hideShortName=true) }}
+
+    {# <div class="tags wrapper mt-2 text-center">
+        <a href="/tag/coding/"><span class="pill">coding</span></a>
+        <a href="/tag/design/"><span class="pill">design</span></a>
+    </div> #}
+    <hr>
+    
+    <div id="main" class="archive wrapper mt-2">
+        {{ list.archive(collections["project"]) }}
+    </div>
+
 
     <!-- Braaay -->
-    <h3 class="h4 font-italic Xtext-center">
+    <h3 class="h4 font-italic">
         <span class="font-weight-400"><a href="http://braaay.com">Braaay.com</a></span>
     </h3>
     <p class="fs-400 font-italic">
