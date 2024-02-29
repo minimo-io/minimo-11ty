@@ -31,21 +31,37 @@
 
 {% macro work(collection) %}
     {% for post in collection | reverse %}
-        {% if currentYear != postYear %}
-            {% set currentYear = postYear %}
-            <h2 class="h4 font-italic font-weight-600">{{ postYear }}.</h2>
-        {% endif %}
 
-        <h3 class="h3 font-italic text-left font-weight-600">
-            <a href="{{ post.url }}">
-               {{ post.data.title or "Home" }}
-            </a>
-        </h3>
-        <p class="fs-400 font-italic">{{ post.data.description }}</p>
-        <figure>
-            <img src="{{ post.data.image }}" alt="{{ post.data.imageCaption or '' }}" class="img-rounded">
-            <figcaption>{{ post.data.imageCaption or '' }}</figcaption> 
-        </figure>
+        <div class="projects">
+            <div class="project">
+                <div class="project-img">
+                    <a href="{{ post.url }}">
+                        <img alt="{{ post.data.imageCaption or '' }}" class="img-rounded" src="{{ post.data.image }}" />
+                    </a>
+                    <figcaption>{{ post.data.imageCaption or '' }}</figcaption> 
+                </div>
+                <div class="project-details">
+                    <h2 class="font-italic font-weight-600">
+                        <a href="{{ post.url }}">{{ post.data.title or "Home" }}</a>
+                    </h2>
+                    <p class="mt-0">{{ post.data.description }}</p>
+                    <dl class="mt-1">
+                        <dt>Role</dt>
+                        <dd>Creator</dd>
+
+                        <dt>Period</dt>
+                        <dd>Oct 2021 — now</dd>
+
+                        <dt>Status</dt>
+                        <dd>Ongoing</dd>
+                        
+                        <dt>Stack</dt>
+                        <dd>Clojure</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+
         
         {# <p>{{ post.content | safe }}</p> #}
 

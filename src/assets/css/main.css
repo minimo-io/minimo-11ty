@@ -98,3 +98,43 @@ blockquote p::after { content: '\201D'; }
 .read-more-text:not(.read-more-text-active){
     display:none;
 }
+
+/* projects / work */
+.projects {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    align-items: center;
+    margin: 35px 0;
+}        
+.projects > * {
+    width: 96vw;
+    max-width: 1000px;
+}        
+.project {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+.project-img {
+    max-width: 560px;
+}
+.project-details {
+    width: calc(1000px - 40px - 560px);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}        
+.project h2{
+    margin-top: 0;
+    display: flex;
+    gap: 5px;
+    align-items: baseline;              
+}
+.project dl {
+    font-size: var(--fs-clamped-200);
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-gap: 5px 10px;
+}  

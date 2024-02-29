@@ -3,3 +3,8 @@
     :root{ --wrapper-gutter: 1.5rem; }
     .star::before{ display:none; }
 }
+@media (max-width: 1000px){
+    .project {
+        flex-direction: column;
+    }     
+}
