@@ -29,6 +29,10 @@ tags:
 
      <h2 id="refs" class="h3 font-italic mt-2">References.</h2>
     <ul>
+        <li>
+            <a href="https://www.youtube.com/watch?v=TOTUXiYZhf4">Understanding Svelte5 runes</a>, more
+            <a href="https://www.youtube.com/watch?v=tC9KSwnczxQ">here</a>.
+        </li>
         <li><a href="https://kinsta.com/knowledgebase/what-is-an-environment-variable/">Environment Variables: What They Are and How To Use Them</a>, more <a href="https://devzibah.hashnode.dev/using-a-dotenv-file-to-store-and-use-api-keys-in-a-vite-built-react-app">here</a>.</li>
     </ul>
 

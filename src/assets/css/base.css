@@ -1,9 +1,9 @@
 /* custom properties  */
 :root{
     --main-content-max: 576px;
-    /* Prev: 992px; */
     --secondary-content-max: 768px;
-
+    --widest-content-max: 992px;
+    
     /* paddings */
     --wrapper-gutter: 1rem;
 

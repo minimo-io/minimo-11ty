@@ -7,36 +7,48 @@ description: "Design, prototyping and creation of digital craziness using Figma,
 
 <div class="wrapper article text-justify mt-5">
     <h2 id="summary" class="h3 font-weight-600 Xtext-center">
-        🦄 <span class="font-italic">Summary</span>
+        🦄 <span class="font-italic">Latests.</span>
     </h2>
     <p class="Xfs-400 font-italic Xtext-center">
-        A yearly summary of all activities, project launches, articles on development, design and... eveything in between!  👉 <a href="/blog/">Go to the full archive</a> ({{ collections.posts.length }} articles)
+        A summary of all activities for the last two articles!
+        <br>👉 <a href="/blog/">Go to the full archive</a> ({{ collections.posts.length }} articles)
     </p>
    
-    <div  class="archive mb-4">
-        <h2 class="h4 font-italic font-weight-600">Latest project.</h2>
-        <a href="/work/lightning-beer-app/">
-            <figure>
-                <img src="/assets/images/projects/project-lightning-beer.webp" alt="lightning-beer-project" class="img-rounded">
-                <figcaption><strong>LightningBeer</strong>: design & development</figcaption> 
-            </figure>
-        </a>        
-        {{ list.archive(collections.posts, "2024") }}
-        {{ list.archive(collections.posts, "2023") }}
+    <div  class="archive mt-1 mb-4">
+        <p>
+            <a href="/work/lightning-beer/">
+                <figure>
+                    <img src="/assets/images/projects/project-lightning-beer.webp" alt="lightning-beer-project" class="img-rounded">
+                    <figcaption><strong>LightningBeer</strong>: design & development</figcaption> 
+                </figure>
+            </a>
+        </p>
+        {{ list.archive(collections.posts, "2024", showTags=false) }}
+        {{ list.archive(collections.posts, "2023", showTags=false) }}
+        <br>
+        <p>Full archive <a href="/blog/">here</a>.</p>
     </div>
 
-    <div class="mb-4">
+    <div class="mb-2">
         <h2 id="biking" class="h3 font-weight-600">
             🚴🏼‍♂️ <span class="font-italic">Biking</span>
         </h2>    
         <p class="font-italic">
-            Latest bike adventure registered on a <a href="https://en.wikipedia.org/wiki/GPS_Exchange_Format" target="_blank" rel="noopener noreferrer">GPX file</a>.<br>
+            Latest bike adventure registered on a <a href="https://en.wikipedia.org/wiki/GPS_Exchange_Format" target="_blank" rel="noopener noreferrer">GPX file</a>.
             👉 All biking <i>tournées</i> <a href="/biking/">here</a>.
         </p>
         
-        {{ biking.map(loadApp=false) }}
 
     </div>
+
+</div>
+<div class="wrapper wrapper-widest">
+
+    {{ biking.map(loadApp=false) }}    
+
+      
+</div>
+<div class="wrapper">
 
     {# <h2 id="photos" class="h3 font-weight-600 mt-4">
         🖼️ <span class="font-italic">Photos</span>

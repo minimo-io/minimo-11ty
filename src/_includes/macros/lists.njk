@@ -1,4 +1,4 @@
-{% macro archive(collection, year = '') %}
+{% macro archive(collection, year = '', showTags = true) %}
     {% set currentYear = "" %}
     {% set count = collection.length %}
     {% for post in collection | reverse %}
@@ -24,12 +24,15 @@
                         .length < 2 %}0{% endif %}{{ count }} 
                     - {{ post.data.title or "Home" }}
                 </a>
-                {% for tag in post.data.tags %}
-                    {% if tag != "posts" %}
-                        <a title="Link to tag `{{ tag | escape }}`" href="/tag/{{ tag | slugify }}/">
-                            <span class="pill">{{ tag }}</span></a>
-                    {% endif %}
-                {% endfor %}
+                {% if showTags %}
+                    {% for tag in post.data.tags %}
+                        {% if tag != "posts" %}
+                            <a title="Link to tag `{{ tag | escape }}`" href="/tag/{{ tag | slugify }}/">
+                                <span class="pill">{{ tag }}</span></a>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+
             </p>
         {% endif %}
         {% set count = count - 1 %}

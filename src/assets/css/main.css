@@ -23,6 +23,9 @@ a.skip-to-main-content {
 .wrapper-wide{
     --new-content-max: var(--secondary-content-max);
 }
+.wrapper-widest{
+    --new-content-max: var(--widest-content-max);
+}
 .wrapper-profile{
     padding:0;
     margin-bottom:3rem;

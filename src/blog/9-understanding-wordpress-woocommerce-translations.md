@@ -1,6 +1,6 @@
 ---
 date: 2024-02-19T16:12:00-03:00
-title: "Understanding Wordpress & Woocommerce translation system"
+title: "Understanding Wordpress translation system"
 description: "A practical guide of the common errors (and solutions) when translating Wordpress & Woocommerce"
 image: "/assets/images/blog/vite-svelte-dev-v2.webp"
 tags:
