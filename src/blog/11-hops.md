@@ -1,0 +1,43 @@
+---
+title: "Hops.uy"
+description: "Discover and buy local craft beers"
+date: 2022-02-23T15:47:31-03:00
+image: /assets/images/projects/project-hops.webp
+imageCaption: "Hops.uy"
+star: true
+stack: Figma, Woocommerce, Flutter
+status: Sold
+period: 2022 - 2023
+role: Creator, developer & designer
+permalink: /work/hops/
+tags:
+    - project
+    - woocommerce
+    - flutter
+    - wordpress
+    - design
+    - coding
+---
+
+<div class="wrapper">
+    <p>
+        🍻 Hops is a craft beer marketplace where you will be able to buy your beers directly from the breweries and earn points redeemable for benefits on your purchases via QR at the bars associated to the app.
+    </p>
+    <p>
+        At Hops you was able to follow your favorite breweries and bars, find out about new releases and participate of their discounts. There was more! You could compare beer prices and search for nearby bars.
+    </p>
+    <p>
+        🛒 For breweries and shops (online and offline), Hops allowed them to sell and interact at a very low cost. 
+    </p>
+    <p>
+        All without commissions and directly to their customers!
+    </p>
+    <p>
+        Craft beer bars could accept Hops QR codes and attract app users who can order from their tables and use their rewards points for discounts.
+    </p>
+    <p>
+        <strong>🚨 In 2023 the project was sold to <a href="/work/braaay-store/"></a>, and all tech and content was transferred to the new project.</strong>
+        
+    </p>
+    
+</div>

@@ -6,5 +6,9 @@
 @media (max-width: 1000px){
     .project {
         flex-direction: column;
-    }     
+        padding-inline:var(--wrapper-gutter);
+    }
+    .project-details{ order:0; }
+    .project-img{ order:1; }
+
 }

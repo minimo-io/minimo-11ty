@@ -3,13 +3,19 @@ title: "Lightning Beer"
 description: "Buy craft beer with Bitcoin/Lightning in your trusted local store"
 date: 2023-10-01T23:23:12-03:00
 image: /assets/images/projects/project-lightning-beer.webp
-imageCaption: "lightning-beer-app"
+imageCaption: "Lightning Beer App, designed in Figma"
 star: true
-permalink: /work/lightning-beer/
+permalink: /work/lightning-beer-app/
+status: Prototyping. UI Completed.
+period: Jan 2024 - now
+role: Designer
+stack: Figma, Svelte
 tags:
     - project
     - craft beer
     - bitcoin
+    - design
+    - concept
 ---
 
 <div class="wrapper">

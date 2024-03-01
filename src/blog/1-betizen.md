@@ -1,14 +1,20 @@
 ---
 title: "Betizen"
 description: Reliable listings of online casinos, games, bonuses and affiliate programs, without scams or BS!
-date: 2022-09-30T14:00:25-03:00
+date: 2022-01-30T14:00:25-03:00
 image: /assets/images/projects/project-betizen.webp
 imageCaption: The Betizen project on mobile
 permalink: /work/betizen/
 star: true
+status: Ongoing
+stack: Wordpress
+period: 2020 - now
+role: Creator
 tags:
     - project
     - iGaming
+    - wordpress
+    - affiliate marketing
 ---
 <div class="wrapper">
     

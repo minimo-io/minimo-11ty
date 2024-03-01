@@ -138,3 +138,9 @@ blockquote p::after { content: '\201D'; }
     grid-template-columns: max-content 1fr;
     grid-gap: 5px 10px;
 }  
+.project dt {
+    font-weight: 600;
+}
+.project-braaay img{
+    border:1px solid #EFEFEF;
+}

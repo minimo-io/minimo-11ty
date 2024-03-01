@@ -6,9 +6,13 @@ modified: 2022-09-30T13:59:38-03:00
 image: /assets/images/projects/project-loveinabox.webp
 imageCaption: "The LoveInABox project mockup"
 permalink: /work/love-in-a-box/
+stack: Figma
+status: Archived (concept app)
 star: true
+period: 2022
+role: Designer
 tags:
-    - prototype
+    - concept
     - project
     - cooking
     - design

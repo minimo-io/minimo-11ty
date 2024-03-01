@@ -1,12 +1,16 @@
-{% macro archive(collection, year='') %}
+{% macro archive(collection, year = '') %}
     {% set currentYear = "" %}
     {% set count = collection.length %}
     {% for post in collection | reverse %}
-        {% set postYear = post.date.getFullYear() %}
+        {% set postYear = post
+            .date
+            .getFullYear() %}
         {# un-elegant but still the only way to "break" a loop in nunjucks #}
         {# https://github.com/mozilla/nunjucks/issues/296 #}
         {% set includePost = true %}
-        {% if year != '' and postYear != year %} {% set includePost = false %} {% endif %}
+        {% if year != '' and postYear != year %}
+            {% set includePost = false %}
+        {% endif %}
 
         {% if includePost %}
             {% if currentYear != postYear %}
@@ -15,14 +19,17 @@
             {% endif %}
             <p {% if post.data.star %} class="star"{% endif %}>
                 <a href="{{ post.url }}" style="font-weight:200;">
-                    #{% if count.toString().length < 2 %}0{% endif %}{{ count }} 
+                    #{% if count
+                        .toString()
+                        .length < 2 %}0{% endif %}{{ count }} 
                     - {{ post.data.title or "Home" }}
                 </a>
                 {% for tag in post.data.tags %}
                     {% if tag != "posts" %}
-                        <a title="Link to tag `{{ tag | escape }}`" href="/tag/{{ tag | slugify }}/"><span class="pill">{{ tag }}</span></a>
+                        <a title="Link to tag `{{ tag | escape }}`" href="/tag/{{ tag | slugify }}/">
+                            <span class="pill">{{ tag }}</span></a>
                     {% endif %}
-                {% endfor %}                
+                {% endfor %}
             </p>
         {% endif %}
         {% set count = count - 1 %}
@@ -30,39 +37,48 @@
 {% endmacro %}
 
 {% macro work(collection) %}
+    <div class="projects">
     {% for post in collection | reverse %}
+    
+        <div class="project project-{{ post.data.title | slugify }}">
+            <div class="project-img">
+                <a href="{{ post.url }}">
+                    <img alt="{{ post.data.imageCaption or '' }}" class="img-rounded" src="{{ post.data.image }}"/>
+                </a>
+                {# <figcaption>{{ post.data.imageCaption or '' }}</figcaption> #}
+            </div>
+            <div class="project-details">
+                <h2 class="font-italic font-weight-600">
+                    <a href="{{ post.url }}">{{ post.data.title or "Home" }}</a>
+                </h2>
+                <p class="mt-0">{{ post.data.description }}</p>
+                <p>
+                    {% set count = 0 %}
+                    {% for tag in post.data.tags %}
+                        {% if tag != "posts" and tag != "project" %}
+                            <a title="Link to tag `{{ tag | escape }}`" href="/tag/{{ tag | slugify }}/">
+                                <span class="pill{% if count === 0 %} ml-0{%endif%}">{{tag}}</span>
+                            </a>
+                            {% set count = count + 1 %}
+                        {% endif %}
+                    {% endfor %}
+                </p>
+                <dl class="project-meta mt-1">
+                    <dt>Role</dt>
+                    <dd>{{ post.data.role or "-" }}</dd>
 
-        <div class="projects">
-            <div class="project">
-                <div class="project-img">
-                    <a href="{{ post.url }}">
-                        <img alt="{{ post.data.imageCaption or '' }}" class="img-rounded" src="{{ post.data.image }}" />
-                    </a>
-                    <figcaption>{{ post.data.imageCaption or '' }}</figcaption> 
-                </div>
-                <div class="project-details">
-                    <h2 class="font-italic font-weight-600">
-                        <a href="{{ post.url }}">{{ post.data.title or "Home" }}</a>
-                    </h2>
-                    <p class="mt-0">{{ post.data.description }}</p>
-                    <dl class="mt-1">
-                        <dt>Role</dt>
-                        <dd>Creator</dd>
+                    <dt>Period</dt>
+                    <dd>{{ post.data.period or "-" }}</dd>
 
-                        <dt>Period</dt>
-                        <dd>Oct 2021 — now</dd>
+                    <dt>Status</dt>
+                    <dd>{{ post.data.status or "-" }}</dd>
 
-                        <dt>Status</dt>
-                        <dd>Ongoing</dd>
-                        
-                        <dt>Stack</dt>
-                        <dd>Clojure</dd>
-                    </dl>
-                </div>
+                    <dt>Stack</dt>
+                    <dd>{{ post.data.stack or "-" }}</dd>
+                </dl>
             </div>
         </div>
 
-        
         {# <p>{{ post.content | safe }}</p> #}
 
         {# <p {% if post.data.star %} class="star"{% endif %}>
@@ -76,4 +92,5 @@
             {% endfor %}                
         </p> #}
     {% endfor %}
+    </div>
 {% endmacro %}
