@@ -19,7 +19,7 @@ tags:
 ---
 <div class="wrapper">
     <p class="fs-400 font-italic">
-        A  wines & craft beer e-commerce, app & store for Brazil and Uruguay (launched in 2023!)
+        A  wines & craft beer e-commerce, app & store for Brazil and Uruguay.
     </p>
     <p>Initial work:</p>
     <ul>
