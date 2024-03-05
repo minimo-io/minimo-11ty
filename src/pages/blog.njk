@@ -3,6 +3,12 @@ title: Blog
 description: A collection of articles
 ---
 {% import "macros/lists.njk" as list %}
-<div id="main" class="archive wrapper wrapper-wide mt-2">
+{% import "macros/tags.njk" as tags with context %}
+<div id="main" class="archive wrapper mt-2">
     {{ list.archive(collections.posts) }}
+        
+    <div class="text-center line-height-2 mt-3">
+        {{ tags.cloud() }}
+    </div>
+
 </div>

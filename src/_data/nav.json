@@ -14,10 +14,10 @@
         },
         {
             "url": "/biking/",
-            "name": "Biking/Adventure"
+            "name": "Biking"
         },
         {
-            "url": "/investing/",
+            "url": "/tag/investing/",
             "name": "Investing"
         }       
     ]

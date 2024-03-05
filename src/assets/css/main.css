@@ -127,7 +127,7 @@ blockquote p::after { content: '\201D'; }
     width: calc(1000px - 40px - 560px);
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 5px;
 }        
 .project h2{
     margin-top: 0;

@@ -4,11 +4,11 @@
     .star::before{ display:none; }
 }
 @media (max-width: 1000px){
-    .project {
+    .project:not(.project-single) {
         flex-direction: column;
         padding-inline:var(--wrapper-gutter);
     }
-    .project-details{ order:0; }
+    .project-details{ order:0; gap:0; }
     .project-img{ order:1; }
 
 }

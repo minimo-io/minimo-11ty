@@ -5,6 +5,7 @@ title: "⚡️ Bitcoin & The Lightning Network"
 description: "Newcomer notes on the Layer 2 scalability solution for Bitcoin"
 tags:
   - bitcoin
+  - investing
 ---
 <div class="wrapper wrapper-wide">
   <iframe width="100%" height="420" class="img-rounded" frameborder="0" src="https://www.theblock.co/data/on-chain-metrics/bitcoin/lightning-networks-capacity-daily/embed" title="Lightning Network's Capacity"></iframe>

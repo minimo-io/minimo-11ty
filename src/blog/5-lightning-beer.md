@@ -5,11 +5,13 @@ date: 2023-10-01T23:23:12-03:00
 image: /assets/images/projects/project-lightning-beer.webp
 imageCaption: "Lightning Beer App, designed in Figma"
 star: true
+
+role: Designer
 permalink: /work/lightning-beer-app/
 status: Prototyping. UI Completed.
 period: Jan 2024 - now
-role: Designer
 stack: Figma, Svelte
+
 tags:
     - project
     - craft beer
@@ -17,8 +19,7 @@ tags:
     - design
     - concept
 ---
-
-<div class="wrapper">
+<div class="wrapper">   
     <p>
         LightningBeer is as a proof-of-concept app for those of us willing to use bitcoin as money, not just as one more speculative asset, so we can buy our craft 6-packs using satoshis, instead of just sitting above them.
     </p>
@@ -29,7 +30,5 @@ tags:
         The financial goal for the project will be to cover its operational costs. 
         Expect an open financial report once a month. <u>Partners are welcome!</u>
     </p>
-    <p>
-        <blockquote>👉 Ready to add you store? Please <a href="/" title="Link to Homepage">get in touch</a>.</blockquote>
-    </p>
+    <blockquote>👉 Ready to add you store? Please <a href="/" title="Link to Homepage">get in touch</a>.</blockquote>
 </div>

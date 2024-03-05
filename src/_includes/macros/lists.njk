@@ -25,10 +25,12 @@
                     - {{ post.data.title or "Home" }}
                 </a>
                 {% if showTags %}
+                     {% set tagsArray = [] %}
                     {% for tag in post.data.tags %}
                         {% if tag != "posts" %}
-                            <a title="Link to tag `{{ tag | escape }}`" href="/tag/{{ tag | slugify }}/">
-                                <span class="pill">{{ tag }}</span></a>
+                            {% set tagsArray = (tagsArray.push(tag), tagsArray) %}
+                            {# <a title="Link to tag `{{ tag | escape }}`" href="/tag/{{ tag | slugify }}/">
+                                <span class="pill">{{ tag }}</span></a> #}
                         {% endif %}
                     {% endfor %}
                 {% endif %}

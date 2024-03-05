@@ -18,14 +18,20 @@ tags:
         <strong class="font-weight-600">What is Vite?</strong>: A (rollup based) front-end build tool (aka bundler) and development server designed for modernnnnnnn-ous webdev.
     </p>
     <p>
-        <strong class="font-weight-600">What is Svelte? And SvelteKit?</strong>: Definitions are changing around. But as far as Svelte4 was concern, Svelte was a components framework, and SvelteKit an app framework. 
+        <strong class="font-weight-600">What is Svelte? And SvelteKit?</strong>: As Svelte4 was concern, Svelte was a components framework, and SvelteKit an app framework. 
     </p>
-    <p>Meaning that if what you need is to inject some simple functioanlity to a page ( say one created with a Static Site Generator like Eleventy) then Svelte + Vite is for you (that's the case for <a href="https://minimo.io">minimo.io</a>).</p>
+    <p>Meaning that if what you need is to inject some simple functioanlity to a page (say one created with a Static Site Generator like Eleventy) then Svelte + Vite is for you (that's the case for <a href="https://minimo.io">minimo.io</a>).</p>
     <p>If on the other hand if what you need is to build a full-stack lovely and creepy application then SvelteKit is your way to go. More on this in <a href="https://youtu.be/z7n17ajJpCo?si=zx8RuvJNbqgBuXIm&t=2410">this video</a> about Svelte 5 with Rich Harris <i>(Feb 1st, 2024)</i>.</p>
 
     <p>
-        Got it! So what else would do I need? A CSS Framework.
+        Got it! So what else would do I need? A CSS Framework?
     </p>
+    <p><strong class="font-weight-600">First</strong>, try out the technology. Svelte made a partnership with <a href="https://stackblitz.com/">Stackblitz</a> (a fullstack web IDE, like the Figma for code editors), so you can try it out online right from their <a href="https://svelte.dev/repl/">REPL</a>.</p>
+    <p><strong class="font-weight-600">Second</strong>, undestand the difference between Svelte & SvelteKit with a practical example. The Svelte team is not making this easier for newcommers as the consciously try to blur the difference.
+    I will make one of this example as I progress with my own learnings.
+    </p>
+    <p><strong class="font-weight-600">Third,</strong> learn Svelte5 and all its nuances.</p>
+    <p><strong class="font-weight-600">Fourth,</strong>, create a small SvelteKit app, like the one I am migrating to Svelte: <a href="/work/lightning-beer-app/">The LightningBeer</a></p>
 
      <h2 id="refs" class="h3 font-italic mt-2">References.</h2>
     <ul>

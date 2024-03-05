@@ -7,6 +7,23 @@ layout: base
 {{ hero.article(title, description, image, imageCaption) }}
 
 <article class="article">
+    {% if role %}
+        <div class="wrapper project project-single">
+            <dl class="project-meta mt-1">
+                <dt>Role</dt>
+                <dd>{{ role }}</dd>
+
+                <dt>Period</dt>
+                <dd>{{ period }}</dd>
+
+                <dt>Status</dt>
+                <dd>{{ status }}</dd>
+
+                <dt>Stack</dt>
+                <dd>{{ stack }}</dd>
+            </dl>
+        </div> 
+    {% endif %}    
     {{ content | safe  }}
 </article>
 
