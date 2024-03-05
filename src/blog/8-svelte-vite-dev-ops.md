@@ -5,6 +5,7 @@ description: "A guide for self-guiding oneself on how to get some sort of guidan
 image: "/assets/images/blog/vite-svelte-dev-v2.webp"
 tags:
   - coding
+  - svelte
 ---
 <div class="wrapper mt-2">
     <p>In 2024 I am pivoting my stack.</p>

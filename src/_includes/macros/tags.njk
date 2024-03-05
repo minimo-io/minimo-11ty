@@ -1,10 +1,17 @@
 {% macro cloud() %}
     <h2 id="tag-cloud" class="h3 font-italic">Tag cloud</h2>
-    {% for post in collections.posts %}
+    {% set tagsAdded = [] %}
+    {% for post in collections.posts | reverse %}
         {% for tag in post.data.tags %}
             {% if tag != "posts" %}
-                <a title="Link to tag `{{ tag | escape }}`" href="/tag/{{ tag | slugify }}/">
-                    <span class="pill">{{ tag }}</span></a>
+                
+                {% if tagsAdded.includes(tag) == false %}
+                    <a title="Link to tag `{{ tag | escape }}`" href="/tag/{{ tag | slugify }}/">
+                        <span class="pill">{{ tag }}</span></a>
+                        
+                    {% set tagsAdded = (tagsAdded.push(tag), tagsAdded) %}    
+                {% endif %}
+                
             {% endif %}
         {% endfor %}
     {% endfor %}
