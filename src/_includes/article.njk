@@ -24,7 +24,8 @@ layout: base
             </dl>
         </div> 
     {% endif %}    
-    {{ content | safe  }}
+    {% templatey content %}
+    {# {{ content | safe  }} #}
 </article>
 
 <div class="tags wrapper mt-2">
