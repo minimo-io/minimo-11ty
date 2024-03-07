@@ -29,7 +29,7 @@
                 <h3 class="font-italic mt-2">Other rides.</h3>
                 <ol>
                     {% for gpx in gpxs %}
-                        <li><a href="#" @click.prevent="gpxFile = '{{ gpxFilesPath + gpx.file }}'; goToHashed('#biking-map')">{{ gpx.title }}</a></li>
+                        <li><a @click.prevent="gpxFile = '{{ gpxFilesPath + gpx.file }}'; goToHashed('#biking-map')">{{ gpx.title }}</a></li>
                     {% endfor %}
                     
                 </ol>          
