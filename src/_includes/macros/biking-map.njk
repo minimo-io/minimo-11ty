@@ -1,27 +1,35 @@
-{% macro map(loadApp=false) %}
+{% macro map(loadApp=false, wrap="wrapper") %}
+    <div class="{{ wrap }}">
+        <section id="biking-map" x-data="{ gpxFile: '{{ gpxs[0].file }}' }" class="gpx mt-1" data-gpx-source="/assets/gpxs/{{ gpxs[0].file }}" data-map-target="latest-biking-map">
+            <header>
+                <h3>Loading...</h3>
+                <span class="start"></span>
+            </header>
 
-    <section id="biking-map" class="gpx mt-1" data-gpx-source="/assets/gpxs/{{ gpxs.pop().file }}" data-map-target="latest-biking-map">
-        <header>
-            <h3>Loading...</h3>
-            <span class="start"></span>
-        </header>
-
-        <div class="map" id="latest-biking-map"></div>
-    
-        <footer>
-            <ul class="info">
-                <li>Distance:&nbsp;<span class="distance"></span>km</li>
-                · <li>Duration:&nbsp;<span class="duration"></span></li>
-                · <li>Pace:&nbsp;<span class="pace"></span>/km</li>
-                {# / <li>Avg&nbsp;HR:&nbsp;<span class="avghr"></span>&nbsp;bpm</li> #}
-                · <li>Elevation:&nbsp;+<span class="elevation-gain"></span>m,
-                    -<span class="elevation-loss"></span>m
-                    (net:<span class="elevation-net"></span>m)</li>
-            </ul>
-        </footer>
-    </section>
-
+            <div class="map" id="latest-biking-map"></div>
+        
+            <footer>
+                <ul class="info">
+                    <li>Distance:&nbsp;<span class="distance"></span>km</li>
+                    · <li>Duration:&nbsp;<span class="duration"></span></li>
+                    · <li>Pace:&nbsp;<span class="pace"></span>/km</li>
+                    {# / <li>Avg&nbsp;HR:&nbsp;<span class="avghr"></span>&nbsp;bpm</li> #}
+                    · <li>Elevation:&nbsp;+<span class="elevation-gain"></span>m,
+                        -<span class="elevation-loss"></span>m
+                        (net:<span class="elevation-net"></span>m)</li>
+                </ul>
+            </footer>
+        </section>
+    </div>
     {% if loadApp === true %}
-        <div class="biking-app"></div>
+        <div class="wrapper">
+            <h3 class="font-italic mt-2">Other rides.</h3>
+            <ol>
+                {% for gpx in gpxs %}
+                    <li><a @click="gpxFile = '{{ gpx.file }}'">{{ gpx.title }}</a></li>
+                {% endfor %}
+                
+            </ol>          
+        </div>
     {% endif %}
 {%endmacro%}

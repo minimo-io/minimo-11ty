@@ -43,12 +43,9 @@ description: "Design, prototyping and creation of digital craziness using Figma,
     </div>
 
 </div>
-<div class="wrapper wrapper-widest">
 
-    {{ biking.map(loadApp=false) }}    
+{{ biking.map(loadApp=false, wrap="wrapper wrapper-widest") }}
 
-      
-</div>
 <div class="wrapper">
     <div class="archive article text-center line-height-2 mt-3">
         {{ tags.cloud() }}
