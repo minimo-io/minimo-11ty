@@ -23,12 +23,12 @@
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.js"></script>
     {% endif %}
-    {# Alpine #}
-    {% if alpine === true %}
-        <script src="//unpkg.com/alpinejs" defer></script>
-    {% endif %}
     <link href="/assets/css/style.css" rel="stylesheet" />
     <script src="/assets/js/bundle.js" defer></script>
+    {# Alpine, keep it after bundle, in order to execute second after DOMContentLoad #}
+    {% if alpine === true %}
+        <script src="//unpkg.com/alpinejs" defer></script>
+    {% endif %}    
     <link href="/assets/images/favicon.png" rel="icon" sizes="32x32">
     <meta name="generator" content="{{ eleventy.generator }}">
     <style>svg{ max-width: 15px; }img{ max-width: 100%; }</style>

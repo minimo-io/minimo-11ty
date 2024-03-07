@@ -1,35 +1,39 @@
 {% macro map(loadApp=false, wrap="wrapper") %}
-    <div class="{{ wrap }}">
-        <section id="biking-map" x-data="{ gpxFile: '{{ gpxs[0].file }}' }" class="gpx mt-1" data-gpx-source="/assets/gpxs/{{ gpxs[0].file }}" data-map-target="latest-biking-map">
-            <header>
-                <h3>Loading...</h3>
-                <span class="start"></span>
-            </header>
+    {% set gpxFilesPath = '/assets/gpxs/' %}
+    {% set gpxFileInit = gpxFilesPath + gpxs[0].file  %}
+    <div x-effect="displayGpx($('#biking-map'), gpxFile)" x-data="{ gpxFile: '{{ gpxFileInit }}' }">
+        <div class="{{ wrap }}">
+            <section id="biking-map" class="gpx mt-1" data-gpx-source="{{ gpxFileInit }}" data-map-target="latest-biking-map">
+                <header>
+                    <h3>Loading...</h3>
+                    <span class="start"></span>
+                </header>
+                <footer>
+                    <ul class="info">
+                        <li>Distance:&nbsp;<span class="distance"></span>km</li>
+                        · <li>Duration:&nbsp;<span class="duration"></span></li>
+                        · <li>Pace:&nbsp;<span class="pace"></span>/km</li>
+                        {# / <li>Avg&nbsp;HR:&nbsp;<span class="avghr"></span>&nbsp;bpm</li> #}
+                        · <li>Elevation:&nbsp;+<span class="elevation-gain"></span>m,
+                            -<span class="elevation-loss"></span>m
+                            (net:<span class="elevation-net"></span>m)</li>
+                    </ul>
+                </footer>
 
-            <div class="map" id="latest-biking-map"></div>
-        
-            <footer>
-                <ul class="info">
-                    <li>Distance:&nbsp;<span class="distance"></span>km</li>
-                    · <li>Duration:&nbsp;<span class="duration"></span></li>
-                    · <li>Pace:&nbsp;<span class="pace"></span>/km</li>
-                    {# / <li>Avg&nbsp;HR:&nbsp;<span class="avghr"></span>&nbsp;bpm</li> #}
-                    · <li>Elevation:&nbsp;+<span class="elevation-gain"></span>m,
-                        -<span class="elevation-loss"></span>m
-                        (net:<span class="elevation-net"></span>m)</li>
-                </ul>
-            </footer>
-        </section>
-    </div>
-    {% if loadApp === true %}
-        <div class="wrapper">
-            <h3 class="font-italic mt-2">Other rides.</h3>
-            <ol>
-                {% for gpx in gpxs %}
-                    <li><a @click="gpxFile = '{{ gpx.file }}'">{{ gpx.title }}</a></li>
-                {% endfor %}
-                
-            </ol>          
+                <div class="map" id="latest-biking-map"></div>
+                            
+            </section>
         </div>
-    {% endif %}
+        {% if loadApp === true %}
+            <div class="wrapper">
+                <h3 class="font-italic mt-2">Other rides.</h3>
+                <ol>
+                    {% for gpx in gpxs %}
+                        <li><a href="#" @click.prevent="gpxFile = '{{ gpxFilesPath + gpx.file }}'; goToHashed('#biking-map')">{{ gpx.title }}</a></li>
+                    {% endfor %}
+                    
+                </ol>          
+            </div>
+        {% endif %}    
+    </div>
 {%endmacro%}

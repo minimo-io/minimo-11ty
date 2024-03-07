@@ -49,7 +49,7 @@ window.addEventListener('DOMContentLoaded', function () {
     } 
     // main map load
     if (gpxMap){
-        displayGpx(gpxMap);
+        // displayGpx(gpxMap); // I am doint this with alpine now.
     }
     
 
@@ -197,7 +197,9 @@ window.addEventListener('DOMContentLoaded', function () {
         anchor.addEventListener('click', function(e){
             e.preventDefault();
             // console.log("Hashing link");
-            const goToHash = $(this.getAttribute("href"));
+            let hashValue = this.getAttribute("href");
+            if (hashValue == "#") return;
+            const goToHash = $(hashValue);
 
             goToHash.style.scrollMarginTop = "10px";
             goToHash.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -247,20 +249,29 @@ const animateCSS = (element, animation, prefix = 'animate__') =>
     element.addEventListener('animationend', handleAnimationEnd, {once: true});
 });
 
-const displayGpx = function (elt) {
+const displayGpx = function (elt, filePath) {
     if (!elt) return;
 
-    var url = elt.getAttribute('data-gpx-source');
+    var url = filePath || elt.getAttribute('data-gpx-source');
     var mapid = elt.getAttribute('data-map-target');
     if (!url || !mapid) return;
 
     function _t(t) { return elt.getElementsByTagName(t)[0]; }
     function _c(c) { return elt.getElementsByClassName(c)[0]; }
 
+    $("#" + mapid).remove();
+    let newMapDiv = document.createElement("div");
+    newMapDiv.id = mapid;
+    newMapDiv.classList.add("map");
+    $("#biking-map").append(newMapDiv);
+
     var map = L.map(mapid);
+
+
     L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: 'Map data &copy; <a href="http://www.osm.org">OpenStreetMap</a>'
-    }).addTo(map);
+        attribution: 'Map data &copy; <a href="http://www.osm.org">OpenStreetMap</a>'
+        }).addTo(map);
+
 
     var control = L.control.layers(null, null).addTo(map);
 
@@ -276,10 +287,6 @@ const displayGpx = function (elt) {
     map.fitBounds(gpx.getBounds());
     control.addOverlay(gpx, gpx.get_name());
 
-    /*
-    * Note: the code below relies on the fact that the demo GPX file is
-    * an actual GPS track with timing and heartrate information.
-    */
     _t('h3').textContent = gpx.get_name();
     _c('start').textContent = gpx.get_start_time().toDateString() + ', '
         + gpx.get_start_time().toLocaleTimeString();
@@ -300,4 +307,6 @@ const displayGpx = function (elt) {
             - gpx.get_elevation_loss()).toFixed(0);
 
     }).addTo(map);
+
+   
 }
