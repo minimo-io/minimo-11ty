@@ -2,12 +2,13 @@
 An 11tyzed minimo.io theme
 
 # ToDo
-
-* Configure markdownItAnchor, from this example https://github.com/11ty/eleventy-base-blog/blob/main/eleventy.config.js
-* Manually list all GPX stuff, maybe load with plain js or Alpinjs.
+* List all GPX stuff, maybe load with plain js or Alpinjs. Maybe a new data file.
+* Create a reusable grid system to list posts like gpx rides so I can clearly show some metadata for each (for later use in posts list)
 * Add primal logo and link in menu and author boxes.
 * BUG: Build styles are being loaded from /assets/css/style.css which is not the minified created version. Must be the style.css. Also styles from /assets/css/* are being exported which is not necesary.
 ---
+* There seems to be a non-documented page.templateSyntax data value, that could replace the current solution for detecting Markdown vs Nunjucks blog posts
+* Configure markdownItAnchor, from this example https://github.com/11ty/eleventy-base-blog/blob/main/eleventy.config.js
 * Add get in touch button at the bottom of articles (with a custo front matter) and at the top menu
 * Download a CV button in homepage
 * Biking: List all articles tagged with "biking". This should not appear within biking articles.

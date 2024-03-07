@@ -1,16 +1,26 @@
 ---
 title: Biking
 description: Some aventures on top of a bike 🚴🏼‍♂️
+alpine: true
 ---
 {# {% import "macros/links.njk" as link %}
 {% import "macros/heros.njk" as hero %} #}
-{% import "macros/biking-map.njk" as biking %}
+{% import "macros/biking-map.njk" as biking with context %}
 
 <div id="main" class="wrapper">
     <p>
-        Bike adventures registered as (<a href="https://en.wikipedia.org/wiki/GPS_Exchange_Format" target="_blank" rel="noopener noreferrer">GPX files</a>). Here is the latest one.
+        Bike adventures registered as <a href="https://en.wikipedia.org/wiki/GPS_Exchange_Format" target="_blank" rel="noopener noreferrer">GPX files</a>. All rides in <a href="https://www.strava.com/athletes/71907777">Strava</a>. Below is the latest one worth mentioning.
     </p>
 </div>
 <div class="wrapper wrapper-widest">
     {{ biking.map(loadApp=true) }}
+</div>
+<div class="wrapper">
+    <h3 class="font-italic mt-2">Other rides.</h3>
+    <ol>
+        {% for gpx in gpxs %}
+            <li>{{ gpx.title }}</li>
+        {% endfor %}
+        
+    </ol>
 </div>

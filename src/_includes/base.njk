@@ -23,7 +23,10 @@
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.js"></script>
     {% endif %}
-
+    {# Alpine #}
+    {% if alpine === true %}
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    {% endif %}
     <link href="/assets/css/style.css" rel="stylesheet" />
     <script src="/assets/js/bundle.js" defer></script>
     <link href="/assets/images/favicon.png" rel="icon" sizes="32x32">
