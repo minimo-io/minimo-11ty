@@ -6,6 +6,7 @@
 */
 
 @import 'animate.min.css';
+@import 'prism-dark.css';
 
 @import 'base.css';
 @import 'themes.css';
@@ -19,4 +20,3 @@
 @import 'queries.css';
 @import 'gpx.css';
 @import 'forms.css';
-@import 'prism-dark.css';
