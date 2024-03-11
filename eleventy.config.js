@@ -1,4 +1,6 @@
-const emojiReadTime = require("@11tyrocks/eleventy-plugin-emoji-readtime");
+const pluginEmojiReadTime = require("@11tyrocks/eleventy-plugin-emoji-readtime");
+const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+
 
 module.exports = function(eleventyConfig){
 
@@ -31,8 +33,13 @@ module.exports = function(eleventyConfig){
     });
 
     // reading time
-    eleventyConfig.addPlugin(emojiReadTime, {
+    eleventyConfig.addPlugin(pluginEmojiReadTime, {
         showEmoji: false
+    });
+
+    // syntaxhighlighter
+    eleventyConfig.addPlugin(pluginSyntaxHighlight, {
+        preAttributes: { tabindex: 0 }
     });
 
     return {

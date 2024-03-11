@@ -14,6 +14,7 @@ tags:
   - project
   - coding
   - jquery
+  - javascript
 ---
 
 <div class="wrapper">
@@ -34,29 +35,35 @@ tags:
             <h4 class="codex" id="codex5">Thomas Kennerly Wolfe Jr.</h4>
             <a class="btn" id="do5">The "Typewriter" effect</a>      
         </p>
-<pre class=""><code>jQuery('#codex5').codex({
+        {% highlight "js" %}
+jQuery('#codex5').codex({
     effect: 'typewriter', 
     speed: 50, 
     reveal: 50
-});</code></pre>          
+});
+        {% endhighlight%}         
         <p>
             <h4 class="codex" id="codex4">Hunter S. Thompson</h4>
             <a class="btn" id="do4">Efecto "Char by Char"</a>
         </p>
-<pre class=""><code>jQuery("#codex4").codex({
+        {% highlight "js" %}
+jQuery("#codex4").codex({
     effect: "charbychar",
     keep_whitespaces: false,
     speed: 50,
     reveal: 100
-});</code></pre>         
+});
+        {% endhighlight%}     
         <p>
             <h4 class="codex" id="codex2">Roberto Arlt</h4>
             <a class="btn" id="do2">Efecto normie (slow)</a>            
         </p>
-<pre class=""><code>jQuery("#codex2").codex({
+        {% highlight "js" %}
+jQuery("#codex2").codex({
     speed: 80,
     duration: 6000
-});</code></pre>        
+});
+        {% endhighlight%}       
     </div>
     <style>.codex{ font-familiy: monospace; }</style>
     <script src="https://cdn.jsdelivr.net/gh/jquery/jquery/dist/jquery.min.js"></script>
