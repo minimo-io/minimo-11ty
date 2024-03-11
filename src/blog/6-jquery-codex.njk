@@ -29,27 +29,63 @@ tags:
         These are the examples of how to use the jQuery Codex to achieve completely and absolutely unproductive text effects.
     </p>
 
-    <div class="uncont">
-        <div class="empty-space empty-single">
-            <span class="empty-space-inner"></span>
-        </div>
-        <div class="wpb_raw_code wpb_content_element wpb_raw_html">
-            <div class="wpb_wrapper">
-                <h6 class="codex" id="codex5" style="font-size:24px;">Thomas Kennerly Wolfe Jr.</h6>
-                <br>
-                <button id="do5">The "Typewriter" effect</button>
-            </div>
-        </div>
-            
+    <div class="text-center">
+        <p>
+            <h4 class="codex" id="codex5">Thomas Kennerly Wolfe Jr.</h4>
+            <a class="btn" id="do5">The "Typewriter" effect</a>      
+        </p>
+<pre class=""><code>jQuery('#codex5').codex({
+    effect: 'typewriter', 
+    speed: 50, 
+    reveal: 50
+});</code></pre>          
+        <p>
+            <h4 class="codex" id="codex4">Hunter S. Thompson</h4>
+            <a class="btn" id="do4">Efecto "Char by Char"</a>
+        </p>
+<pre class=""><code>jQuery("#codex4").codex({
+    effect: "charbychar",
+    keep_whitespaces: false,
+    speed: 50,
+    reveal: 100
+});</code></pre>         
+        <p>
+            <h4 class="codex" id="codex2">Roberto Arlt</h4>
+            <a class="btn" id="do2">Efecto normie (slow)</a>            
+        </p>
+<pre class=""><code>jQuery("#codex2").codex({
+    speed: 80,
+    duration: 6000
+});</code></pre>        
     </div>
+    <style>.codex{ font-familiy: monospace; }</style>
     <script src="https://cdn.jsdelivr.net/gh/jquery/jquery/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/minimo-labs/jquery-codex/jquery.codex.js"></script>
     <script>
         $(function () {
-            $('#do5').click(function () {
-                alert('OOK');
-                $('#codex5').codex({effect: 'typewriter', speed: 50, reveal: 50});
+            
+            jQuery('#do5').click(function () {
+                jQuery('#codex5').codex({
+                    effect: 'typewriter', 
+                    speed: 50, 
+                    reveal: 50
+                });
             });
+            jQuery('#do4').click(function () {
+                jQuery("#codex4").codex({
+                        effect: "charbychar",
+                        keep_whitespaces: false,
+                        speed: 50,
+                        reveal: 100
+                });
+            });
+            jQuery('#do2').click(function () {
+                jQuery("#codex2").codex({
+                    speed: 80,
+                    duration: 6000
+                });
+            });
+
         })
     </script>
 </div>
