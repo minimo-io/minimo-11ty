@@ -2,11 +2,14 @@
 An 11tyzed minimo.io theme
 
 # ToDo
+* Draft articles functionality
+* Draft the Diccionario del Lunfardo article.
 * List all GPX stuff, maybe load with plain js or Alpinjs. Maybe a new data file.
 * Create a reusable grid system to list posts like gpx rides so I can clearly show some metadata for each (for later use in posts list)
 * Add primal logo and link in menu and author boxes.
 * BUG: Build styles are being loaded from /assets/css/style.css which is not the minified created version. Must be the style.css. Also styles from /assets/css/* are being exported which is not necesary.
 ---
+* Add a visit project button on work listing and on each project page.
 * There seems to be a non-documented page.templateSyntax data value, that could replace the current solution for detecting Markdown vs Nunjucks blog posts
 * Reading progress
 * Configure markdownItAnchor, from this example https://github.com/11ty/eleventy-base-blog/blob/main/eleventy.config.js
@@ -18,3 +21,4 @@ An 11tyzed minimo.io theme
 * Use the library leaflet-gpx via npm and eleventy.config.js, instead of hard-coding it.
 * Think about implementing esbuild to bundle javascript, [Bundle JavaScript with Eleventy and esbuild](https://blog.r0b.io/post/bundle-javascript-with-eleventy-and-esbuild/). This will need changing the currect pipeline (for the better). Check [esbuild](https://github.com/evanw/esbuild).
 * Add functionality: Load prism-light or prism-dark depending on the mode selected (not it's fixed dark).
+* Rebuild the "Diccionario del Lunfardo" in Alpine.js or Svelte.
