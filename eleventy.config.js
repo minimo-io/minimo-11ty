@@ -1,6 +1,7 @@
 const pluginEmojiReadTime = require("@11tyrocks/eleventy-plugin-emoji-readtime");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginDrafts = require("./eleventy.config.drafts.js");
+const rimraf = require('rimraf');
 
 module.exports = function(eleventyConfig){
 
@@ -8,9 +9,14 @@ module.exports = function(eleventyConfig){
     eleventyConfig.ignores.add('src/tests');
 
     // additional file copies
-    eleventyConfig.addPassthroughCopy('src/assets');
+    if (process.env.ELEVENTY_RUN_MODE != "build"){
+        eleventyConfig.addPassthroughCopy('src/assets/css');
+    }
+    eleventyConfig.addPassthroughCopy('src/assets/gpxs');
+    eleventyConfig.addPassthroughCopy('src/assets/images');
+    eleventyConfig.addPassthroughCopy('src/assets/js');
     eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
-    eleventyConfig.addPassthroughCopy('src/.well-known');
+    eleventyConfig.addPassthroughCopy('src/.well-known'); // for nostr
 
     eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
     // if content is markdown then wrap it around, else: free will!
@@ -55,6 +61,14 @@ module.exports = function(eleventyConfig){
     // drafts functionality as in https://www.11ty.dev/docs/quicktips/draft-posts/
     eleventyConfig.addPlugin(pluginDrafts);
 
+    eleventyConfig.addGlobalData("runMode", () =>{
+        return process.env.ELEVENTY_RUN_MODE;
+    });
+    // eleventyConfig.on('eleventy.after', async ({ dir, results, runMode, outputMode }) => {
+    //     if ("build" == runMode){
+
+    //     }
+    // });
 
     return {
         dir: {

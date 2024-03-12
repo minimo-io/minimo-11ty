@@ -1,17 +1,18 @@
 {
   "name": "@minimo-labs/minimo-11ty",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A theme for the minimo.io website made with 11ty",
   "scripts": {
     "dev": "NODE_ENV=dev npm-run-all clean-build --parallel watch:*",
-    "build": "npm-run-all clean-build build:11ty --parallel build:postcss minify:*",
+    "build": "npm-run-all clean-build build:11ty build:postcss minify:* clean-prod",
     "clean-build": "rimraf _site",
+    "clean-prod": "rimraf _site/assets/js",
     "watch:11ty": "eleventy --serve",
     "build:11ty": "eleventy",
     "watch:postcss": "postcss src/assets/css/style.css --dir _site --watch",
     "build:postcss": "postcss src/assets/css/style.css --dir _site",
     "minify:html": "html-minifier --input-dir _site --output-dir _site --file-ext html --remove-comments --collapse-whitespace",
-    "minify:js": "terser _site/assets/js/bundle.js --mangle --toplevel -o _site/assets/js/bundle.js"
+    "minify:js": "terser _site/assets/js/bundle.js --toplevel -o _site/bundle.js"
   },
   "repository": {
     "type": "git",
