@@ -6,5 +6,13 @@
     "github": "https://github.com/minimo-io",
     "linkedIn": "https://www.linkedin.com/in/nicolas-erramuspe/",
     "author": "Nicolas <nicolas@minimo.io> (https://minimo.io)",
-    "authorShort": "Nicolas Erramuspe"
+    "authorShort": "Nicolas Erramuspe",
+    "strava":{
+        "profile": "https://www.strava.com/athletes/71907777",
+        "gear": "Trek Dual Sport 2 (2019, 4th gen)",
+        "rides": "154",
+        "kms": "4,050.5",
+        "lastUpdate": "March 12, 2024"
+    }
+
 }

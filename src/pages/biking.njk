@@ -10,9 +10,18 @@ tags:
 {% import "macros/biking-map.njk" as biking with context %}
 
 <div id="main" class="wrapper">
+    <p class="text-truncate">
+        Total kms recorded: {{ site.strava.kms }}kms
+        <br>
+        Total rides: {{ site.strava.rides }}
+        <br>
+        Current gear: <a href="#biking-gear">{{ site.strava.gear }}</a>
+        <br>
+        Last update: {{ site.strava.lastUpdate }}
+    </p>  
     <p>
-        Bike adventures registered as <a href="https://en.wikipedia.org/wiki/GPS_Exchange_Format" target="_blank" rel="noopener noreferrer">GPX files</a>. All rides in <a href="https://www.strava.com/athletes/71907777">Strava</a>. Below is the latest one worth mentioning.
-    </p>
+        This is the latest bike adventure registered as a <a href="https://en.wikipedia.org/wiki/GPS_Exchange_Format" target="_blank" rel="noopener noreferrer">GPX file</a>. More rides <a href="#other-rides">below</a>.
+    </p>        
 </div>
 
 {{ biking.map(loadApp=true, wrap="wrapper wrapper-widest") }}

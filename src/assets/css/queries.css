@@ -2,6 +2,7 @@
 @media (max-width:768px){
     :root{ --wrapper-gutter: 1.5rem; }
     .star::before{ display:none; }
+    .d-none-mobile{ display:none; }
 }
 @media (max-width: 1000px){
     .project:not(.project-single) {

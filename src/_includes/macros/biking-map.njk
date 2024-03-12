@@ -25,18 +25,21 @@
             </section>
         </div>
         {% if loadApp === true %}
-            <div class="wrapper wrapper-wide">
-                <h3 class="font-italic mt-2">Other rides.</h3>
-                <p>Total kms on <a href="https://www.strava.com/athletes/71907777">Strava</a>: 4,050km.</p>
-                <ol reversed>
+            <div class="wrapper wrapper-wide">              
+                <h2 id="other-rides" class="h3 font-italic mt-2">Other rides.</h2>
+                <p>Click on any of these other adventures. Complete list in <a href="https://www.strava.com/athletes/71907777">Strava</a>.</p>
+                <ol reversed class="pl-0">
                     {% for gpx in gpxs %}
-                        <li>
-                            {{ gpx.country }} / {{ gpx.kms }}km / {{ gpx.date | rideDate }} / 
+                        <li class="text-truncate">
+                            {{ gpx.country }} / {{ gpx.kms }}km / 
+                            <span class="d-none-mobile">{{ gpx.date | rideDate }} / </span>
                             <a @click.prevent="gpxFile = '{{ gpxFilesPath + gpx.file }}'; goToHashed('#biking-map')">{{ gpx.title }}</a>
                         </li>
                     {% endfor %}
                     
                 </ol>          
+                <h3 id="biking-gear" class="font-italic mt-2">Gear.</h3>
+                <p class="font-italic">(Under construction)</p>
             </div>
         {% endif %}    
     </div>

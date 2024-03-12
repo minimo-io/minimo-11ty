@@ -23,7 +23,7 @@
 .pb-3{ padding-bottom:3rem; }
 .pb-5{ padding-bottom:5rem!important; }
 .py-1{padding:1rem 0;}
-.pl-0{ padding-left:0; }
+.pl-0{ padding-left:0 !important; }
 .opacity-5{ opacity: .5;}
 .bg-grey{ background: var(--high-background-gradient); }
 
@@ -82,3 +82,8 @@
 .sr-only:not(caption) { position: absolute !important; }
     /* bg clips */
 .bg--angled { clip-path: polygon(0 0,100% 0%,100% calc(100% - 5vh),0% 100%); }
+.text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
