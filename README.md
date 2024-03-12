@@ -2,13 +2,12 @@
 An 11tyzed minimo.io theme
 
 # ToDo
-* Finish article about Wordpress internationalization
 * List all GPX stuff, maybe load with plain js or Alpinjs. Maybe a new data file.
-* Create a reusable grid system to list posts like gpx rides so I can clearly show some metadata for each (for later use in posts list)
-* Add primal logo and link in menu and author boxes.
 * BUG: Build styles are being loaded from /assets/css/style.css which is not the minified created version. Must be the style.css. Also styles from /assets/css/* are being exported which is not necesary.
 * Upload Mínimo to Netlify
 ---
+* Add primal logo and link in menu and author boxes.
+* Create a reusable grid system to list posts like gpx rides so I can clearly show some metadata for each (for later use in posts list)
 * There seems to be a non-documented page.templateSyntax data value, that could replace the current solution for detecting Markdown vs Nunjucks blog posts
 * Sometimes, like in the Wordpress i18n one, markdown articles need a wider space. Have a front-end matter property to choose, `wrapper-wide`.
 * Add Fiverr block, to include into articles for which I do have a freelance service to offer.
