@@ -1,14 +1,178 @@
 [
     {
-        "title" : "Night Ride in São Paulo",
+        "title" : "São Paulo Night Ride",
+        "country": "🇧🇷",        
         "file": "2024-03-04-night-ride-sp.gpx",
         "date": "2024-03-04T23:29:08Z",
-        "distance_km": "31.16"
+        "kms": "31.16"
     },
     {
         "title" : "Mogi das Cruzes - Luis Carlos",
+        "country": "🇧🇷",
         "file": "2024-02-12-mogi.gpx",
         "date": "2024-02-12T16:28:30Z",
-        "distance_km": "31.16"
-    }
+        "kms": "20.61"
+    },
+
+    {
+        "title" : "X: São Paulo-Embú das Artes Night Ride",
+        "country": "🇧🇷",
+        "file": "2023-09-24-9909040515.gpx",
+        "date": "2023-09-24T04:55:59Z",
+        "kms": "51.24",
+        "desc": "The experiment ended 04:55 at dawn, too much traffic with no lights."
+    },      
+
+    {
+        "title" : "Rota dos Vinhedos Jundiaí",
+        "country": "🇧🇷",
+        "file": "2023-07-30-jundai.gpx",
+        "date": "2023-07-30T14:15:55Z",
+        "kms": "36.56"
+    },
+
+    {
+        "title" : "São Paulo Evening Ride",
+        "country": "🇧🇷",
+        "file": "2023-07-23-9508626291.gpx",
+        "date": "2023-07-23T16:38:13Z",
+        "kms": "37.31"
+    },     
+
+    
+    {
+        "title" : "Punta del Diablo-Castillos",
+        "country": "🇺🇾",
+        "file": "2023-02-05-8511049601.gpx",
+        "date": "2023-02-05T15:04:41Z",
+        "kms": "37.31"
+    },     
+
+
+    {
+        "title" : "São Bento do Sapucaí Surroundings",
+        "country": "🇧🇷",
+        "file": "2022-09-17-7824599543.gpx",
+        "date": "2022-09-17T15:20:59Z",
+        "kms": "44.51"
+    },     
+
+    {
+        "title" : "Punta del Diablo-La Coronilla",
+        "country": "🇺🇾",
+        "file": "2022-04-06-6940687973.gpx",
+        "date": "2022-04-06T13:49:53Z",
+        "kms": "41.65",
+        "desc": "Ride to buy some fuel"
+    },  
+    
+    {
+        "title" : "Atlántida - Montevideo",
+        "country": "🇺🇾",
+        "file": "2022-03-04-6773566586.gpx",
+        "date": "2022-03-04T19:28:12Z",
+        "kms": "47.68",
+        "desc": "Finish line: Uruguay coast bike experience with Erika"
+    },     
+    
+    {
+        "title" : "Piriápolis-Atlántida",
+        "country": "🇺🇾",
+        "file": "2022-03-04-6772698667.gpx",
+        "date": "2022-03-04T13:26:17Z",
+        "kms": "58.94",
+        "desc": "Uruguay coast bike experience with Erika"
+    },     
+
+    {
+        "title" : "Punta del Este-Piriápolis",
+        "country": "🇺🇾",
+        "file": "2022-03-03-6768059820.gpx",
+        "date": "2022-03-03T14:09:45Z",
+        "kms": "49.66",
+        "desc": "Uruguay coast bike experience with Erika"
+    },    
+    
+    {
+        "title" : "José Ignacio-Punta del Este",
+        "country": "🇺🇾",
+        "file": "2022-03-01-6757147598.gpx",
+        "date": "2022-03-01T14:39:01Z",
+        "kms": "36.31",
+        "desc": "Uruguay coast bike experience with Erika"
+    },
+
+    {
+        "title" : "La Paloma-José Ignacio",
+        "country": "🇺🇾",
+        "file": "2022-02-28-6753391217.gpx",
+        "date": "2022-02-28T14:38:49Z",
+        "kms": "66.30",
+        "desc": "Uruguay coast bike experience with Erika"
+    },
+    
+    {
+        "title" : "Cabo Polonio-La Paloma",
+        "country": "🇺🇾",
+        "file": "2022-02-27-6749321169.gpx",
+        "date": "2022-02-27T13:49:17Z",
+        "kms": "48.09",
+        "desc": "Uruguay coast bike experience with Erika"
+    },
+    
+    {
+        "title" : "Castillos-La Paloma (Christmas)",
+        "country": "🇺🇾",
+        "file": "2021-12-31-6452808704.gpx",
+        "date": "2021-12-31T13:59:57Z",
+        "kms": "67.75",
+        "desc": "Went to meet my friends."
+    },
+
+    {
+        "title" : "Castillos-Valizas-Castillos",
+        "country": "🇺🇾",
+        "file": "2021-11-24-6303103659.gpx",
+        "date": "2021-11-24T19:54:57Z",
+        "kms": "44.74"
+    }, 
+    {
+        "title" : "Castillos-Punta del Diablo-Castillos",
+        "country": "🇺🇾",
+        "file": "2021-10-26-6170922642.gpx",
+        "date": "2021-10-26T12:46:57Z",
+        "kms": "81.48",
+        "desc": "Went to talk with the constructor."
+    }, 
+    {
+        "title" : "La Paloma Surroundings",
+        "country": "🇺🇾",
+        "file": "2021-10-10-6094658393.gpx",
+        "date": "2021-10-10T16:34:17Z",
+        "kms": "76.79",
+        "desc": "Ride with Alicia."
+    },     
+    {
+        "title" : "Castillos Hills",
+        "country": "🇺🇾",
+        "file": "2021-10-04-6062937117.gpx",
+        "date": "2021-10-04T14:01:00Z",
+        "kms": "46.78"
+    },     
+    {
+        "title" : "Castillos Hills",
+        "country": "🇺🇾",
+        "file": "2021-09-22-6002080274.gpx",
+        "date": "2021-09-22T14:04:23Z",
+        "kms": "46.66"
+    },    
+    {
+        "title" : "Rocha Hills",
+        "country": "🇺🇾",
+        "file": "2021-09-18-rocha.gpx",
+        "date": "2021-09-18T17:16:47Z",
+        "kms": "32.14"
+    } 
+
+    
 ]

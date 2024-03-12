@@ -32,6 +32,16 @@ module.exports = function(eleventyConfig){
         return `${monthName} ${dayNumber}, ${yearNumber}`;
     });
 
+    eleventyConfig.addFilter("rideDate", (dateString) => {
+        dateObj = new Date(dateString);
+        let monthNumber = dateObj.getMonth();
+        if (monthNumber < 10) monthNumber = "0"+monthNumber;     
+        let dayNumber = dateObj.getDate();
+        if (dayNumber < 10) dayNumber = "0"+dayNumber;        
+        let yearNumber = dateObj.getFullYear();
+        return `${yearNumber}-${monthNumber}-${dayNumber}`;
+    });    
+
     // reading time
     eleventyConfig.addPlugin(pluginEmojiReadTime, {
         showEmoji: false
