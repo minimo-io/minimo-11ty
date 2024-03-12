@@ -134,6 +134,7 @@ If you are not a developer just keep in mind that your theme or plugin should be
 
 **Let's follow with a summary of the misconceptions and errors detected when takling to clients.**
 
+## Common confusions around i18n and l10n
 ### Confussion #1
 #### Themes and child themes
 
