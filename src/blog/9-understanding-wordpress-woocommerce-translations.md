@@ -65,8 +65,6 @@ Sometimes `.po` files are only partially translated, resulting in partial texts 
 <br><br>
 It is often the case that some of this strings were not correctly created by the developer. Which require, in many cases, some nasty hacks to solve.
 
-<center>FIVERR; HERE! ME!</center>
-
 * **MO files** (`.mo`): From a `.po` file, all nice and ready with all (or some) translations a `.mo` binary file is **compiled** by the software. This file contains all the original strings and their translations, in a format ready for fast extraction. These are the real translations files used by the Wordpress software and all its plugins.
 
 ### 2. Loading Translations
@@ -112,27 +110,71 @@ If the configured locale for our Wordpress instance is `pt_BR` then translations
 
 This is very important, and often a cause of confussions on whay translations are not loading correctly.
 
-To configure our locale for our Wordpress instance we must go to `Configurations > General` or setup a `WPLANG`constant in our `wp-config.php` file.
+To configure our locale for our Wordpress instance we must go to `Configurations > General` or setup a `WPLANG` constant in our `wp-config.php` file.
 
 ### 3. Wordpress translation functions
 
-https://wordpress.stackexchange.com/questions/57735/whats-the-point-on-gettext-syntax
-http://ottopress.com/2012/more-internationalization-fun/
+Translations functions should be used on any Wordpress theme or plugin that is supposed to be "translatable" or in more technical terms, on any theme or plugin that what to be internationalized (and later localized).
 
+Without using these functions in your themes or plugins texts (aka. strings) will be "hard-coded", non-"translatable", fixed: subsequently they won't be detected by the software scanning the code when creating the corresponding `.pot` file, and you'ill end up with translations problems.
+
+This is why if you have no coding skills, should always use professional themes and plugins.
+Or you can reach out to me asking for help, and I will be more than glad to help indeed, but at the same time pissed of with the lazy developer that created the problem in the first place.
+
+So, here are the most common translations functions that should be used in any internationalized Wordpress theme or plugin. There many non-obvious ones, but for those more in-depth matters you can Otto's great article about [More Internationalization Fun](http://ottopress.com/2012/more-internationalization-fun/).
+Withour further addo:
+
+* [__()](https://developer.wordpress.org/reference/functions/__/): Retrieves the translation for the first argument.
+* [_e()](https://developer.wordpress.org/reference/functions/_e/): Displays the translated text.
+* [_x()](https://developer.wordpress.org/reference/functions/_x/): Retrieves translated string with gettext context.
+* [_ex()](https://developer.wordpress.org/reference/functions/_ex/): Displays the above. 
+* [_n()](https://developer.wordpress.org/reference/functions/_n/): Translates and retrieves the singular or plural based on the number supplied.
+
+If you are not a developer just keep in mind that your theme or plugin should be developed using this functions in order to have internationalization and localization capabilities.
+
+**Let's follow with a summary of the misconceptions and errors detected when takling to clients.**
 
 ### Confussion #1
 #### Themes and child themes
 
 > Basically i want to keep the parent them in English and have a Portuguese translation in the child theme therefore the website will have two languages
 
-### Confussions #2. 
-#### Site language
-Check the **Site language** was configured to "nb_NO" in order for Woocommerce and all other plugins to pick the right translations files (previously was configured to en_US), (remembering that all translations must be kept in the /wp/wp-content/langauges/ directory, to avoid resets on updates).
+Child themes are there to extend parent themes functionality, but they work in the same locale context.
+In order to get the site in two languages within a Wordpress structure, you can use a Multi-site installation and keep different structures under the same install, or use a multilingual plugin like [WPML](https://wpml.org/?aid=367613&affiliate_key=XEdBwktpBwNO) (paid) or [Polylang](https://wordpress.org/plugins/polylang/) (free, paid).
 
-I have fixed this. With the fix many translations are now displayed correctly (see screenshot 1), but not all (why below).
+### Confussion #2. 
+#### Overriding files
+Another common problem is when "translations disappear".
 
-3. In Wordpress not all translations are handled by the theme. Each plugin has its own translations files. Many plugins participate in the front-end screen rendering in this case, so their translations files must also be translated. One example of this is the whishlist plugin I detected "WPC Smart Wishlist for WooCommerce (Premium)" (see screenshot 2). It was not translated with the change previously mentioned because its translations files for the "nb_NO" language do not exist. We must create it, translated them and upload it in the correct folder with the correct naming. Let me know if you want me to translate these other files, or if you that know the language will do it for me to install them (I will have to charge a little extra for the extra hours).
+As stated before the right way to (somewhat) persistently modify a translation for a theme or plugin that has been correctly created using translation functions, is to upload files, with the correct filename (considering text-domains) in the `wp-content/languages/{plugins|themes}` folder. Else all translations will be replaced when the theme or plugin is updated and new original `.po`, `.mo` and hopefully `.pot` files are downloaded.
 
-4. Other texts are not part of translation files but part of the content. In this cases we must detect and change the text from each individual content piece (article or block), using the Elementor interface. If you allow me I can change the ones I detect for you (see screenshot 3).
+### Confussion #3. 
+#### Files are named and placed ok, but still no translations?
+Check the **Sites language** locale configured at `Configurations > General` or via the `WPLANG` constant.
 
-5. Finally I need to know if you also want the admin interface translated too, to "nb_NO" language or if you want to keep it in english.
+In order for Wordpress, Woocommerce or any other plugin to pick the right translation files, not only the filename must have the correct locale but they must match the configured (and active) locale for the site.
+
+For example, for the `woocommerce-pt_BR.mo` translation file to be loaded, then the site configured locale must be `pt_BR`, else your nice and tidy translations won't load 🤷
+
+### Confussion #4.
+#### Can't find some texts to be translated in my `.po` or `.pot` file.
+
+In Wordpress not all translations are handled by the theme. Each plugin has its own translations files. Many plugins participate in some form of front-end screen rendering, so their translations files must also be translated. 
+
+Other texts are not part of translation files but part of the content itself. Maybe some Elementor Block? In this cases we must detect and change the text from each individual content piece (article or block), using the Elementor interface. 
+
+### Confussion #5.
+#### Admin Dashboard not translated.
+
+When more or one translation is present and configured, admins (and most registered users) can choose their locale in their logged-in user profile. This can thus be different from the anonymous user front-end locale.
+So make sure which locale is configured for your user at `{your_site}/wp-admin/profile.php` url once logged-in.
+
+## Final thoughts
+
+Wordpress i18n and l10n can be confusing at first contact, but it is a well tested and efficient system wich goes back to 1995 with the release of the GNU gettext, free software implementation.
+
+In case you need any help with your Wordpress or Woocommerce translations, and before installing [Loco Translate](https://wordpress.org/plugins/loco-translate/) and start messing around with translation files, [drop me a message at Fiverr](https://www.fiverr.com/minimo_labs) and allow me to assist or at least guide you out of your translation problems.
+
+It will be my pleasure to detect and fix any translation problem you might be having!
+
+That said, Mālama pono, legyen szép napja, tenha um ótimo dia, and have a great day 😻!
