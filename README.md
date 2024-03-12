@@ -2,8 +2,6 @@
 An 11tyzed minimo.io theme
 
 # ToDo
-* BUG: Homepage displayGPx not defined.
-* BUG: Build styles are being loaded from /assets/css/style.css which is not the minified created version. Must be the style.css. Also styles from /assets/css/* are being exported which is not necesary.
 * Upload Mínimo to Netlify
 ---
 * Add primal logo and link in menu and author boxes.
