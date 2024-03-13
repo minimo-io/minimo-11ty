@@ -29,6 +29,7 @@
     border-radius: 1rem;
     max-width: 40rem;
     margin:0 auto;
+    background: var(--nav-backdrop);
 }
 .nav a{ 
     display:flex;
@@ -78,10 +79,8 @@
     top: 1.5rem;
     right: 1.5rem;
 }
-
 @supports (backdrop-filter: blur(.5rem)){
     .nav{
-        background: var(--nav-backdrop);
         backdrop-filter: blur(.5rem);             
     }
 }
