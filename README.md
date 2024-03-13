@@ -5,6 +5,7 @@ An 11tyzed minimo.io theme
 * Fix menu on mobile
 * Configure Netlify redirects from old articles when suited
 https://docs.netlify.com/routing/redirects/
+https://docs.netlify.com/routing/redirects/redirect-options/
 ---
 * There seems to be a non-documented page.templateSyntax data value, that could replace the current solution for detecting Markdown vs Nunjucks blog posts
 * Add primal logo and link in menu and author boxes.

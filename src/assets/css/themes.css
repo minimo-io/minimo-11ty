@@ -7,7 +7,7 @@
     --high-background: rgb(27, 27, 27);
     --high-background-gradient: linear-gradient(90deg, rgb(27, 27, 27) 20%, rgba(0, 0, 0, 0) 100%);
     --foreground-text: #e7e7e7;
-    --nav-backdrop: rgba(35, 35, 35, 0.5);
+    --nav-backdrop: rgba(35, 35, 35, 0.8);
     --nav-item-selected-color: invert(100%);
     --links-border: .13rem solid rgba(231, 231, 231, .8);
 }
