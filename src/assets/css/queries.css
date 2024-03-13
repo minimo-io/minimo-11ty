@@ -3,6 +3,10 @@
     :root{ --wrapper-gutter: 1.5rem; }
     .star::before{ display:none; }
     .d-none-mobile{ display:none; }
+    .author-box > :last-child{
+        padding-inline: 2rem;
+    }
+    .projects{ gap:2.5rem; }
 }
 @media (max-width: 1000px){
     .project:not(.project-single) {
