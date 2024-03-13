@@ -46,12 +46,7 @@ window.addEventListener('DOMContentLoaded', function () {
                 heyHand.click();
             }, 5000);
         }
-    } 
-    // main map load
-    if (gpxMap){
-        // displayGpx(gpxMap); // I am doint this with alpine now.
     }
-    
 
     // keysdown for menu
     document.onkeydown = function (e) {
@@ -182,7 +177,7 @@ window.addEventListener('DOMContentLoaded', function () {
     }
 
     // add hashing links to headings for deep linking
-    const articleHeadings = $(".article h2, .article .h2", "all");
+    const articleHeadings = $(".article h2, .article .h2, .deeplinked h2", "all");
     articleHeadings && articleHeadings.forEach( heading => {
         if (heading.getAttribute("id")){
             heading.innerHTML =  
