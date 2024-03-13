@@ -4,9 +4,9 @@ An 11tyzed minimo.io theme
 # ToDo
 * Upload Mínimo to Netlify
 ---
+* There seems to be a non-documented page.templateSyntax data value, that could replace the current solution for detecting Markdown vs Nunjucks blog posts
 * Add primal logo and link in menu and author boxes.
 * Create a reusable grid system to list posts like gpx rides so I can clearly show some metadata for each (for later use in posts list)
-* There seems to be a non-documented page.templateSyntax data value, that could replace the current solution for detecting Markdown vs Nunjucks blog posts
 * Sometimes, like in the Wordpress i18n one, markdown articles need a wider space. Have a front-end matter property to choose, `wrapper-wide`.
 * Add Fiverr block, to include into articles for which I do have a freelance service to offer.
 * New: Reading progress
