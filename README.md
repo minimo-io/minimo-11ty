@@ -12,6 +12,8 @@ An 11tyzed minimo.io theme
 
 -   Create a hire button
 -   Avoid flickering dark mode: https://dev.to/ayc0/light-dark-mode-avoid-flickering-on-reload-1567
+-   Create more case studies in Work, not just an image. Check this out: https://vanholtz.co/work/studiomega/
+    I can do that for Braaay for example.
 -   BUG: Biking map error on mobile, ride data overflows to the right (not on desktop emulator).
 -   There seems to be a non-documented page.templateSyntax data value, that could replace the current solution for detecting Markdown vs Nunjucks blog posts
 -   Add primal logo and link in menu and author boxes.
