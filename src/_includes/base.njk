@@ -3,7 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% if title %}{{ title }} - {% endif %}{{ site.name }}</title>
+    {% if page.url == "/" %}
+        <title>{{ site.name }} - UX Designer, Frontend Developer & Jamstacker!</title>
+    {% else %}
+        <title>{% if title %}{{ title }} - {% endif %}{{ site.name }}</title>
+    {% endif %}
+    
     {% if description %}<meta name="description" content="{{ description }}">{% endif %}
     {% if pagination and pagination.alias == "tag" %}
         <meta name="robots" content="noindex, nofollow" />
