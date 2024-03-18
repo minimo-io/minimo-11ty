@@ -10,7 +10,8 @@ An 11tyzed minimo.io theme
 
 ---
 
--   Create a hire button
+-   Hiring button must redirect to a form, and that form be the end of my conversion funnel.
+    https://skyward.digital/contact
 -   Avoid flickering dark mode: https://dev.to/ayc0/light-dark-mode-avoid-flickering-on-reload-1567
 -   Create more case studies in Work, not just an image. Check this out: https://vanholtz.co/work/studiomega/
     I can do that for Braaay for example.
@@ -35,3 +36,4 @@ An 11tyzed minimo.io theme
 -   Add functionality: Load prism-light or prism-dark depending on the mode selected (not it's fixed dark).
 -   Rebuild the "Diccionario del Lunfardo" in Alpine.js or Svelte.
 -   Load all gpx files data with an eleventyComputed property that lists them.
+-   Rocket animation, https://cargo2support.cargo.site/Make-an-Image-Fly-Across-the-Screen
