@@ -10,6 +10,11 @@ An 11tyzed minimo.io theme
 
 ---
 
+-   Add an effect to the call to action button, With 3 stages: 1) Any Wordpress problem? 2) Woocommerce API Integration need? 3) +11 clients problems solved! 4) Let's Work Together! or Get a Quote! With a fast blink and more delay!
+
+-   Nice 4 images metro showcase!
+    https://www.granite.ie/work/ to rapidly showcase work for the work section.
+
 -   Hiring button must redirect to a form, and that form be the end of my conversion funnel.
     https://skyward.digital/contact
 -   Avoid flickering dark mode: https://dev.to/ayc0/light-dark-mode-avoid-flickering-on-reload-1567
