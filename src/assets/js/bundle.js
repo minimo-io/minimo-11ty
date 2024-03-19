@@ -46,6 +46,10 @@ window.addEventListener(
                     heyHand.click();
                 }, 5000);
             }
+            setTimeout(() => {
+                var rocket = document.getElementById("rocket");
+                rocket.style.animation = "launch 1.5s forwards"; /* Adjust launch speed */
+            }, 3000);
         }
 
         // keysdown for menu
