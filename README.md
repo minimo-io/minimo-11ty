@@ -10,6 +10,8 @@ An 11tyzed minimo.io theme
 
 ---
 
+-   There seems to be a non-documented page.templateSyntax data value, that could replace the current solution for detecting Markdown vs Nunjucks blog posts (posted the question at 11ty's Discord server and Github).
+
 -   Add an effect to the call to action button, With 3 stages: 1) Any Wordpress problem? 2) Woocommerce API Integration need? 3) +11 clients problems solved! 4) Let's Work Together! or Get a Quote! With a fast blink and more delay!
 
 -   Nice 4 images metro showcase!
@@ -21,7 +23,6 @@ An 11tyzed minimo.io theme
 -   Create more case studies in Work, not just an image. Check this out: https://vanholtz.co/work/studiomega/
     I can do that for Braaay for example.
 -   BUG: Biking map error on mobile, ride data overflows to the right (not on desktop emulator).
--   There seems to be a non-documented page.templateSyntax data value, that could replace the current solution for detecting Markdown vs Nunjucks blog posts
 -   Add primal logo and link in menu and author boxes.
 -   Create a reusable grid system to list posts like gpx rides so I can clearly show some metadata for each (for later use in posts list)
 -   Sometimes, like in the Wordpress i18n one, markdown articles need a wider space. Have a front-end matter property to choose, `wrapper-wide`.
