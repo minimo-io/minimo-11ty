@@ -28,6 +28,7 @@ a.skip-to-main-content {
 }
 .wrapper-profile {
     padding: 0;
+    margin-top: 1rem;
     margin-bottom: 3rem;
     text-align: justify;
 }
