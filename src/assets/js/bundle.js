@@ -29,7 +29,7 @@ const goToHashed = (manualAnchor) => {
 window.addEventListener(
     "DOMContentLoaded",
     function () {
-        // homepage animations
+        // homepage animations & where profile image is
         if (profileImage) {
             profileImage.style.setProperty("--animate-duration", "0.5s");
             profileImage.addEventListener("click", () => animateProfileImage());
@@ -46,10 +46,12 @@ window.addEventListener(
                     heyHand.click();
                 }, 5000);
             }
-            setTimeout(() => {
-                var rocket = document.getElementById("rocket");
-                rocket.style.animation = "launch 1.5s forwards"; /* Adjust launch speed */
-            }, 3000);
+            let rocket = $("#rocket");
+            if (rocket) {
+                setTimeout(() => {
+                    rocket.style.animation = "launch 1.5s forwards"; /* Adjust launch speed */
+                }, 3000);
+            }
         }
 
         // keysdown for menu
