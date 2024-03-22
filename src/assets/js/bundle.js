@@ -14,12 +14,12 @@ const profileImage = $(".img-profile");
 const gpxMap = $("#biking-map");
 const pepe1 = "";
 
-const goToHashed = (manualAnchor) => {
+const goToHashed = (manualAnchor, marginTop) => {
     if ((window.location.hash && window.location.hash.length) || manualAnchor) {
         const hashedElem = $(manualAnchor) || $(window.location.hash);
         // console.log("Going to hash: " + window.location.hash);
         if (hashedElem) {
-            hashedElem.style.scrollMarginTop = "10px";
+            hashedElem.style.scrollMarginTop = marginTop || "10px";
             hashedElem.scrollIntoView({ behavior: "smooth", block: "start" });
         }
     }
@@ -164,7 +164,7 @@ window.addEventListener(
                     );
 
                     // smooth scroll to this anchor
-                    goToHashed("#main");
+                    goToHashed("#lets-work-together", "20px");
 
                     // change button text and icon back to read-more
                     this.querySelector("svg:nth-child(1)").classList.remove("d-none");

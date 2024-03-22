@@ -13,7 +13,7 @@ alpine: true
     </h2>
     <p class="font-italic">
         A summary of all activities for the last two years!
-        <br>👉 Go to the <a href="/blog/">full archive</a> ({{ collections.posts.length }} entries)
+        <br>👉 Looking for <a href="/work/">my work</a>? ({{ collections.project.length }} projects)
     </p>
    
     <div  class="archive mt-1 mb-4">
@@ -28,7 +28,7 @@ alpine: true
         {{ list.archive(collections.posts, "2024", showTags=false) }}
         {{ list.archive(collections.posts, "2023", showTags=false) }}
         <br>
-        <p>💯 <a href="/blog/" class="text-underline">Full archive here</a>.</p>
+        <p>💯 <a href="/blog/" class="text-underline">Full archive here</a> ({{ collections.posts.length }} entries).</p>
     </div>
 
     <div class="mb-2">
