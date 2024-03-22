@@ -1,6 +1,6 @@
 # minimo-11ty
 
-An 11tyzed minimo.io theme
+An 11tyzed minimo.io theme [![Netlify Status](https://api.netlify.com/api/v1/badges/f84a1fda-72ce-4e3f-bd8e-4edaa693026d/deploy-status)](https://app.netlify.com/sites/minimo-io/deploys)
 
 # ToDo
 

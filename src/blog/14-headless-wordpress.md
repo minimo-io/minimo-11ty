@@ -2,11 +2,11 @@
 date: 2024-03-19T16:12:00-03:00
 title: "Headless Wordpress CMS and Eleventy"
 description: "Some meanderings around the new hype around headless CMSs and Eleventy"
+draft: true
 tags:
     - headless
     - jamstack
     - wordpress
-    - coding
 ---
 
 Last week was the **De{code} 2024** Wordpress Developer Conference by WP-Engine, and among AI (of course), Headless Wordpress was a hot topic.

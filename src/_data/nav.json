@@ -1,6 +1,6 @@
 {
     "items": [
-        { 
+        {
             "url": "/",
             "name": "Home"
         },
@@ -15,10 +15,6 @@
         {
             "url": "/biking/",
             "name": "Biking"
-        },
-        {
-            "url": "/tag/investing/",
-            "name": "Investing"
-        }       
+        }
     ]
 }
