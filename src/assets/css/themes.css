@@ -11,14 +11,16 @@
     transition: background 300ms;
     --background: black;
     --high-background: rgb(27, 27, 27);
-    /* --high-background-gradient: linear-gradient(90deg,  20%, rgba(0, 0, 0, 0) 100%); */
-    --high-background-gradient: linear-gradient(90deg, rgb(27, 27, 27) 20%, rgba(0, 0, 0, 0) 100%);
+    /* --high-background-gradient: linear-gradient(90deg, rgb(27, 27, 27) 20%, rgba(0, 0, 0, 0) 100%); */
+    --high-background-gradient: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.69)), var(--noise-image);
     --foreground-text: #e7e7e7;
     --nav-border: 1px solid var(--foreground-text);
     --nav-backdrop: rgba(35, 35, 35, 0.95);
     --nav-item-selected-color: invert(100%);
     --links-border: 0.13rem solid rgba(231, 231, 231, 0.8);
+    --links-border: 0.13rem solid rgba(231, 231, 231, 0.8);
 }
+
 /* not base64 encoded for ease of use when creating future themes */
 .theme-dark .nav-toggle {
     background: url('data:image/svg+xml,<svg viewBox="0 0 400 400" fill="white" xmlns="http://www.w3.org/2000/svg"><circle cx="60" cy="60" r="40" /><circle cx="200" cy="60" r="40" /><circle cx="340" cy="60" r="40" /><circle cx="60" cy="200" r="40" /><circle cx="200" cy="200" r="40" /><circle cx="340" cy="200" r="40" /><circle cx="60" cy="340" r="40" /><circle cx="200" cy="340" r="40" /><circle cx="340" cy="340" r="40" /></svg>')
@@ -38,7 +40,7 @@
 }
 
 /* gpx */
-/* Tweak by Deepak Devanand, https://dev.to/deepakdevanand/leaflet-map-dark-theme-5ej0 */
+/* Tweak by Deepak Devanand, https://dev.to/deepakdevanand/leaflet-map-dark-th */
 .theme-dark .leaflet-layer,
 .theme-dark .leaflet-control-zoom-in,
 .theme-dark .leaflet-control-zoom-out,

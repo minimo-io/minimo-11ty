@@ -23,11 +23,16 @@
     --fs-clamped-900: clamp(2.4881rem, 2.0473rem + 2.2043vw, 3.7556rem);
 
     --svg-icon-size: 15px;
+    --noise-image: url(/assets/images/noise.svg);
+    --noise-image-dark: url(/assets/images/noise-dark.svg);
 
     /* colors */
     --background: white;
     --high-background: #f3f3f3;
-    --high-background-gradient: linear-gradient(90deg, rgba(249, 249, 249, 1) 20%, rgba(255, 255, 255, 0) 100%);
+    /* --high-background-gradient: linear-gradient(90deg, rgba(249, 249, 249, 1) 20%, rgba(255, 255, 255, 0) 100%); */
+    --high-background-gradient: linear-gradient(90deg, rgba(249, 249, 249, 1) 20%, rgba(255, 255, 255, 0) 100%),
+        var(--noise-image);
+
     --foreground-text: #2e3033;
     --nav-border: 1px solid #000;
     --nav-backdrop: rgba(255, 255, 255, 0.95);
