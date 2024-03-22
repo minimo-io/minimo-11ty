@@ -23,6 +23,8 @@
     --fs-clamped-900: clamp(2.4881rem, 2.0473rem + 2.2043vw, 3.7556rem);
 
     --svg-icon-size: 15px;
+
+    /* Author: https://grainy-gradients.vercel.app/ */
     --noise-image: url(/assets/images/noise.svg);
     --noise-image-dark: url(/assets/images/noise-dark.svg);
 
