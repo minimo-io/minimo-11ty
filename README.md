@@ -4,14 +4,6 @@ An 11tyzed minimo.io theme [![Netlify Status](https://api.netlify.com/api/v1/bad
 
 # ToDo
 
--   Configure Netlify redirects from old articles when suited
-    https://docs.netlify.com/routing/redirects/
-    https://docs.netlify.com/routing/redirects/redirect-options/
-
----
-
--   There seems to be a non-documented page.templateSyntax data value, that could replace the current solution for detecting Markdown vs Nunjucks blog posts (posted the question at 11ty's Discord server and Github).
-
 -   Add an effect to the call to action button, With 3 stages: 1) Any Wordpress problem? 2) Woocommerce API Integration need? 3) +11 clients problems solved! 4) Let's Work Together! or Get a Quote! With a fast blink and more delay!
 
 -   Nice 4 images metro showcase!

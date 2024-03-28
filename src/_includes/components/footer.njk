@@ -3,53 +3,52 @@
 <footer class="footer wrapper">
     {% if page.url !== "/" and page.url != "/work/" %}
         {{ author.box() }}
+        <a
+            href="mailto:nicolas@minimo.io?subject=🤘 Hi Nicolas, I'd like to hire you"
+            class="btn btn-sm btn-primary btn-cta mt-1">Let's work together!</a>
     {% endif %}
-    
+
     {% set defaultFooter = "minimo.io - v" + pkg.version %}
     {% if page.url === "/blog/" %}
         {% set lastPostPublished = collections.posts | reverse %}
         {% if collections.posts.length > 0 %}
-            <p style="font-size:var(--fs-clamped-200);">Last article published: {{ lastPostPublished.slice(0,1)[0].date | postDate }}</p>
+            <p style="font-size:var(--fs-clamped-200);">Last article published:
+            {{ lastPostPublished.slice(0,1)[0].date | postDate }}</p>
         {% endif %}
     {% elseif page.url === "/" or page.url === "/work/" %}
-        
-         <p class="alert">{{ defaultFooter }}</p>
 
-    {% else %}
+        <p class="alert">{{ defaultFooter }}</p>
+
+        {% else %}
         {# <p style="font-size:var(--fs-clamped-200);">Published on {{ date | postDate }}</p> #}
     {% endif %}
 
-    {% if page.url != "/" and page.url != "/work/" %}<p style="font-size:var(--fs-clamped-200);">{{ defaultFooter }}</p>{% endif %}
+    {% if page.url != "/" and page.url != "/work/" %}
+        <p style="font-size:var(--fs-clamped-200);">{{ defaultFooter }}</p>
+    {% endif %}
 </footer>
 
 {# Test ld+json results here: https://search.google.com/test/rich-results/result  #}
 {% if page.url === "/" %}
-    
+
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "{{ site.author | safe }}",
-            "url": "{{ page.url }}",
-            "logo": "{{ site.url }}/assets/images/yet-another-guy.webp"
-        }
+        { "@context": "https://schema.org", "@type": "Organization", "name": "{{ site.author | safe }}",
+                    "url": "{{ page.url }}",
+                    "logo": "{{ site.url }}
+        /assets/images/yet-another-guy.webp" }
     </script>
 {% elif layout === "article" %}
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "{{ title }}",
-        "image": [ "{{ site.url + image }}" ],
-        "datePublished": "{{ page.date.toISOString() }}",
+        { "@context": "https://schema.org", "@type": "BlogPosting", "headline": "{{ title }}",
+                "image": [ "{{ site.url + image }}" ],
+                "datePublished": "{{ page.date.toISOString() }}",
         {% if modified %}"dateModified": "{{ modified.toISOString() }}",{% endif %}
         "author": [{
-            "@type": "Person",
-            "name": "{{ site.authorShort }}",
-            "image": "{{ site.url }}/assets/yet-another-guy.webp",
-            "jobTitle": "Developer",
-            "url": "{{ site.url }}"
-        }]
-    }
-    </script>   
+                    "@type": "Person",
+                    "name": "{{ site.authorShort }}",
+                    "image": "{{ site.url }}/assets/yet-another-guy.webp",
+                    "jobTitle": "Developer",
+                    "url": "{{ site.url }}
+        " }] }
+    </script>
 {% endif %}
