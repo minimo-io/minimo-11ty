@@ -1,15 +1,19 @@
 # minimo-11ty
 
-An 11tyzed minimo.io theme [![Netlify Status](https://api.netlify.com/api/v1/badges/f84a1fda-72ce-4e3f-bd8e-4edaa693026d/deploy-status)](https://app.netlify.com/sites/minimo-io/deploys)
+An 11tyzed minimo.io theme.
+
+---
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f84a1fda-72ce-4e3f-bd8e-4edaa693026d/deploy-status)](https://app.netlify.com/sites/minimo-io/deploys)
 
 # ToDo
 
--   Add an effect to the call to action button, With 3 stages: 1) Any Wordpress problem? 2) Woocommerce API Integration need? 3) +11 clients problems solved! 4) Let's Work Together! or Get a Quote! With a fast blink and more delay!
-
--   Nice 4 images metro showcase!
+-   Nice 4 images metro showcase! or a hero with more visual impact
     https://www.granite.ie/work/ to rapidly showcase work for the work section.
 
--   Hiring button must redirect to a form, and that form be the end of my conversion funnel.
+-   Add an effect to the call to action button, With 3 stages: 1) Any Wordpress problem? 2) Woocommerce API Integration need? 3) +11 clients problems solved! 4) Let's Work Together! or Get a Quote! With a fast blink and more delay!
+
+-   Hiring button must redirect to a landing page with a form be the end of my conversion funnel.
     https://skyward.digital/contact
 -   Avoid flickering dark mode: https://dev.to/ayc0/light-dark-mode-avoid-flickering-on-reload-1567
 -   Create more case studies in Work, not just an image. Check this out: https://vanholtz.co/work/studiomega/
