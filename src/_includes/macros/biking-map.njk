@@ -1,6 +1,6 @@
 {% macro map(loadApp=false, wrap="wrapper") %}
     {% set gpxFilesPath = '/assets/gpxs/' %}
-    {% set gpxFileInit = gpxFilesPath + gpxs[0].file  %}
+    {% set gpxFileInit = gpxFilesPath + gpxs[0].file %}
     <div x-effect="displayGpx($('#biking-map'), gpxFile)" x-data="{ gpxFile: '{{ gpxFileInit }}' }">
         <div class="{{ wrap }}">
             <section id="biking-map" class="gpx mt-1" data-gpx-source="{{ gpxFileInit }}" data-map-target="latest-biking-map">
@@ -11,36 +11,45 @@
                 <footer>
                     <ul class="info text-truncate">
                         <li>Distance:&nbsp;<span class="distance"></span>km</li>
-                        · <li>Duration:&nbsp;<span class="duration"></span></li>
-                        · <li>Pace:&nbsp;<span class="pace"></span>/km</li>
+                        ·
+                        <li>Duration:&nbsp;<span class="duration"></span>
+                        </li>
+                        ·
+                        <li>Pace:&nbsp;<span class="pace"></span>/km</li>
                         {# / <li>Avg&nbsp;HR:&nbsp;<span class="avghr"></span>&nbsp;bpm</li> #}
-                        · <li>Elevation:&nbsp;+<span class="elevation-gain"></span>m,
-                            -<span class="elevation-loss"></span>m
-                            (net:<span class="elevation-net"></span>m)</li>
+                        ·
+                        <li>Elevation:&nbsp;+<span class="elevation-gain"></span>m,
+                                                                                    -<span class="elevation-loss"></span>m
+                                                                                    (net:<span class="elevation-net"></span>m)</li>
                     </ul>
                 </footer>
-
                 <div class="map" id="latest-biking-map"></div>
-                            
             </section>
         </div>
         {% if loadApp === true %}
-            <div class="wrapper wrapper-wide deeplinked">              
+            <div class="wrapper wrapper-wide deeplinked">
                 <h2 id="other-rides" class="h3 font-italic mt-2">Other rides.</h2>
-                <p>Click on any of these other adventures. Complete list in <a href="https://www.strava.com/athletes/71907777">Strava</a>.</p>
+                <p>Click on any of these other adventures. Complete list in
+                    <a href="https://www.strava.com/athletes/71907777">Strava</a>.</p>
                 <ol reversed class="pl-0">
                     {% for gpx in gpxs %}
                         <li class="text-truncate">
-                            {{ gpx.country }} / {{ gpx.kms }}km / 
-                            <span class="d-none-mobile">{{ gpx.date | rideDate }} / </span>
+                            {{ gpx.country }} / {{ gpx.kms }}km /
+                            <span class="d-none-mobile">{{ gpx.date | rideDate }} /
+                            </span>
                             <a @click.prevent="gpxFile = '{{ gpxFilesPath + gpx.file }}'; goToHashed('#biking-map')">{{ gpx.title }}</a>
                         </li>
                     {% endfor %}
-                    
-                </ol>          
+                </ol>
                 <h2 id="biking-gear" class="h3 font-italic mt-2">Gear.</h2>
-                <p class="font-italic">(Under construction)</p>
+                <p class="font-italic">
+                    
+                    <figure>
+                        <img src="/assets/images/gear.webp" alt="biking-gear" class="img-rounded">      
+                        <figcaption class="text-right">{{ site.strava.gear }}</figcaption> 
+                    </figure>  
+                </p>
             </div>
-        {% endif %}    
+        {% endif %}
     </div>
-{%endmacro%}
+{% endmacro %}

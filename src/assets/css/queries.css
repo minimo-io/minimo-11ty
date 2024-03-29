@@ -1,19 +1,32 @@
 /* media queries */
-@media (max-width:768px){
-    :root{ --wrapper-gutter: 1.5rem; }
-    .star::before{ display:none; }
-    .d-none-mobile{ display:none; }
-    .author-box > :last-child{
+@media (max-width: 768px) {
+    :root {
+        --wrapper-gutter: 1.5rem;
+    }
+    .star::before {
+        display: none;
+    }
+    .d-none-mobile {
+        display: none;
+    }
+    .author-box > :last-child {
         padding-inline: 2rem;
     }
-    .projects{ gap:2.5rem; }
+    .projects {
+        gap: 2.5rem;
+    }
 }
-@media (max-width: 1000px){
+@media (max-width: 1000px) {
     .project:not(.project-single) {
         flex-direction: column;
-        padding-inline:var(--wrapper-gutter);
+        padding-inline: var(--wrapper-gutter);
+        width: auto;
     }
-    .project-details{ order:0; gap:0; }
-    .project-img{ order:1; }
-
+    .project-details {
+        order: 0;
+        gap: 0;
+    }
+    .project-img {
+        order: 1;
+    }
 }

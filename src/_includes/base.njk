@@ -1,51 +1,55 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% if page.url == "/" %}
-        <title>{{ site.name }} - UX Designer, Frontend Developer & Jamstacker!</title>
-    {% else %}
-        <title>{% if title %}{{ title }} - {% endif %}{{ site.name }}</title>
-    {% endif %}
-    
-    {% if description %}<meta name="description" content="{{ description }}">{% endif %}
-    {% if pagination and pagination.alias == "tag" %}
-        <meta name="robots" content="noindex, nofollow" />
-    {% else %}
-        <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
-    {% endif %}
-    
-    <link rel="canonical" href="{{ site.url + page.url }}">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,600;1,400;1,600&family=Roboto+Mono:wght@300;400;600&display=swap" rel="stylesheet">
-
-    {# GPX #}
-    {% if page.url == "/" or page.url == "/biking/" %}
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
-        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
-        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.js"></script>
-    {% endif %}
-
-    <link href="{% if runMode != 'build' %}/assets/css{% endif %}/style.css" rel="stylesheet" />
-    <script src="{% if runMode != 'build' %}/assets/js{% endif %}/bundle.js" defer></script>
-
-    {# Alpine, keep it after bundle, in order to execute second after DOMContentLoad #}
-    {% if alpine === true %}
-        <script src="//unpkg.com/alpinejs" defer></script>
-    {% endif %}    
-    <link href="/assets/images/favicon.png" rel="icon" sizes="32x32">
-    <meta name="generator" content="{{ eleventy.generator }}">
-    <style>svg{ max-width: 15px; }img{ max-width: 100%; }</style>
-
-</head>
-<body>
-    <a href="#main" class="skip-to-main-content">Skip to main content</a>
-
-    {{ content | safe  }}
-
-    {% include "components/footer.njk" %}
-</body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% if page.url == "/" %}
+            <title>{{ site.name }} - UX Designer, Frontend Developer & Jamstacker!</title>
+        {% else %}
+            <title>
+                {% if title %}
+                    {{ title }} -
+                {% endif %}
+                {{ site.name }}</title>
+        {% endif %}
+        {% if description %}<meta name="description" content="{{ description }}">{% endif %}
+        {% if pagination and pagination.alias == "tag" %}
+            <meta name="robots" content="noindex, nofollow"/>
+        {% else %}
+            <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1"/>
+        {% endif %}
+        <link rel="canonical" href="{{ site.url + page.url }}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,600;1,400;1,600&family=Roboto+Mono:wght@300;400;600&display=swap"
+            rel="stylesheet">
+        {# GPX #}
+        {% if page.url == "/" or page.url == "/biking/" %}
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css"/>
+            <script defer src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+            <script defer src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.js"></script>
+        {% endif %}
+        <link href="{% if runMode != 'build' %}/assets/css{% endif %}/style.css" rel="stylesheet"/>
+        <script src="{% if runMode != 'build' %}/assets/js{% endif %}/bundle.js" defer></script>
+        {# Alpine, keep it after bundle, in order to execute second after DOMContentLoad #}
+        {% if alpine === true %}
+            <script src="https://unpkg.com/alpinejs@3.13.7/dist/cdn.min.js" defer></script>
+        {% endif %}
+        <link href="/assets/images/favicon.png" rel="icon" sizes="32x32">
+        <meta name="generator" content="{{ eleventy.generator }}">
+        <style>
+            svg {
+                max-width: 15px;
+            }
+            img {
+                max-width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="#main" class="skip-to-main-content">Skip to main content</a>
+        {{ content | safe }}
+        {% include "components/footer.njk" %}
+    </body>
 </html>

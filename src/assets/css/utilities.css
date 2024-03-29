@@ -182,3 +182,6 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+.fit-content {
+    width: fit-content;
+}

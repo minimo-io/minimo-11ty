@@ -79,6 +79,18 @@
                     <dt>Stack</dt>
                     <dd>{{ post.data.stack or "-" }}</dd>
                 </dl>
+                {% set project_cta_text = "Details" %}
+                {% set project_cta_url = post.url %}
+                {% if post.data.url %}
+                        {% set project_cta_url = post.data.url %}
+                        {% if post.data.url_button %}
+                            {% set project_cta_text = post.data.url_button %}
+                        {% else %}
+                            {% set project_cta_text = "Visit" %}
+                        {% endif %}
+                    </a>
+                {% endif %}
+                <a href="{{ project_cta_url }}" class="btn btn-sm btn-primary btn-cta fit-content mt-1" {% if post.data.url %}target="_blank" rel="noopener noreferrer"{% endif %}>{{ project_cta_text }}</a>                
             </div>
         </div>
 
