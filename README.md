@@ -8,10 +8,11 @@ An 11tyzed minimo.io theme.
 
 # ToDo
 
--   Self-host, minimized js deps, inline styles.
+-   Self-host, minimized js deps + make all styles inline like https://www.mattknight.io/blog/migrating-from-nextjs-to-eleventy.
 -   Nice 4 images metro showcase! or a hero with more visual impact
     https://www.granite.ie/work/ to rapidly showcase work for the work section.
-
+-   Create a clear statement of my services and clients, on the /services page. Like here with 4 clear buttons
+    https://sustainablewebdesign.org/
 -   Hiring button must redirect to a landing page with a form be the end of my conversion funnel.
     https://skyward.digital/contact
 -   Avoid flickering dark mode: https://dev.to/ayc0/light-dark-mode-avoid-flickering-on-reload-1567
@@ -35,3 +36,7 @@ An 11tyzed minimo.io theme.
 -   Rebuild the "Diccionario del Lunfardo" in Alpine.js or Svelte.
 -   Load all gpx files data with an eleventyComputed property that lists them.
 -   Add an effect to the call to action button, With 3 stages: 1) Any Wordpress problem? 2) Woocommerce API Integration need? 3) +11 clients problems solved! 4) Let's Work Together! or Get a Quote! With a fast blink and more delay!
+
+### Bugs
+
+-   Hash conflict js error when linking to hashed links: https://kit.svelte.dev/docs/page-options#prerende
