@@ -2,17 +2,14 @@
 
 An 11tyzed minimo.io theme.
 
----
-
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f84a1fda-72ce-4e3f-bd8e-4edaa693026d/deploy-status)](https://app.netlify.com/sites/minimo-io/deploys)
 
 # ToDo
 
 -   Self-host, minimized js deps + make all styles inline like https://www.mattknight.io/blog/migrating-from-nextjs-to-eleventy.
--   Nice 4 images metro showcase! or a hero with more visual impact
+-   Nice 4 images metro showcase! or a hero with more visual impact for the first (featured) work.
     https://www.granite.ie/work/ to rapidly showcase work for the work section.
--   Create a clear statement of my services and clients, on the /services page. Like here with 4 clear buttons
-    https://sustainablewebdesign.org/
+-   Services/Clients page: - Create a clear statement of my services and clients, on the /services page. Like here with 4 clear buttons https://sustainablewebdesign.org/ - Clients logos and construct https://zackkass.com/
 -   Hiring button must redirect to a landing page with a form be the end of my conversion funnel.
     https://skyward.digital/contact
 -   Avoid flickering dark mode: https://dev.to/ayc0/light-dark-mode-avoid-flickering-on-reload-1567
