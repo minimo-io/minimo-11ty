@@ -19,10 +19,11 @@
 @media (max-width: 1000px) {
     .project:not(.project-single) {
         flex-direction: column;
-        padding-inline: var(--wrapper-gutter);
-        width: auto;
+        padding-inline: calc(var(--wrapper-gutter) - 0.8rem);
+        width: 100%;
     }
     .project-details {
+        width: 100%;
         order: 0;
         gap: 0;
     }

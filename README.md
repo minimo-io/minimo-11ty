@@ -8,7 +8,7 @@ An 11tyzed minimo.io theme.
 
 # ToDo
 
--   Self-host, minimized js deps, like i do with styles.
+-   Self-host, minimized js deps, inline styles.
 -   Nice 4 images metro showcase! or a hero with more visual impact
     https://www.granite.ie/work/ to rapidly showcase work for the work section.
 
