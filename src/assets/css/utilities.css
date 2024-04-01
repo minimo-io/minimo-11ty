@@ -144,6 +144,9 @@
 .text-underline {
     text-decoration: underline;
 }
+.text-uppercase {
+    text-transform: uppercase;
+}
 .font-italic {
     font-style: italic;
 }

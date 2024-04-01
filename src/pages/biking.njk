@@ -5,60 +5,179 @@ alpine: true
 tags:
     - alpinejs
 ---
+
 {# {% import "macros/links.njk" as link %}
 {% import "macros/heros.njk" as hero %} #}
 {% import "macros/biking-map.njk" as biking with context %}
-
 <div id="main" class="wrapper">
     <p class="text-truncate">
         Total kms recorded: {{ site.strava.kms }}kms
         <br>
-        Total rides: {{ site.strava.rides }}
-        <br>
-        Current gear: <a href="#biking-gear">{{ site.strava.gear }}</a>
-        <br>
-        Last update: {{ site.strava.lastUpdate }}
-    </p>  
-    <p>
-        This is the latest bike adventure registered as a <a href="https://en.wikipedia.org/wiki/GPS_Exchange_Format" target="_blank" rel="noopener noreferrer">GPX file</a>. More rides <a href="#other-rides">below</a>.
-    </p>        
-</div>
-
-{{ biking.map(loadApp=true, wrap="wrapper wrapper-widest") }}
-
-<div class="wrapper wrapper-wide deeplinked">
-    <h2 id="biking-skills" class="h3 font-italic">Bikepacking skills</h2>
-    <p>
-        Bikepacking involves lots of different skills that build up over time and practice.
-        So first, let's summarize those groups of skills to acquire and then let's get deep into the nitty gritty details.
-    </p>
-    <h4 class="font-italic">General skills to have</h4>
-    <ol>
-        <li>Camping</li>
-        <li>Navigation & Communication</li>
-        <li>Bike Repair & Maintenance</li>
-        <li><a href="https://www.youtube.com/@GrayBeardedGreenBeret">First Aids</a></li>
-        <li>Work while on the Road</li>
-        <li>Clothing & Food</li>
-    </ol>
-    <p>Those skills groups can help us determine our kits & packs. <strong>A small kit for each would be reasonable enough, if they fit into our bags</strong>.</p>
-    <h4 class="font-italic">Practical skills worth having</h4>
-    <ol>
-        <li><a href="https://www.youtube.com/watch?v=zHsUOEhDiNM">How to fix a broken bicycle chain</a> (Portuguese)</li>
-        <li><a href="https://youtu.be/Rl-rz1z3WS8?si=63eHnEZS-zhevZ3r&t=928">Lubricant bases for bike chains</a> (Portuguese)</li>
-        <li><a href="https://www.youtube.com/watch?v=8zBaiCxzGq4">How to make an anti-punch tape, homemade and cheap.</a> (Portuguese)</li>
-    </ol>
-    <h4 class="font-italic">Other practical tips</h4>
-    <ol>
-        <li>In dangerous contries
-            <ul>
-                <li>Never travel at night</li>
-                <li>Cycle into cities in the middle of the day</li>
-                <li>Take the biggest possible roads into big towns</li>
-                <li>When <strong>wild camping</strong> always set up your tent at sunset so you are less prone to being detected</li>
-                <li>Keep asking to the locals that trust you</li>
-            </ul>
-        </li>
-
-    </ol>
-</div>
+            Total rides: {{ site.strava.rides }}
+            <br>
+                Current gear:
+                <a href="#biking-gear">{{ site.strava.gear }}</a>
+                <br>
+                    Last update: {{ site.strava.lastUpdate }}
+                </p>
+                <p>
+                    This is the latest bike adventure registered as a
+                    <a href="https://en.wikipedia.org/wiki/GPS_Exchange_Format" target="_blank" rel="noopener noreferrer">GPX file</a>. More rides
+                    <a href="#other-rides">below</a>.
+                </p>
+            </div>
+            {{ biking.map(loadApp=true, wrap="wrapper wrapper-widest") }}
+            <div class="wrapper wrapper-wide deeplinked">
+                <h2 id="biking-skills" class="h3 font-italic">Bikepacking skills</h2>
+                <p>
+                    Bikepacking involves lots of different skills that build up over time and practice. So first, let's summarize those
+                    groups of skills to acquire and then let's get deep into the nitty gritty details.
+                </p>
+                <h4 class="font-italic">General skills to have</h4>
+                <ul>
+                    <li>
+                        <strong class="text-uppercase">
+                            <a href="https://youtu.be/5EJQQPKHtJw?si=PxExpUPUrZOgGyoU&t=267">
+                                Maintain Core body temperature
+                            </a>
+                        </strong>
+                        <ul>
+                            <li>
+                                <strong class="text-uppercase">Shelter Kit</strong>
+                                <ol>
+                                    <li>Something to sleep under 👉
+                                        <a href="https://www.prepper-resources.com/survival-with-the-versatile-military-poncho/">Military Poncho</a>
+                                    </li>
+                                    <li>Something to sleep in 👉 Tent
+                                        &
+                                        <a href="https://en.wikipedia.org/wiki/Sleeping_bag">Sleeping bag</a>
+                                    </li>
+                                    <li>Something to sleep on (majority of our body heat is lost to conduction -being in contact with the ground) 👉
+                                        <a
+                                            target="_blank"
+                                            rel="noreferrer noopener"
+                                            href="https://www.mundoterra.com.br/mini-bivak-bivy-sack-de-emergencia-kailash.html">Bivvy sack</a>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>Paracord</li>
+                            <li>Aluminum stakes (6)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong class="text-uppercase">Fire Kit</strong>
+                        <ul>
+                            <li>Bic lighter (easy access)</li>
+                            <li>Ferrocerium rod</li>
+                            <li>(Swedish) Fire lighters (10 min) 👉
+                                <a href="https://www.instagram.com/p/C4BEShQsWyd/">Fiat Lux</a>. Ref.
+                                <a href="https://www.hemslojd.com/product/4610.html">here</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong class="text-uppercase">Water</strong>
+                        <ul>
+                            <li>1L container (suitable for boling water)</li>
+                            <li>Sawyer Mini water filter</li>
+                            <li>Water purification tablets 👉
+                                <a href="https://www.decathlon.com.br/potabilizador-de-agua-clor-in-50289/p">Clorin</a>
+                            </li>
+                            <li>Shemagh or Fabric to wrap all up</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong class="text-uppercase">Food & Cooking</strong>
+                        - Snack every 1hr. (4K cals per day)
+                        <ul>
+                            <li>Oatmeal (instant)</li>
+                            <li>Bananas</li>
+                            <li>(Dates / Nuts / Seeds) Mix or Energy bars</li>
+                            <li>Hard-boiled eggs</li>
+                            <li>Pre-cooked sausages (for fat and flavour)</li>
+                            <br>
+                                <li>Frying pan (that can boil water)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong class="text-uppercase">First aids</strong>
+                            <ul>
+                                <li>Isopropyl Alcohol Spray</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong class="text-uppercase">Navigation & Communication</strong>
+                            <ul>
+                                <li>Notepad (x1) & pencils (x2)</li>
+                                <li>Cycle computer 👉
+                                    <a href="https://www.youtube.com/watch?v=vczMa7FSKKQ">iGPSPORT BSC100S</a>
+                                </li>
+                                <li>Cellphone (well charged)</li>
+                                <li>Headlamp & Extra batteries (x2)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong class="text-uppercase">Bike Repair & Maintenance</strong>
+                            <ul>
+                                <li>Sunglasses</li>
+                                <li>Pump</li>
+                                <li>Inner tubes (x1 extra)</li>
+                                <li>Bike multitool</li>
+                                <li>Water Canteen (x2 for long distances)</li>
+                                <li>Power-links (chain)</li>
+                                <li>Standalone 4mm Allen Key (2, wrapped)</li>
+                                <li>Chain lub 👉
+                                    <a href="https://www.youtube.com/watch?v=Rl-rz1z3WS8&t=914s">Wax or Silicone (for humidity)</a>
+                                </li>
+                                <li>Patches & Glue</li>
+                                <li>Common bolts</li>
+                                <li>Screwdriver</li>
+                                <li>Old tires stripes</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong class="text-uppercase">Knife</strong>
+                            👉
+                            <a href="https://www.greenholland.com.br/faca-bahco-1446-ov">Bahco</a>
+                        </li>
+                        <li>
+                            <strong class="text-uppercase">Multitool</strong>
+                        </li>
+                        <li>
+                            <strong class="text-uppercase">Sharpening</strong>
+                            👉
+                            <a href="https://www.amazon.com.br/Pedra-Smiths-MP4L-Arkansas-10/dp/B0001WP6H4/">Smith's Arkansas 4inchm (10cm)</a>
+                            or Sandpaper (<a href="https://www.youtube.com/watch?v=jVKyw256nCI">Ref</a>)
+                        </li>
+                        <li>Clothing</li>
+                        <li>Work (while on the road)</li>
+                    </ul>
+                    <p>Those skills groups can help us determine our kits & packs.
+                        <strong>A small kit for each would be reasonable enough, if they fit into our bags</strong>.</p>
+                    <h4 class="font-italic">Practical skills worth having</h4>
+                    <ol>
+                        <li>
+                            <a href="https://www.youtube.com/watch?v=zHsUOEhDiNM">How to fix a broken bicycle chain</a>
+                            (Portuguese)</li>
+                        <li>
+                            <a href="https://youtu.be/Rl-rz1z3WS8?si=63eHnEZS-zhevZ3r&t=928">Lubricant bases for bike chains</a>
+                            (Portuguese)</li>
+                        <li>
+                            <a href="https://www.youtube.com/watch?v=8zBaiCxzGq4">How to make an anti-punch tape, homemade and cheap.</a>
+                            (Portuguese)</li>
+                    </ol>
+                    <h4 class="font-italic">Other practical tips</h4>
+                    <ol>
+                        <li>In dangerous contries
+                            <ul>
+                                <li>Never travel at night</li>
+                                <li>Cycle into cities in the middle of the day</li>
+                                <li>Take the biggest possible roads into big towns</li>
+                                <li>When
+                                    <strong>wild camping</strong>
+                                    always set up your tent at sunset so you are less prone to being detected</li>
+                                <li>Keep asking to the locals that trust you</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
