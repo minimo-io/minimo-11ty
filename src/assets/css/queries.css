@@ -15,6 +15,9 @@
     .projects {
         gap: 2.5rem;
     }
+    .nav-buttons .btn-sm {
+        font-size: 0.7rem;
+    }
 }
 @media (max-width: 1000px) {
     .project:not(.project-single) {

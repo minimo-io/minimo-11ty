@@ -6,6 +6,7 @@ An 11tyzed minimo.io theme.
 
 # ToDo
 
+-   Nice way to show shortcuts, https://app.routickr.com/habits (keyboard bottom right)
 -   Self-host, minimized js deps + make all styles inline like https://www.mattknight.io/blog/migrating-from-nextjs-to-eleventy.
 -   Nice 4 images metro showcase! or a hero with more visual impact for the first (featured) work.
     https://www.granite.ie/work/ to rapidly showcase work for the work section.
