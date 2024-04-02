@@ -69,21 +69,22 @@ blockquote footer {
     font-style: normal;
 }
 blockquote footer::before {
-    content: "~";
+    content: '~';
 }
 blockquote p::before {
-    content: "\201C";
+    content: '\201C';
 }
 blockquote p::after {
-    content: "\201D";
-}
-.wrapper ul,
-.wrapper ol {
-    margin-top: 1rem;
-    padding: 0 0 0 1.3em;
+    content: '\201D';
 }
 .wrapper ul {
+    margin-top: 1rem;
+    padding: 0 0 0 1.3em;
     list-style-type: square;
+}
+.wrapper ol,
+.wrapper ul {
+    padding: 0 0 0 1.3em;
 }
 
 .tags a {
@@ -179,6 +180,9 @@ blockquote p::after {
     left: 100%;
     padding-left: 2rem;
     animation: preLaunch 0.1s infinite;
+}
+.nested-list li ul {
+    margin-bottom: 1rem;
 }
 
 @keyframes preLaunch {
