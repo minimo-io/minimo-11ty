@@ -50,7 +50,10 @@ tags:
     <p>
         <strong>Fourth,</strong>, create a small SvelteKit app, like the one I am migrating to Svelte:
         <a href="/work/lightning-beer-app/">The LightningBeer</a>, as a concept app.</p>
+
+
     <h2 id="sveltekit-notes" class="h3 font-italic mt-2">SvelteKit notes</h2>
+    <p>SvelteKit uses filesystem-based routing and apps are server-rendered by default.</p>
     <p>A new project
         <i>in the making</i>
         will require some SSR (Server-Side-Rendering) along with some pages being generated at build time (just as I do with
@@ -61,6 +64,12 @@ tags:
     </p>
     <p>When using this option we must consider that that this content can only be updated by building and delopying a new
         version of the app.</p>
+    <p>An expected error is created using the error helper from
+        <code>@sveltejs/kit</code>. An unexpected error, by contrast, is assumed to be a bug in your app. When an unexpected
+            error is thrown, its message and stack trace will be logged to the console.
+    </p>
+
+
     <h2 id="libs" class="h3 font-italic mt-2">Interesting Libraries.</h2>
     <ul>
         <li>
@@ -71,6 +80,8 @@ tags:
             <s>component</s>
             library.</li>
     </ul>
+
+
     <h2 id="refs" class="h3 font-italic mt-2">References.</h2>
     <ul>
         <li>Svelte 5 is in preview, here is
