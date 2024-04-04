@@ -84,6 +84,10 @@
 .bg-grey {
     background: var(--high-background-gradient);
 }
+.bg-red {
+    background-color: #f8d7da !important;
+    color: #2e3033;
+}
 
 .no-border {
     border: 0;
