@@ -49,7 +49,7 @@ Convert Betizen.org in a Static Site.<br>
 
 A basic structure was needed. And as always, the [11ty base blog](https://github.com/11ty/eleventy-base-blog) seemed as a great start.
 
-Also i18n and l10n were a must. Here is an interesting article about [i18n with Eleventy](https://www.lenesaile.com/en/blog/internationalization-with-eleventy-20-and-netlify/).
+Also i18n and l10n functionalities were a must. Here is an interesting article about [i18n with Eleventy](https://www.lenesaile.com/en/blog/internationalization-with-eleventy-20-and-netlify/) by [Lene Saile](https://www.lenesaile.com/en/about/) and here an Smashingmagazine article about [Internationalization And Localization For Static Sites](https://www.smashingmagazine.com/2020/11/internationalization-localization-static-sites/).
 
 For deployment Vercel, as I had some other projects hosted at Netlify, consuming quota.
 
