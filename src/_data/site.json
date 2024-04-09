@@ -1,5 +1,6 @@
 {
     "name": "Mínimo",
+    "homeDescription": "UX Designer & Frontend Developer working with Svelte, WP/WooCommerce, Eleventy and Figma in the fields of Payments, iGaming & Retail",
     "url": "https://minimo.io",
     "email": "nicolas@minimo.io",
     "nostr": "npub1wujhdsytm3w6g0mpsqh8v7ezx83jcm64dlkwuqgm5v8lv0pds55ssudkw0",
@@ -7,12 +8,11 @@
     "linkedIn": "https://www.linkedin.com/in/nicolas-erramuspe/",
     "author": "Nicolas <nicolas@minimo.io> (https://minimo.io)",
     "authorShort": "Nicolas Erramuspe",
-    "strava":{
+    "strava": {
         "profile": "https://www.strava.com/athletes/71907777",
         "gear": "Trek Dual Sport 2 (2019, 4th gen)",
         "rides": "154",
         "kms": "4,050.5",
         "lastUpdate": "March 12, 2024"
     }
-
 }

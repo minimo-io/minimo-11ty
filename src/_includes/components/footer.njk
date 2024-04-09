@@ -30,25 +30,39 @@
 
 {# Test ld+json results here: https://search.google.com/test/rich-results/result  #}
 {% if page.url === "/" %}
-
     <script type="application/ld+json">
-        { "@context": "https://schema.org", "@type": "Organization", "name": "{{ site.author | safe }}",
-                    "url": "{{ page.url }}",
-                    "logo": "{{ site.url }}
-        /assets/images/yet-another-guy.webp" }
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+        {
+            "@type": "WebSite",
+            "@id": "{{ site.url }}#website",
+            "url": "{{ site.url }}",
+            "name": "Mínimo",
+            "description": "{{ site.homeDescription }}.",
+            "inLanguage": "en"
+        }
+        ]
+    }
     </script>
 {% elif layout === "article" %}
     <script type="application/ld+json">
-        { "@context": "https://schema.org", "@type": "BlogPosting", "headline": "{{ title }}",
-                "image": [ "{{ site.url + image }}" ],
-                "datePublished": "{{ page.date.toISOString() }}",
-        {% if modified %}"dateModified": "{{ modified.toISOString() }}",{% endif %}
+        {   "@context": "https://schema.org", 
+            "@type": "BlogPosting", 
+            "mainEntityOfPage": {
+                "@type": "WebPage"
+            },            
+            "headline": "{{ title }}",
+            "image": [ "{{ site.url + image }}" ],
+            "datePublished": "{{ page.date.toISOString() }}",
+            {% if modified %}"dateModified": "{{ modified.toISOString() }}",{% endif %}
         "author": [{
-                    "@type": "Person",
-                    "name": "{{ site.authorShort }}",
-                    "image": "{{ site.url }}/assets/yet-another-guy.webp",
-                    "jobTitle": "Developer",
-                    "url": "{{ site.url }}
+            "@type": "Person",
+            "name": "{{ site.authorShort }}",
+            "image": "{{ site.url }}/assets/yet-another-guy.webp",
+            "jobTitle": "Developer",
+            "url": "{{ site.url }}
         " }] }
     </script>
+
 {% endif %}
