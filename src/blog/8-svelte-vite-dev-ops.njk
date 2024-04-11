@@ -11,72 +11,18 @@ tags:
 <div class="wrapper mt-2">
     <p>In 2024 I am pivoting my stack.</p>
     <p>
-        Moving from back to the web, from Dart to Nodejs and Express, from Flutter to Svelte. From heavy CMSs to the jamstack
-        lolz of Eleventy. Reasons in a future, more philosophical, probably non-sensical article.
+        Moving back to the web, from Dart to Nodejs and Express (or Fastify), from Flutter to Svelte, from heavy CMSs to the jamstack fun of Eleventy, spiced up with Alpine. Reasons in a future, more philosophical, probably non-sensical article.
     </p>
     <p>
-        So first and foremost some quick (always changing) definitions.
+        So here are the result; top <a href="#libs">UI & Components Kits and libraries</a>, the best <a href="#headless-cms">Headless CMSs</a> and some interesting <a href="#refs">References</a> to use when building future Svelte + Vite applications and websites. Finally a <a href="#tldr">TL;DR</a>.
     </p>
-    <p>
-        <strong>What is Vite?</strong>: A (rollup based) front-end build tool (aka bundler) and development server designed for modernnnnnnn-ous webdev.
-    </p>
-    <p>
-        <strong>What is Svelte? And SvelteKit?</strong>: As Svelte4 was concern, Svelte was a components framework, and SvelteKit an app framework.
-    </p>
-    <p>Meaning that if what you need is to inject some simple functioanlity to a page (say one created with a Static Site
-        Generator like Eleventy) then Svelte + Vite is for you (that's the case for
-        <a href="https://minimo.io">minimo.io</a>).</p>
-    <p>If on the other hand if what you need is to build a full-stack lovely and creepy application then SvelteKit is your
-        way to go. More on this in
-        <a href="https://youtu.be/z7n17ajJpCo?si=zx8RuvJNbqgBuXIm&t=2410">this video</a>
-        about Svelte 5 with Rich Harris
-        <i>(Feb 1st, 2024)</i>.</p>
-    <p>
-        Got it! So what else would do I need? A component library? Tailwind?
-    </p>
-    <p>
-        <strong>First</strong>, try out the technology. Svelte made a partnership with
-        <a href="https://stackblitz.com/">Stackblitz</a>
-        (a fullstack web IDE, like the Figma for code editors), so you can try it out online right from their
-        <a href="https://svelte.dev/repl/">REPL</a>.</p>
-    <p>
-        <strong>Second</strong>, undestand the difference between Svelte & SvelteKit with a practical example. The Svelte team
-            is not making this easier for newcommers as the consciously try to blur the difference. I will make one of this example
-            as I progress with my own learnings.
-    </p>
-    <p>
-        <strong>Third,</strong>
-        learn Svelte & SvelteKit, and all their nuances.</p>
-    <p>
-        <strong>Fourth,</strong>, create a small SvelteKit app, like the one I am migrating to Svelte:
-        <a href="/work/lightning-beer-app/">The LightningBeer</a>, as a concept app.</p>
-
-
-    <h2 id="sveltekit-notes" class="h3 font-italic mt-2">SvelteKit notes</h2>
-    <p>SvelteKit uses filesystem-based routing and apps are server-rendered by default.</p>
-    <p>A new project
-        <i>in the making</i>
-        will require some SSR (Server-Side-Rendering) along with some pages being generated at build time (just as I do with
-        Eleventy for this site).</p>
-    <p>"SvelteKit does nicely allow for mixing and matching different rendering types on different pages"</p>
-    <p>There is an option for that when working with SvelteKit,
-        <a href="https://kit.svelte.dev/docs/page-options">using `prerender`</a>
-    </p>
-    <p>When using this option we must consider that that this content can only be updated by building and delopying a new
-        version of the app.</p>
-    <p>An expected error is created using the error helper from
-        <code>@sveltejs/kit</code>. An unexpected error, by contrast, is assumed to be a bug in your app. When an unexpected
-            error is thrown, its message and stack trace will be logged to the console.
-    </p>
-
-
     <h2 id="libs" class="h3 font-italic mt-2">Interesting Libraries.</h2>
     <ul>
         <li>
             <a href="https://dexie.org/docs/Tutorial/Svelte">Dexie.js</a>, a minimalistic wrapper for IndexedDB.
         </li>
         <li>
-            <a href="https://surrealdb.com/">SurrealDB</a>, and <a href="https://github.com/oskar-gmerek/surreal-sveltekit">this starter</a>.
+            <a href="https://surrealdb.com/">SurrealDB</a>, a multi-model database, with <a href="https://github.com/oskar-gmerek/surreal-sveltekit">this starter</a>.
         </li>
         <hr>
         <li>
@@ -84,7 +30,7 @@ tags:
         </li>
         <li>
             <a href="https://www.shadcn-svelte.com">Shadcn-svelte</a>, as a
-            <s>component</s>library.
+            <s>component</s> library.
         </li>
         <li>
             <a href="https://preline.co/docs/frameworks-svelte.html">Preline UI</a>, prebuilt UI components based on the utility-first Tailwind CSS framework.
@@ -120,8 +66,7 @@ tags:
 
     <h2 id="refs" class="h3 font-italic mt-2">References.</h2>
     <ul>
-        <li>Svelte 5 is in preview, here is
-            <a href="https://svelte.dev/blog/whats-new-in-svelte-march-2024">March 2024 update</a>.</li>
+        <li><a href="https://www.youtube.com/watch?v=4soqks5zBLI">SvelteKit and TypeScript Course - Build A Type-Safe SvelteKit 1.0 App</a></li>
         <li>
             <a href="https://www.youtube.com/watch?v=TOTUXiYZhf4">Understanding Svelte5 runes</a>, more
             <a href="https://www.youtube.com/watch?v=tC9KSwnczxQ">here</a>, and even more
@@ -139,4 +84,63 @@ tags:
             <a href="https://www.smashingmagazine.com/2023/06/build-server-side-rendered-svelte-apps-sveltekit/">Build a
                 Server-Side-Rendering App with SvelteKit</a>.</li>
     </ul>
+
+    <h2 id="tldr" class="h3 font-italic mt-2">TL;DR.</h2>
+    <p>
+        So let's dive into some quick (always changing) definitions.
+    </p>
+    <p>
+        <strong>What is Vite?</strong>: A (rollup based) front-end build tool (aka bundler) and development server designed for modernnnnnnn-ous webdev.
+    </p>
+    <p>
+        <strong>What is Svelte? And SvelteKit?</strong>: As Svelte4 was concern, Svelte was a components framework, and SvelteKit an app framework.
+    </p>
+    <p>Meaning that if what you need is to inject some simple functioanlity to a page (say one created with a Static Site
+        Generator like Eleventy) then Svelte + Vite is for you (if you want to avoid builds you might prefer <a href="https://alpinejs.dev/">Alpine.js</a>, and spice your site up, composing behaviour directly from your markup).</p>
+    <p>If on the other hand if what you need is to build a full-stack lovely and creepy application then SvelteKit is your
+        way to go. More on this in
+        <a href="https://youtu.be/z7n17ajJpCo?si=zx8RuvJNbqgBuXIm&t=2410">this video</a>
+        about Svelte 5 with Rich Harris
+        <i>(Feb 1st, 2024)</i>.</p>
+    <p>
+        Got it! So what else would do I need? A component library? Tailwind?
+    </p>
+    <p>
+        <strong>First</strong>, try out the technology. Svelte made a partnership with
+        <a href="https://stackblitz.com/">Stackblitz</a>
+        (a fullstack web IDE, like the Figma for code editors), so you can try it out online right from their
+        <a href="https://svelte.dev/repl/">REPL</a>.</p>
+    <p>
+        <strong>Second</strong>, undestand the difference between Svelte & SvelteKit with a practical example. The Svelte team
+            is not making this easier for newcommers as the consciously try to blur the difference. I will make one of this example
+            as I progress with my own learnings.
+    </p>
+    <p>
+        <strong>Third,</strong>
+        learn Svelte & SvelteKit, and all their nuances (being aware of Svelte 5).</p>
+    <p>
+        <strong>Fourth,</strong> create a small SvelteKit app, concept-app like my
+        <a href="/work/lightning-beer-app/">The LightningBeer</a>.</p>
+    <p>
+        <strong>Fifth,</strong> implement Svelte with a component library like Skeleton in a real production app.</p>
+
+    <h2 id="sveltekit-notes" class="h3 font-italic mt-2">SvelteKit notes</h2>
+    <p>SvelteKit uses filesystem-based routing and apps are server-rendered by default.</p>
+    <p>A new project
+        <i>in the making</i>
+        will require some SSR (Server-Side-Rendering) along with some pages being generated at build time (just as I do with
+        Eleventy for this site).</p>
+    <p>"SvelteKit does nicely allow for mixing and matching different rendering types on different pages"</p>
+    <p>There is an option for that when working with SvelteKit,
+        <a href="https://kit.svelte.dev/docs/page-options">using `prerender`</a>
+    </p>
+    <p>When using this option we must consider that that this content can only be updated by building and delopying a new
+        version of the app.</p>
+    <p>An expected error is created using the error helper from
+        <code>@sveltejs/kit</code>. An unexpected error, by contrast, is assumed to be a bug in your app. When an unexpected
+            error is thrown, its message and stack trace will be logged to the console.
+    </p>
+
+
+
 </div>
