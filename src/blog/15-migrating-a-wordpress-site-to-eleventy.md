@@ -15,7 +15,7 @@ Wordpress is a great tool, I love it and love my clients who use it even more (I
 
 [Betizen.org](https://www.betizen.org/), the site provides reliable listings of online casinos, games, bonuses and affiliate programs, without scams or BS! Receiving lots of junk traffic, which overlows the lazy apache server.
 
-For this project Wordpress was an obvious bad choice. Specially for a warrior with many open fronts (clients, an e-commerce to maintain, new [bitcoin projects](/work) in the horizon, learning [Nostr](http://localhost:8080/blog/nostrification-101/), etc).
+For this project Wordpress was an obvious bad choice. Specially for a warrior with many open fronts (clients, an e-commerce to maintain, new [bitcoin projects](/work) in the horizon, learning [Nostr](/blog/nostrification-101/), etc).
 
 So after some time dealing with it, I decided moving to greener pastures, to a light, clean, simple static site using the one and only SSG: [Eleventy](https://www.11ty.dev/).
 
