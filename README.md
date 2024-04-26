@@ -6,6 +6,7 @@ An 11tyzed minimo.io theme.
 
 # ToDo
 
+-   Add micro-apps like the Nostr Followback at /work and homepage (also Diccionario del Lunfardo)
 -   Nice way to show shortcuts, https://app.routickr.com/habits (keyboard bottom right)
 -   Self-host, minimized js deps + make all styles inline like https://www.mattknight.io/blog/migrating-from-nextjs-to-eleventy.
 -   Nice 4 images metro showcase! or a hero with more visual impact for the first (featured) work.
@@ -37,4 +38,5 @@ An 11tyzed minimo.io theme.
 
 ### Bugs
 
+-   There is a shortcut conflict with "D" (black-mode) in Forms.
 -   Hash conflict js error when linking to hashed links: https://kit.svelte.dev/docs/page-options#prerende

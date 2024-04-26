@@ -21,10 +21,30 @@ layout: base
 
                 <dt>Stack</dt>
                 <dd>{{ stack }}</dd>
-            </dl>
+            </dl>         
         </div> 
-    {% endif %}    
+
+        {# Visit button #}
+        {% if url %}
+            <div class="wrapper ">
+                {% set project_cta_text = "" %}
+                {% set project_cta_url = url %}
+
+                {% if url_button %}
+                    {% set project_cta_text = url_button %}
+                {% else %}
+                    {% set project_cta_text = "Visit" %}
+                {% endif %}
+                
+                <a href="{{ project_cta_url }}" class="btn btn-sm btn-primary btn-cta fit-content mt-1" {% if url %} target="_blank" rel="noopener noreferrer" {% endif %}>{{ project_cta_text }}</a>
+            </div>
+        {% endif %}
+        
+    {% endif %}
+
     {% templatey content %}
+
+
 
     {# {{ content | safe  }} #}
 </article>

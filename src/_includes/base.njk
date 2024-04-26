@@ -42,6 +42,14 @@
         {% if alpine === true %}
             <script src="https://unpkg.com/alpinejs@3.13.7/dist/cdn.min.js" defer></script>
         {% endif %}
+
+        {# For appticles #}
+        {% if css %}
+            <link href="{{ css }}" rel="stylesheet"/>
+        {%endif%}
+        {% if js %}
+            <script src="{{ js }}" defer></script>
+        {%endif%}
         <link href="/assets/images/favicon.png" rel="icon" sizes="32x32">
         <meta name="generator" content="{{ eleventy.generator }}">
         <style>

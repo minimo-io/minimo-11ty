@@ -1,0 +1,15 @@
+---
+layout: base
+---
+
+{% import "macros/heros.njk" as hero with context %}
+
+{{ hero.simple(title, description) }}
+
+<div class="wrapper">{{ content | safe }}</div>
+<div class="wrapper wrapper-wide mt-2">
+    
+    <div id="app" class="{{ page.fileSlug }}"></div>
+</div>
+
+
