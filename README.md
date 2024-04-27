@@ -6,7 +6,9 @@ An 11tyzed minimo.io theme.
 
 # ToDo
 
+-   Rebuild the "Diccionario del Lunfardo" in Alpine.js or Svelte.
 -   Add micro-apps like the Nostr Followback at /work and homepage (also Diccionario del Lunfardo)
+-   For hard-work appticles or microapps have a different footer where i kindly ask for tips!
 -   Nice way to show shortcuts, https://app.routickr.com/habits (keyboard bottom right)
 -   Self-host, minimized js deps + make all styles inline like https://www.mattknight.io/blog/migrating-from-nextjs-to-eleventy.
 -   Nice 4 images metro showcase! or a hero with more visual impact for the first (featured) work.
@@ -32,7 +34,6 @@ An 11tyzed minimo.io theme.
 -   Use the library leaflet-gpx via npm and eleventy.config.js, instead of hard-coding it.
 -   Think about implementing esbuild to bundle javascript, [Bundle JavaScript with Eleventy and esbuild](https://blog.r0b.io/post/bundle-javascript-with-eleventy-and-esbuild/). This will need changing the currect pipeline (for the better). Check [esbuild](https://github.com/evanw/esbuild).
 -   Add functionality: Load prism-light or prism-dark depending on the mode selected (not it's fixed dark).
--   Rebuild the "Diccionario del Lunfardo" in Alpine.js or Svelte.
 -   Load all gpx files data with an eleventyComputed property that lists them.
 -   Add an effect to the call to action button, With 3 stages: 1) Any Wordpress problem? 2) Woocommerce API Integration need? 3) +11 clients problems solved! 4) Let's Work Together! or Get a Quote! With a fast blink and more delay!
 
