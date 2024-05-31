@@ -6,6 +6,7 @@ An 11tyzed minimo.io theme.
 
 # ToDo
 
+-   Create a sitemap like the one I created for Betizen.org
 -   Rebuild the "Diccionario del Lunfardo" in Alpine.js or Svelte.
 -   Add micro-apps like the Nostr Followback at /work and homepage (also Diccionario del Lunfardo)
 -   For hard-work appticles or microapps have a different footer where i kindly ask for tips!
