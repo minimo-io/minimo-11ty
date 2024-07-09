@@ -1,6 +1,6 @@
 ---
 title: Migrating a +800 pages affiliate Wordpress site to Eleventy
-permalink: migrating-a-800-pages-wordpress-site-to-eleventy
+permalink: /blog/migrating-a-800-pages-wordpress-site-to-eleventy/
 description: 'How to successfully migrate an iGaming site to (dramatically) increase performance and security'
 date: 2024-04-04T18:10:00-03:00
 image: /assets/images/blog/betizen-wordpress-vs-eleventy-2.webp
