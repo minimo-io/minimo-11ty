@@ -4,6 +4,7 @@ alpine: true
 ---
 {% import "macros/lists.njk" as list %}
 {% import "macros/biking-map.njk" as biking with context %}
+{% import "macros/gallery.njk" as gallery with context %}
 {% import "macros/tags.njk" as tags with context %}
 
 <div class="wrapper article text-justify mt-5">
@@ -44,6 +45,19 @@ alpine: true
 </div>
 
 {{ biking.map(loadApp=false, wrap="wrapper wrapper-widest") }}
+
+{# Galllery #}
+<div class="wrapper wrapper-wide">
+    <h2 id="photos" class="h3 font-weight-600 mt-3">
+        🖼️ <span class="font-italic">Photos</span>
+    </h2>  
+    <p class="font-italic">A collection of public available pictures.</p>
+
+    <div class="archive article text-center line-height-2 mt-1">
+        {{ gallery.grid() }}
+    </div>
+
+</div>
 
 <div class="wrapper">
     <div class="archive article text-center line-height-2 mt-3">

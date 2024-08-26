@@ -1,0 +1,11 @@
+{% macro grid() %}
+    <div class="mo-image-gallery">
+        
+        {% for image in galleryImages | reverse %}
+            {% if image %}
+                <img loading="lazy" src="{{ image.path }}" title="{{ image.name }}" />
+            {% endif %}
+        {% endfor %}
+
+    </div> 
+{% endmacro %}
