@@ -6,6 +6,7 @@ An 11tyzed minimo.io theme.
 
 # ToDo
 
+-   EleventyImage plugins for gallery: https://darthmall.net/weblog/2024/11ty-photo-gallery/ and https://www.11ty.dev/docs/plugins/image/
 -   Create a sitemap like the one I created for Betizen.org
 -   Rebuild the "Diccionario del Lunfardo" in Alpine.js or Svelte.
 -   Add micro-apps like the Nostr Followback at /work and homepage (also Diccionario del Lunfardo)
