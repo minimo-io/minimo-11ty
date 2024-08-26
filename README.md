@@ -6,8 +6,14 @@ An 11tyzed minimo.io theme.
 
 # ToDo
 
--   EleventyImage plugins for gallery: https://darthmall.net/weblog/2024/11ty-photo-gallery/ and https://www.11ty.dev/docs/plugins/image/
+-   EleventyImage plugins for gallery: https://darthmall.net/weblog/2024/11ty-photo-gallery/ and https://www.11ty.dev/docs/plugins/image/ and https://darekkay.com/blog/photography-website/
+-   Toogle years in articles (and date grid): https://jamstackthemes.dev/demo/theme/11ty-bliss/ also https://rauchg.com/
 -   Create a sitemap like the one I created for Betizen.org
+-   Correct canonicals
+-   Nostr
+    -   Add nostr (primal), Nostr logo (mempool) and https://boltz.exchange/
+    -   Show the last Nostr note, (in the header ticker?)
+-   Add a Ctrl + K, command for tools and other stuff
 -   Rebuild the "Diccionario del Lunfardo" in Alpine.js or Svelte.
 -   Add micro-apps like the Nostr Followback at /work and homepage (also Diccionario del Lunfardo)
 -   For hard-work appticles or microapps have a different footer where i kindly ask for tips!
@@ -27,7 +33,10 @@ An 11tyzed minimo.io theme.
 -   New: Reading progress
 -   New: Add a visit project button on work listing and on each project page.
 -   New: Configure markdownItAnchor, from this example https://github.com/11ty/eleventy-base-blog/blob/main/eleventy.config.js
--   Download a CV button in homepage
+-   Download a CV button in homepage. "See skill set below" - CV must not be boring.
+-   Create a design section for my front-end & brand designs using Figma (maybe even link to a ready only Figma workspace)
+-   Create an button for Affiliate Manager trying to reach out.
+    Will a very basic and well design card with numbers (present only in the iGaming category?).
 -   Biking: List all articles tagged with "biking". This should not appear within work articles.
 -   Biking: Design where can I show my current gear.
 -   Biking: Being able to group bikepacking trips.
@@ -38,6 +47,9 @@ An 11tyzed minimo.io theme.
 -   Add functionality: Load prism-light or prism-dark depending on the mode selected (not it's fixed dark).
 -   Load all gpx files data with an eleventyComputed property that lists them.
 -   Add an effect to the call to action button, With 3 stages: 1) Any Wordpress problem? 2) Woocommerce API Integration need? 3) +11 clients problems solved! 4) Let's Work Together! or Get a Quote! With a fast blink and more delay!
+
+-   (v2) Add pagination for blog posts.
+-   (v2) Markup article files must be more isolated from pure html. Ideally they should be pure, simple, minimal markup.
 
 ### Bugs
 
