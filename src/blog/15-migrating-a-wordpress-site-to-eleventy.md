@@ -8,12 +8,6 @@ imageCaption: 'Eleventy vs. Wordpress'
 tags: [eleventy, wordpress, jamstack]
 ---
 
-<blockquote>
-    <p>
-        🚀 <strong>Pitch</strong>: If you are an iGaming affiliate interested in lowering the costs of running your sites <a href="https://minimo.io">get in touch</a>.
-    </p>
-</blockquote>
-
 ## Results first
 
 **The challenge:** Lowering costs, have better performance and security + forgetting about time-consuming Wordpress maintenance.
