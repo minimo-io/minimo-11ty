@@ -1,9 +1,9 @@
 ---
 title: My whirlwind romance with the Zed AI Editor
 permalink: /blog/the-zed-ai-editor/
-description: "Look, VS Code, it's not you, it's me. Well, actually... it's Zed."
+description: "Look, VS Code, it's not you, it's me. Well, actually... it's Zed 😬"
 date: 2024-10-28T17:46:00-03:00
-image: /assets/images/blog/zed-editor.png
+image: /assets/images/blog/zed-editor-2.png
 imageCaption: 'Zed AI Editor'
 tags: [ai, editors]
 ---
@@ -58,7 +58,7 @@ Expect some carefully crafted settings for both Rust and (Svelte + TypeScript + 
 </div>
 <div class="wrapper">
 
-## The Verdict
+## My verdict
 
 Quite an ambitious piece of software that's in its early days, but if you're tired of your editor using more RAM than Chrome,
 or if you're curious about integrating AI into your workflow without paying for tokens to get paid for groceries or selling your soul, give Zed a shot.

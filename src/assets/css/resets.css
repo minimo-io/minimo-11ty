@@ -3,6 +3,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    transition: opacity 0.5s linear;
 }
 * {
     margin: 0;

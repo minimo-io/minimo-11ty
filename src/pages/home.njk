@@ -14,16 +14,19 @@ alpine: true
     <p class="font-italic">
         👉 Looking for <a href="/work/">my work</a>? ({{ collections.project.length }} projects)
     </p>
+</div>
 
-    <div  class="archive mt-1 mb-4">
-        <p>
-            <a href="/blog/the-zed-ai-editor/" title="Lightning Beer App">
+        <div class="wrapper wrapper-wide mt-2">
+            <a href="/blog/the-zed-ai-editor/" title="The Zed Editor">
                 <figure>
-                    <img width="100%" src="/assets/images/blog/zed-editor.png" alt="zed-editor" class="img-rounded">
+                    <img width="100%" src="/assets/images/blog/zed-editor-2.png" alt="zed-editor" class="img-rounded">
                     <figcaption><strong>The Zed Editor</strong>: latest article.</figcaption>
                 </figure>
             </a>
-        </p>
+        </div>
+
+<div class="wrapper article text-justify mt-1">
+    <div  class="archive mt-1 mb-4">
         {{ list.archive(collections.posts, "2024", showTags=false) }}
         {{ list.archive(collections.posts, "2023", showTags=false) }}
         <br>
