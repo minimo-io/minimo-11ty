@@ -21,6 +21,9 @@
     .nav-buttons .btn-sm {
         font-size: 0.7rem;
     }
+    .wrapper-profile {
+        padding-inline: 1rem;
+    }
 }
 @media (max-width: 1000px) {
     .project:not(.project-single) {

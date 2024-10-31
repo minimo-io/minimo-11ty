@@ -4,7 +4,7 @@ function $(s, all) {
     return all ? document.querySelectorAll(s) : document.querySelector(s)
 }
 
-let theme = localStorage.getItem('theme') || 'theme-light' // defaults
+let theme = localStorage.getItem('theme') || 'theme-dark' // defaults, can also be 'theme-{dark|light}'
 
 const navButtons = $('.nav-buttons')
 const primaryNav = $('.nav')
@@ -41,9 +41,7 @@ window.addEventListener(
             let heyHand = $('.hey-hand')
             if (heyHand) {
                 heyHand.style.setProperty('--animate-duration', '0.8s')
-                heyHand.addEventListener('click', () =>
-                    animateCSS(heyHand, 'shakeX')
-                )
+                heyHand.addEventListener('click', () => animateCSS(heyHand, 'shakeX'))
                 this.setTimeout(() => {
                     heyHand.click()
                 }, 500)
@@ -54,8 +52,7 @@ window.addEventListener(
             let rocket = $('#rocket')
             if (rocket) {
                 setTimeout(() => {
-                    rocket.style.animation =
-                        'launch 1.5s forwards' /* Adjust launch speed */
+                    rocket.style.animation = 'launch 1.5s forwards' /* Adjust launch speed */
                 }, 3000)
             }
         }
@@ -118,7 +115,7 @@ window.addEventListener(
         switchTheme(theme)
         themeToggle.addEventListener('click', () => {
             // in the future I could implement not just dark mode
-            // buy more themes.
+            // but more themes.
             if (document.body.classList.contains('theme-dark')) {
                 switchTheme('theme-light')
             } else {
@@ -132,10 +129,7 @@ window.addEventListener(
             $('.read-more-btn').addEventListener('click', function (e) {
                 let readMoreText = $('.read-more-text')
 
-                if (
-                    false ===
-                    readMoreText.classList.contains('read-more-text-active')
-                ) {
+                if (false === readMoreText.classList.contains('read-more-text-active')) {
                     // show text
                     // first get the height of the hidden text,
                     // it must be visible for the browser first in order to have a height
@@ -154,12 +148,8 @@ window.addEventListener(
                     goToHashed('#more')
 
                     // change button text and icon
-                    this.querySelector('svg:nth-child(1)').classList.add(
-                        'd-none'
-                    )
-                    this.querySelector('svg:nth-child(2)').classList.remove(
-                        'd-none'
-                    )
+                    this.querySelector('svg:nth-child(1)').classList.add('d-none')
+                    this.querySelector('svg:nth-child(2)').classList.remove('d-none')
                     this.querySelector('span').textContent = 'Read less'
                 } else {
                     // hide text
@@ -169,9 +159,7 @@ window.addEventListener(
                     readMoreText.addEventListener(
                         'transitionend',
                         function () {
-                            readMoreText.classList.remove(
-                                'read-more-text-active'
-                            )
+                            readMoreText.classList.remove('read-more-text-active')
                         },
                         {
                             once: true,
@@ -182,12 +170,8 @@ window.addEventListener(
                     goToHashed('#lets-work-together', '20px')
 
                     // change button text and icon back to read-more
-                    this.querySelector('svg:nth-child(1)').classList.remove(
-                        'd-none'
-                    )
-                    this.querySelector('svg:nth-child(2)').classList.add(
-                        'd-none'
-                    )
+                    this.querySelector('svg:nth-child(1)').classList.remove('d-none')
+                    this.querySelector('svg:nth-child(2)').classList.add('d-none')
                     this.querySelector('span').textContent = 'Read more'
                 }
 
@@ -196,10 +180,7 @@ window.addEventListener(
         }
 
         // add hashing links to headings for deep linking
-        const articleHeadings = $(
-            '.article h2, .article .h2, .deeplinked h2',
-            'all'
-        )
+        const articleHeadings = $('.article h2, .article .h2, .deeplinked h2', 'all')
         articleHeadings &&
             articleHeadings.forEach((heading) => {
                 if (heading.getAttribute('id')) {
@@ -227,12 +208,7 @@ window.addEventListener(
                         block: 'start',
                     })
 
-                    window.history &&
-                        history.replaceState(
-                            undefined,
-                            undefined,
-                            this.getAttribute('href')
-                        )
+                    window.history && history.replaceState(undefined, undefined, this.getAttribute('href'))
                 })
             })
 
@@ -307,8 +283,7 @@ const displayGpx = function (elt, filePath) {
     var map = L.map(mapid)
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution:
-            'Map data &copy; <a href="http://www.osm.org">OpenStreetMap</a>',
+        attribution: 'Map data &copy; <a href="http://www.osm.org">OpenStreetMap</a>',
     }).addTo(map)
 
     var control = L.control.layers(null, null).addTo(map)
@@ -328,18 +303,11 @@ const displayGpx = function (elt, filePath) {
 
             _t('h3').textContent = gpx.get_name()
             _c('start').textContent =
-                gpx.get_start_time().toDateString() +
-                ', ' +
-                gpx.get_start_time().toLocaleTimeString()
+                gpx.get_start_time().toDateString() + ', ' + gpx.get_start_time().toLocaleTimeString()
             _c('distance').textContent = (gpx.get_distance() / 1000).toFixed(2)
-            _c('duration').textContent = gpx.get_duration_string(
-                gpx.get_moving_time()
-            )
+            _c('duration').textContent = gpx.get_duration_string(gpx.get_moving_time())
             // _c('pace').textContent     = gpx.get_duration_string(gpx.get_moving_pace_imp(), true);
-            _c('pace').textContent = gpx.get_duration_string(
-                gpx.get_moving_pace(),
-                true
-            )
+            _c('pace').textContent = gpx.get_duration_string(gpx.get_moving_pace(), true)
             // _c('avghr').textContent    = gpx.get_average_hr();
 
             // _c('elevation-gain').textContent = gpx.to_ft(gpx.get_elevation_gain()).toFixed(0);
@@ -347,15 +315,9 @@ const displayGpx = function (elt, filePath) {
             // _c('elevation-net').textContent  = gpx.to_ft(gpx.get_elevation_gain()
             //     - gpx.get_elevation_loss()).toFixed(0);
 
-            _c('elevation-gain').textContent = gpx
-                .get_elevation_gain()
-                .toFixed(0)
-            _c('elevation-loss').textContent = gpx
-                .get_elevation_loss()
-                .toFixed(0)
-            _c('elevation-net').textContent = (
-                gpx.get_elevation_gain() - gpx.get_elevation_loss()
-            ).toFixed(0)
+            _c('elevation-gain').textContent = gpx.get_elevation_gain().toFixed(0)
+            _c('elevation-loss').textContent = gpx.get_elevation_loss().toFixed(0)
+            _c('elevation-net').textContent = (gpx.get_elevation_gain() - gpx.get_elevation_loss()).toFixed(0)
         })
         .addTo(map)
 }

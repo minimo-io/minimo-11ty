@@ -18,7 +18,7 @@
         {% elif page.url == "/" %}
              <meta name="description" content="{{ site.homeDescription }}">
         {% endif %}
-       
+
         {% if pagination and pagination.alias == "tag" %}
             <meta name="robots" content="noindex, nofollow"/>
         {% else %}
@@ -61,7 +61,7 @@
             }
         </style>
     </head>
-    <body>
+    <body class="theme-dark">
         <a href="#main" class="skip-to-main-content">Skip to main content</a>
         {{ content | safe }}
         {% include "components/footer.njk" %}
