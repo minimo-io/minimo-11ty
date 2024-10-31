@@ -4,7 +4,7 @@
     {% if page.url !== "/" and page.url != "/work/" %}
         {{ author.box() }}
         <a
-            href="mailto:nicolas@minimo.io?subject=🤘 Hi Nicolas, I'd like to hire you"
+            href="mailto:nicolas@minimo.io?subject=🤘 Hi Nicolas!"
             class="btn btn-sm btn-primary btn-cta mt-1">Let's work together!</a>
     {% endif %}
 
@@ -47,11 +47,11 @@
     </script>
 {% elif layout === "article" %}
     <script type="application/ld+json">
-        {   "@context": "https://schema.org", 
-            "@type": "BlogPosting", 
+        {   "@context": "https://schema.org",
+            "@type": "BlogPosting",
             "mainEntityOfPage": {
                 "@type": "WebPage"
-            },            
+            },
             "headline": "{{ title }}",
             "image": [ "{{ site.url + image }}" ],
             "datePublished": "{{ page.date.toISOString() }}",
