@@ -24,6 +24,10 @@
     .wrapper-profile {
         padding-inline: 1rem;
     }
+    .img-post {
+        width: 100%;
+        border-radius: 0px;
+    }
 }
 @media (max-width: 1000px) {
     .project:not(.project-single) {

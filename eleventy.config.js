@@ -66,6 +66,11 @@ module.exports = function (eleventyConfig) {
         return array.slice(0, n)
     })
 
+    // Remove iframes from a text (for the atom feed)
+    eleventyConfig.addFilter('removeIframes', (htmlContent) => {
+        return htmlContent.replace(/<iframe\b[^>]*>(.*?)<\/iframe>/gi, '')
+    })
+
     // base plugin
     // eleventyConfig.addPlugin(EleventyHtmlBasePlugin)
     // reading time
