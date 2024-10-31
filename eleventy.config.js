@@ -1,5 +1,8 @@
 const pluginEmojiReadTime = require('@11tyrocks/eleventy-plugin-emoji-readtime')
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
+const feedPlugin = require('@11ty/eleventy-plugin-rss')
+// const { EleventyHtmlBasePlugin } = require('@11ty/eleventy')
+
 const pluginDrafts = require('./eleventy.config.drafts.js')
 // const rimraf = require('rimraf')
 const fs = require('fs')
@@ -19,6 +22,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('src/assets/js')
     eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' })
     eleventyConfig.addPassthroughCopy('src/.well-known') // for nostr
+    eleventyConfig.addPassthroughCopy('src/feed.xml')
 
     eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`)
     // if content is markdown then wrap it around, else: free will!
@@ -50,6 +54,20 @@ module.exports = function (eleventyConfig) {
         return `${yearNumber}-${monthNumber}-${dayNumber}`
     })
 
+    // Get the first `n` elements of a collection.
+    eleventyConfig.addFilter('head', (array, n) => {
+        if (!Array.isArray(array) || array.length === 0) {
+            return []
+        }
+        if (n < 0) {
+            return array.slice(n)
+        }
+
+        return array.slice(0, n)
+    })
+
+    // base plugin
+    // eleventyConfig.addPlugin(EleventyHtmlBasePlugin)
     // reading time
     eleventyConfig.addPlugin(pluginEmojiReadTime, {
         showEmoji: false,
@@ -62,6 +80,8 @@ module.exports = function (eleventyConfig) {
 
     // drafts functionality as in https://www.11ty.dev/docs/quicktips/draft-posts/
     eleventyConfig.addPlugin(pluginDrafts)
+    // feed
+    eleventyConfig.addPlugin(feedPlugin, {})
 
     eleventyConfig.addGlobalData('runMode', () => {
         return process.env.ELEVENTY_RUN_MODE
