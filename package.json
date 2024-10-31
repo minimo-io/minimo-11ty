@@ -1,6 +1,6 @@
 {
     "name": "@minimo-labs/minimo-11ty",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "description": "A theme for the minimo.io website made with 11ty",
     "scripts": {
         "dev": "NODE_ENV=dev npm-run-all clean-build --parallel watch:*",
