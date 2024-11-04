@@ -185,6 +185,22 @@ blockquote p::after {
     margin-bottom: 1rem;
 }
 
+ul.archive-with-dates,
+ul.archive-with-dates li {
+    list-style: none;
+}
+ul.archive-with-dates {
+    display: block;
+    padding-inline: 0.5rem;
+}
+ul.archive-with-dates li {
+    display: flex;
+    justify-content: space-between;
+}
+ul.archive-with-dates .archive-inline-date {
+    display: none;
+}
+
 @keyframes preLaunch {
     0% {
         transform: translateX(-50%) translateY(0) rotateZ(0) scaleY(1);

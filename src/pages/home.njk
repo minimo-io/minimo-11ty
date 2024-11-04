@@ -16,23 +16,27 @@ alpine: true
     </p>
 </div>
 
-        <div class="wrapper wrapper-wide mt-2">
-            <a href="/blog/the-zed-ai-editor/" title="The Zed Editor">
-                <figure>
-                    <img width="100%" src="/assets/images/blog/zed-editor-2.png" alt="zed-editor" class="img-rounded">
-                    <figcaption><strong>The Zed Editor</strong>: latest article.</figcaption>
-                </figure>
-            </a>
-        </div>
+<div class="wrapper wrapper-wide mt-2">
+    <a href="/blog/the-zed-ai-editor/" title="The Zed Editor">
+        <figure>
+            <img width="100%" src="/assets/images/blog/zed-editor-2.png" alt="zed-editor" class="img-rounded">
+            <figcaption><strong>The Zed Editor</strong>: latest article.</figcaption>
+        </figure>
+    </a>
+</div>
 
-<div class="wrapper article text-justify mt-1">
+<div class="wrapper wrapper-wide article text-justify mt-2">
     <div  class="archive mt-1 mb-4">
-        {{ list.archive(collections.posts, "2024", showTags=false) }}
-        {{ list.archive(collections.posts, "2023", showTags=false) }}
+        {{ list.archive_with_dates(collections.posts, "2024", showTags=false) }}
+        {{ list.archive_with_dates(collections.posts, "2023", showTags=false) }}
         <br>
         <p>💯 <a href="/blog/" class="text-underline">Full archive here</a> ({{ collections.posts.length }} entries).</p>
     </div>
 
+</div>
+
+
+<div class="wrapper article text-justify mt-1">
     <div class="mb-2">
         <h2 id="biking" class="h3 font-weight-600">
             🚴🏼‍♂️ <span class="font-italic">Biking</span>
@@ -41,10 +45,7 @@ alpine: true
             Latest bike adventure registered on a <a href="https://en.wikipedia.org/wiki/GPS_Exchange_Format" target="_blank" rel="noopener noreferrer">GPX file</a>.
             👉 All biking <i>tournées</i> <a href="/biking/">here</a>.
         </p>
-
-
     </div>
-
 </div>
 
 {{ biking.map(loadApp=false, wrap="wrapper wrapper-widest") }}

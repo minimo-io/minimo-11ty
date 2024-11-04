@@ -44,6 +44,14 @@ module.exports = function (eleventyConfig) {
         return `${monthName} ${dayNumber}, ${yearNumber}`
     })
 
+    eleventyConfig.addFilter('postDateSmall', (dateString) => {
+        dateObj = new Date(dateString)
+        let monthName = dateObj.toLocaleString('en', { month: 'short' })
+        let dayNumber = dateObj.getDate()
+        // let yearNumber = dateObj.getFullYear()
+        return `${monthName} ${dayNumber}`
+    })
+
     eleventyConfig.addFilter('rideDate', (dateString) => {
         dateObj = new Date(dateString)
         let monthNumber = dateObj.getMonth()

@@ -7,7 +7,6 @@ An 11tyzed minimo.io theme.
 # ToDo
 
 -   EleventyImage plugins for gallery: https://darthmall.net/weblog/2024/11ty-photo-gallery/ and https://www.11ty.dev/docs/plugins/image/ and https://darekkay.com/blog/photography-website/
--   Toogle years in articles (and date grid): https://jamstackthemes.dev/demo/theme/11ty-bliss/ also https://rauchg.com/
 -   Create a sitemap like the one I created for Betizen.org
 -   Correct canonicals
 -   Nostr
@@ -50,6 +49,7 @@ An 11tyzed minimo.io theme.
 
 -   (v2) Add pagination for blog posts.
 -   (v2) Markup article files must be more isolated from pure html. Ideally they should be pure, simple, minimal markup.
+-   (v2) Toogle years in articles (for older years): https://jamstackthemes.dev/demo/theme/11ty-bliss/
 
 ### Bugs
 

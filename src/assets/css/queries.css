@@ -28,6 +28,20 @@
         width: 100%;
         border-radius: 0px;
     }
+    ul.archive-with-dates li {
+        display: flex;
+        justify-content: start;
+        flex-flow: row wrap;
+    }
+    ul.archive-with-dates li > div:first-child {
+        /* padding-right: 1rem; */
+    }
+    ul.archive-with-dates li > div:last-child {
+        display: none;
+    }
+    ul.archive-with-dates .archive-inline-date {
+        display: inline-block;
+    }
 }
 @media (max-width: 1000px) {
     .project:not(.project-single) {

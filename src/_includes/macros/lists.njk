@@ -18,7 +18,7 @@
             <p {% if post.data.star %} class="star" {% endif %}>
                 {% if post.data.draft %}
                     <span class="pill bg-red font-weight-bold">draft</span>
-                {% endif %}                
+                {% endif %}
                 <a href="{{ post.url }}" style="font-weight:200;">
                     #{% if count
                         .toString()
@@ -39,6 +39,60 @@
         {% endif %}
         {% set count = count - 1 %}
     {% endfor %}
+{% endmacro %}
+
+{% macro archive_with_dates(collection, year = '', showTags = true) %}
+    {% set currentYear = "" %}
+    {% set count = collection.length %}
+    <ul class="archive-with-dates">
+    {% for post in collection | reverse %}
+        {% set postYear = post
+            .date
+            .getFullYear() %}
+        {% set includePost = true %}
+            {% if year != '' and postYear != year %}
+        {% set includePost = false %}
+        {% endif %}
+
+            {% if includePost %}
+                {% if currentYear != postYear %}{% set currentYear = postYear %}<h2 class="h4 font-italic font-weight-600">{{ postYear }}.</h2>
+            {% endif %}
+            <li {% if post.data.star %} class="star" {% endif %}>
+                <div>
+                    {% if post.data.draft %}
+                        <span class="pill bg-red font-weight-bold">draft</span>
+                    {% endif %}
+
+                    {#<a href="{{ post.url }}" style="font-weight:200;">
+                        #{% if count
+                            .toString()
+                            .length < 2 %}0{%- endif %}
+                        {{- count }} - {{ post.data.title or "Home" }}
+                    </a>#}
+
+                    <a href="{{ post.url }}" style="font-weight:200;">
+                        {{ post.data.title or "Home" }}
+                    </a>
+
+                    {% if showTags %}
+                        {% for tag in post.data.tags %}
+                            {% if tag != "posts" and tag == "project" %}
+                                <a title="Link to tag `{{ tag | escape }}`" href="/tag/{{ tag | slugify }}/">
+                                    <span class="pill">{{ tag }}</span>
+                                </a>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                    <span class="archive-inline-date opacity-5">{{ post.data.date | postDateSmall }}</span>
+                </div>
+                <div class="opacity-5">
+                    {{ post.data.date | postDateSmall }}
+                </div>
+            </li>
+        {% endif %}
+        {% set count = count - 1 %}
+    {% endfor %}
+    </ul>
 {% endmacro %}
 
 {% macro work(collection) %}
@@ -106,7 +160,7 @@
                                                                                                                                                 {% if tag != "posts" %}
                                                                                                                                                     <a title="Link to tag `{{ tag | escape }}`" href="/tag/{{ tag | slugify }}/"><span class="pill">{{ tag }}</span></a>
                                                                                                                                                 {% endif %}
-                                                                                                                                            {% endfor %}                
+                                                                                                                                            {% endfor %}
                                                                                                                                         </p> #}
     {% endfor %}
 </div>{% endmacro %}
