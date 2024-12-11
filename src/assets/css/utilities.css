@@ -132,6 +132,14 @@
 .img-rounded-0 {
     border-radius: 0;
 }
+.img-rotate {
+    transform: rotate(-1deg);
+    transition: transform 0.3s ease-in-out;
+}
+.img-rotate:hover {
+    transform: rotate(0deg);
+}
+
 .img-center {
     display: block;
     margin-left: auto;

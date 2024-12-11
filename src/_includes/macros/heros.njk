@@ -28,7 +28,7 @@
         {% if image %}
             <figure class="pt-2">
                 {% set imageAlt = imageCaption or title %}
-                <img src="{{ image }}" alt="{{ imageAlt | slugify }}" class="img-rounded">
+                <img src="{{ image }}" alt="{{ imageAlt | slugify }}" class="img-rounded img-rotate">
                     {% if imageCaption %}
                         <figcaption>{{ imageCaption }}</figcaption>
                     {% endif %}
@@ -41,6 +41,7 @@
             <div class="wrapper pt-1 pb-2">
                 {% include "components/nav.njk" %}
                 <main id="main" class="wrapper wrapper-profile fs-400">
+
                     <img
                         decoding="async"
                         width="132"
@@ -48,24 +49,25 @@
                         src="/assets/images/yet-another-guy.webp"
                         alt="profile-image"
                         loading="lazy">
+
                         <h2 class="h4 font-weight-400 mt-3">
                             <span style="display:inline-block" class="hey-hand">👋</span>
                             <i>Hey!</i>
                         </h2>
                         <p>
                             Nicolas here.
-                            <strong>I'm a UX Designer & Frontend Developer</strong>
+                            <strong>I'm a Developer & IU/UX Designer</strong>
                             interested in bringing performant digital ideas to life.
                         </p>
                         <p> I use tools such as
-                            <span class="mo mo-svelte font-weight-400">Svelte</span>, <span class="mo mo-alpine font-weight-400">Alpine.js</span>, <span class="mo mo-11ty font-weight-400">Eleventy</span>
-                             and
-                            <span class="mo mo-woocommerce font-weight-400">WP/WooCommerce</span> when building for the web; NestJS for the back-end, Netlify/Vercel for CI/CD, {# some  <span class="mo mo-flutter font-weight-400">Flutter</span> for fun, #} and <span class="mo mo-figma font-weight-400">Figma</span> for prototyping & design!
+                            <span class="mo mo-svelte font-weight-400">Svelte</span>, <span class="mo mo-11ty font-weight-400">Eleventy</span> &
+                             <span class="mo mo-alpine font-weight-400">Alpine.js</span>
+                            <!--<span class="mo mo-woocommerce font-weight-400">WP/WooCommerce</span>--> when building for the web; NestJS & Python for the back-end and AI, Netlify/Vercel for CI/CD, {# some  <span class="mo mo-flutter font-weight-400">Flutter</span> for fun, #} and <span class="mo mo-figma font-weight-400">Figma</span> for prototyping & design!
                             <strong style="position:relative;"><span id="rocket" class="rocket">🚀</span>
                             </strong>
                         </p>
                         <p>
-                            I'm currently located in 
+                            I'm currently located in
                             <span class="no-wrap">🇧🇷SP/Brazil</span>, developing new stuff and
                             <a href="/biking/">biking around</a>.{# , and developing ideas in the fields of Payments/<svg class="mr-0-3" fill="#F08F19" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248
                                 248zm-141.7-35.3c4.9-33-20.2-50.7-54.6-62.6l11.1-44.7-27.2-6.8-10.9
@@ -76,7 +78,7 @@
                                 87.2c-8.4 33.8-65.3 15.5-83.8 10.9l14.9-59.9c18.4 4.6 77.6 13.7 68.8 49zm8.4-87.7c-7.7 30.7-55 15.1-70.4
                                 11.3l13.5-54.3c15.4 3.8 64.8 11 56.8 43z"/>
                             </svg>Bitcoin, iGaming and Retail.#}
-                        </p>                        
+                        </p>
                         <p>
                             Check out
                             <a href="/work/">my work</a>,
@@ -90,7 +92,7 @@
                             </p>
                             <hr/>
                             <h3 id="more" class="font-italic text-left">A bit of personal history</h3>
-                            <p>In 2024 I am entering the AI and Payments spaces with 2 new projects.</p>
+                            <p>In 2024 & 2025 I am entering the AI and Payments spaces with 2 new projects, <a href="/blog/how-to-fine-tune-open-source-ai-models-for-fun-and-profit/">more here</a>.</p>
                             <p>In 2023 I moved to 🇧🇷Brazil, pivot my tech stack & co-founded
                                 <a href="/work/braaay-store/">an e-commerce project</a>.</p>
                             <p>In late 2022 I rediscovered love 💘</p>
