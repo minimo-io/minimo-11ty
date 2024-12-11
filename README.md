@@ -45,7 +45,6 @@ An 11tyzed minimo.io theme.
 - Think about implementing esbuild to bundle javascript, [Bundle JavaScript with Eleventy and esbuild](https://blog.r0b.io/post/bundle-javascript-with-eleventy-and-esbuild/). This will need changing the currect pipeline (for the better). Check [esbuild](https://github.com/evanw/esbuild).
 - Add functionality: Load prism-light or prism-dark depending on the mode selected (not it's fixed dark).
 - Load all gpx files data with an eleventyComputed property that lists them.
-- Add an effect to the call to action button, With 3 stages: 1) Any Wordpress problem? 2) Woocommerce API Integration need? 3) +11 clients problems solved! 4) Let's Work Together! or Get a Quote! With a fast blink and more delay!
 
 - (v2) Add pagination for blog posts.
 - (v2) Markup article files must be more isolated from pure html. Ideally they should be pure, simple, minimal markup.

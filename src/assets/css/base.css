@@ -8,13 +8,13 @@
     --wrapper-gutter: 1rem;
 
     /* fonts */
-    --ff-body: "Roboto Mono", monospace;
-    --ff-heading: "Cormorant", serif;
+    --ff-body: 'Roboto Mono', monospace;
+    --ff-heading: 'Cormorant', serif;
 
     /* font sizes */
     /* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1240,19.69,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
     --fs-clamped-200: clamp(0.6944rem, 0.662rem + 0.162vw, 0.7875rem);
-    --fs-clamped-300: clamp(0.8331rem, 0.7805rem + 0.263vw, 0.9844rem);
+    --fs-clamped-300: clamp(0.88rem, 0.83rem + 0.263vw, 0.9844rem);
     --fs-clamped-400: clamp(1rem, 0.9198rem + 0.4011vw, 1.2306rem);
     --fs-clamped-500: clamp(1.2rem, 1.0824rem + 0.588vw, 1.5381rem);
     --fs-clamped-600: clamp(1.44rem, 1.272rem + 0.8402vw, 1.9231rem);
