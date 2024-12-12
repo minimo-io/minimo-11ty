@@ -84,6 +84,18 @@
     margin-top: 0px;
     width: 18px;
 }
+.mo-docker::before {
+    background-image: url(/assets/images/docker-logo.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    content: '';
+    background-position: 0px 1px;
+    background-size: cover;
+    height: 18px;
+    margin-right: 6px;
+    margin-top: 0px;
+    width: 18px;
+}
 
 .mo-11ty::before {
     background-position: -43px 3px;
