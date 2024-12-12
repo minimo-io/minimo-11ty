@@ -50,6 +50,16 @@
         no-repeat center;
 }
 
+#lets-work-together > svg.fa {
+    fill: white;
+    max-height: 13px;
+    top: -1px;
+    position: relative;
+}
+a#lets-work-together:hover > svg.fa {
+    fill: black;
+}
+
 /* gpx */
 /* Tweak by Deepak Devanand, https://dev.to/deepakdevanand/leaflet-map-dark-th */
 .theme-dark .leaflet-layer,

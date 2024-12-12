@@ -51,8 +51,8 @@ Expect some carefully crafted settings for both Rust and (Svelte + TypeScript + 
 </div>
 <div class="wrapper-wide">
     <center>
-        <a href="/assets/images/blog/zed-editor.png">
-            <img src="/assets/images/blog/zed-editor.png" alt="zed-editor-example" class="img-rounded Xd-none-mobile img-post">
+        <a href="/assets/images/blog/zed-editor-3.png">
+            <img src="/assets/images/blog/zed-editor-3.png" alt="zed-editor-example" class="img-rounded Xd-none-mobile img-post">
         </a>
     </center>
 </div>
