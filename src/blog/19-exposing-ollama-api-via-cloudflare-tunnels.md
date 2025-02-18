@@ -24,8 +24,13 @@ About the projects:
     2. Create a [Tauri](https://tauri.app/) mobile app for the Fidelity & Cashback Club, reusing the Sveltekit front-end from the web.
     3. Move the current Wordpress instance to a subdomain for using it as a headless CMS, connecting the both fronts to the backend via GraphQL.
        I would prefer [Ghost](https://ghost.org/) as a CMS, but life's, unfair as it is sometimes, it's about tradeoffs.
-- **Minimo**: Add tools (merge Futurewise old project) & Nostr, and a face refresh in the style of https://allenai.org/. Also write a short article to explain people what the hell and why is this thing called Mínimo.
-- **Learning path**: Go deep on undestanding Neural-Networks/DeepLearning, ML, Open-source AI & RAG implementations. Whike improving my Python & [HuggingFace](https://huggingface.co/minimo-io) skills.
+- **Minimo**:
+    1. Upgrade Mínimo to Eleventy 3.
+    2. Add tools `⌘ T` (merge Futurewise.lat project) & Nostr.
+    3. Refresh the UI in the likes of https://allenai.org/.
+    4. Write a short article to explain people what the heck and why is this thing called Mínimo.
+- **Learning path**: Go deep on undestanding Neural-Networks/DeepLearning & ML, Open-source AI, fine-tunning & RAG implementations. While improving my Python & [HuggingFace](https://huggingface.co/minimo-io) skills. Check the complete learning path and free AI courses I'll take here (no link for now :).
+
 - **Possible Experiments:** After finishing the learning path, have fun creating one of these small experiments:
     1. Fine-tune a "wine recommendation assistant" with RAG capabilities, and deploy it using an open-source model running locally with [Ollama](https://ollama.com/) via [Cloudflare Tunnels](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/). Or via [replicate.com](https://replicate.com/)? Or just use [MistralAI](https://mistral.ai/) Le Plataforme? Or Deepseek cheap APIs?
        The result should be our own in-house AI wine _sommelier_, able to write articles & recommend. Like buscawine.com on steroids.
