@@ -24,7 +24,7 @@ About the projects:
     2. Create a [Tauri](https://tauri.app/) mobile app for the Fidelity & Cashback Club, reusing the Sveltekit front-end from the web.
     3. Move the current Wordpress instance to a subdomain for using it as a headless CMS, connecting the both fronts to the backend via GraphQL.
        I would prefer [Ghost](https://ghost.org/) as a CMS, but life's, unfair as it is sometimes, it's about tradeoffs.
-- **Minimo**: Add tools & Nostr, and a face refresh in the style of https://allenai.org/.
+- **Minimo**: Add tools (merge Futurewise old project) & Nostr, and a face refresh in the style of https://allenai.org/. And write a short article to explain people what the hell and why this is called Mínimo.
 - **Learning path**: Go deep on undestanding Neural-Networks/DeepLearning, ML, Open-source AI & RAG implementations. Whike improving my Python & [HuggingFace](https://huggingface.co/minimo-io) skills.
 - **Possible Experiments:** After finishing the learning path, have fun creating one of these small experiments:
     1. Fine-tune a "wine recommendation assistant" with RAG capabilities, and deploy it using an open-source model running locally with [Ollama](https://ollama.com/) via [Cloudflare Tunnels](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/). Or via [replicate.com](https://replicate.com/)? Or just use [MistralAI](https://mistral.ai/) Le Plataforme? Or Deepseek cheap APIs?
