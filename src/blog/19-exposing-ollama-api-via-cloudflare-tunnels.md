@@ -1,5 +1,5 @@
 ---
-title: Fine-tunning open-source AI models for fun and profit in 2025
+title: '2025: Fine-tunning open-source AI models for fun and profit and more'
 permalink: /blog/how-to-fine-tune-open-source-ai-models-for-fun-and-profit/
 description: 'Open-source AI tiny models? Self-hosted services? What could go wrong? 😈 A pledge for my 2025 dev experiments.'
 date: 2024-11-21T00:20:00-03:00
@@ -14,9 +14,9 @@ This 2025, it's time to commit to some serious dev work.
 **Let this be the pledge that holds me accountable.**
 
 So, want to expect from me?
-Two main projects to be launched, one learning path (AI & RAG techniques), a side task and a one weird experiment.
+Three main projects to be launched or upgraded, one learning path (AI & RAG techniques), a side task and a one weird experiment.
 
-About the projects:
+### About the projects:
 
 - **ViiVPay**: Co-found and create v1 of a high and low risk payment processor, w/PIX & Boleto for Brazil & Bitcoin/Lightning for settlements & payments (in a near future), while keeping the project compliant.
 - **[Braaay.com](https://braaay.com)**: My way to elevante the game is to contribute with technology, plus a lot of deep transcendental breathing, with sparse [bike rides](/biking/). Goals:
