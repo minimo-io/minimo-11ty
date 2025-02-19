@@ -6,6 +6,7 @@ An 11tyzed minimo.io theme.
 
 # ToDo
 
+- Nostr logo for CTA.
 - EleventyImage plugins for gallery: https://darthmall.net/weblog/2024/11ty-photo-gallery/ and https://www.11ty.dev/docs/plugins/image/ and https://darekkay.com/blog/photography-website/
 - Create a sitemap like the one I created for Betizen.org
 - Correct canonicals
