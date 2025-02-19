@@ -26,10 +26,12 @@ Three main projects to be launched or upgraded, one learning path, some side tas
 - **(1st) [ViiVPay](https://viivpay.com)**: Create v1 of this high (and low) risk payment processor, with PIX & Boleto for Brazil & Bitcoin/Lightning for settlements & international payments (in a near future), while keeping the project compliant in messy Third World systems, & safe from as\*?les.
 - **(2nd) [Braaay.com](https://braaay.com)**: My way to elevate the game is to contribute technology, plus a lot of deep transcendental breathing, with sparse [bike rides](/biking/). Goals:
 
-    1. Switch the front-end for [braaay.com](https://braaay.com) to a clean and lean Svelte + Tailwind. Integrate payments (including OpenNode for BTC payments).
-    2. Create a [Tauri](https://tauri.app/) mobile app for the Fidelity & Cashback Club, reusing the Sveltekit front-end from the web.
-    3. Move the current Wordpress instance to a subdomain for using it as a headless CMS, connecting both fronts to the backend via GraphQL.
+    1. Switch the front-end for [braaay.com](https://braaay.com) to a clean and lean Svelte + Tailwind.
+    2. Integrate payments (including OpenNode for BTC payments).
+    3. Create a [Tauri](https://tauri.app/) mobile app for the Fidelity & Cashback Club, reusing the Sveltekit front-end from the web.
+    4. Move the current Wordpress instance to a subdomain for using it as a headless CMS, connecting both fronts to the backend via GraphQL.
        I would prefer [Ghost](https://ghost.org/) as a CMS, but life is unfair, so accept the tradeoffs and move on.
+    5. Create a WP/WC plugin that makes our "AI assistant" to write wine articles for the creative team.
 
 - **(Side tasks) Minimo**:
 
