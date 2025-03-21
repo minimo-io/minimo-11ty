@@ -35,11 +35,13 @@ Three main projects to be launched or upgraded, one learning path, some side tas
 
 - **(Side tasks) Minimo**:
 
-    1. Upgrade Mínimo to Eleventy 3.
+    1. Re-write minimo.io from Eleventy to SvelteKit SSG (prerender = true) & Tailwind 4.
     2. Add tools at `⌘ T` (merge Futurewise.lat's project) & Nostr.
-    3. Refresh the UI in the likes of https://allenai.org/ w/ [Tailwind 4 vibes](https://tailwindcss.com/blog/tailwindcss-v4).
+    3. Refresh the UI. References:
+        - [Tailwind 4 vibes](https://tailwindcss.com/blog/tailwindcss-v4): design "accesories".
+        - [The Monospace Web](https://owickstrom.github.io/the-monospace-web/): fonts & general simplicity.
+        - [JetBrains Mono](https://fontsource.org/fonts/jetbrains-mono) font.
     4. Write a short article to explain people what the heck and why is this thing called Mínimo.
-    5. (The idealistic in me wants to save the whales and...) Migrate my custom design system to [Tailwind 4](https://tailwindcss.com/blog/tailwindcss-v4).
 
 - **Learning Path**: Go deep on understanding Neural-Networks/DeepLearning & ML, Open-source AI models, fine-tuning & RAG implementations. While improving my [Python](https://automatetheboringstuff.com/) & [HuggingFace](https://huggingface.co/minimo-io) skills. Check the complete learning path and free AI courses I'll take here (no link for now)... or not.
 

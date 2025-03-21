@@ -27,6 +27,7 @@ alpine: true
 
 <div class="wrapper wrapper-wide article text-justify mt-2">
     <div  class="archive mt-1 mb-4">
+        {{ list.archive_with_dates(collections.posts, "2025", showTags=false) }}
         {{ list.archive_with_dates(collections.posts, "2024", showTags=false) }}
         {{ list.archive_with_dates(collections.posts, "2023", showTags=false) }}
         <br>
