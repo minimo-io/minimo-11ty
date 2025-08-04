@@ -80,6 +80,6 @@ And it was fun to keep learning the Eleventy SSG! BTW: What a great community.
 
 <blockquote>
     <p>
-        🚀 <strong>Pitch</strong>: If you are an iGaming affiliate interested in lowering the costs of running your sites <a href="https://primal.net/p/npub1wujhdsytm3w6g0mpsqh8v7ezx83jcm64dlkwuqgm5v8lv0pds55ssudkw0" rel="nofollow noopener" target="_blank">get in touch</a>.
+        🚀 <strong>Pitch</strong>: If you are an iGaming affiliate interested in lowering the costs of running your sites <a href="#" rel="nofollow noopener" target="_blank">get in touch</a>.
     </p>
 </blockquote>

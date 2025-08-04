@@ -3,9 +3,9 @@
 <footer class="footer wrapper">
     {% if page.url !== "/" and page.url != "/work/" %}
         {{ author.box() }}
-        <a
-            href="https://primal.net/p/npub1wujhdsytm3w6g0mpsqh8v7ezx83jcm64dlkwuqgm5v8lv0pds55ssudkw0" rel="nofollow noopener" target="_blank"
-            class="btn btn-sm btn-primary btn-cta mt-1">Find me on Nostr!</a>
+        {# <a
+            href="#" rel="nofollow noopener" target="_blank"
+            class="btn btn-sm btn-primary btn-cta mt-1">Find me on Nostr!</a> #}
     {% endif %}
 
     {% set defaultFooter = "minimo.io - v" + pkg.version %}
