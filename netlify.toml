@@ -10,3 +10,69 @@
   to = "https://www.betizen.org/"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/work/hops/"
+  to = "https://www.cubiq.lat/en/blog/beer-app"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/work/lightning-beer-app/"
+  to = "https://www.cubiq.lat/en/blog/beer-app"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/work/love-in-a-box/"
+  to = "https://www.cubiq.lat/lab"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/app/nostr-followback/"
+  to = "https://www.cubiq.lat/lab"
+  status = 301
+  force = true 
+
+[[redirects]]
+  from = "/blog/bitcoin-and-the-lightning-network/"
+  to = "https://www.cubiq.lat/en/blog/bitcoin-and-the-lightning-network"
+  status = 301
+  force = true 
+
+[[redirects]]
+  from = "/blog/nostrification-101/"
+  to = "https://www.cubiq.lat/en/blog/nostrification-101"
+  status = 301
+  force = true 
+
+[[redirects]]
+  from = "/blog/understanding-wordpress-translation-system/"
+  to = "https://www.cubiq.lat/en/blog/understanding-wordpress-translation-system"
+  status = 301
+  force = true 
+
+[[redirects]]
+  from = "/blog/migrating-a-800-pages-wordpress-site-to-eleventy/"
+  to = "https://www.cubiq.lat/en/blog/migrating-a-800-pages-wordpress-site-to-eleventy"
+  status = 301
+  force = true 
+
+[[redirects]]
+  from = "/blog/the-zed-ai-editor/"
+  to = "https://www.cubiq.lat/en/blog/the-zed-ai-editor"
+  status = 301
+  force = true 
+
+[[redirects]]
+  from = "/blog/tmux-multiplexing-for-local-espionage/"
+  to = "https://www.cubiq.lat/en/blog/tmux-multiplexing-for-local-espionage"
+  status = 301
+  force = true 
+
+[[redirects]]
+  from = "/"
+  to = "https://www.cubiq.lat"
+  status = 301
+
