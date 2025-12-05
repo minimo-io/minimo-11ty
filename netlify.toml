@@ -3,3 +3,10 @@
   for = "/*"
     [headers.values]
     Access-Control-Allow-Origin = "*"
+
+
+[[redirects]]
+  from = "/work/betizen/"
+  to = "https://www.betizen.org/"
+  status = 301
+  force = true
